@@ -1,6 +1,20 @@
 p {
     font-family: sans-serif; /*Cambiar fuente*/
 }
+html {
+    font-family: Arial, sans-serif; /*Cambiar fuente*/
+}
 header {
-    font-family: sans-serif; /*Cambiar fuente*/
+    background-color: #27ae60;
+}
+footer {
+    color: white;
+    background-color: black;
+}
+footer, a {
+    color: white; /*Cambiar el color de los enlaces*/
+}
+.centro {
+    font-size: 25px; /*Hacer la fuente mas grande*/
+    border: 5px; /*Poner el margen de la div*/
 }
