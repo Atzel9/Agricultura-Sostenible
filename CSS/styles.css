@@ -29,10 +29,25 @@ header nav li a {
     font-weight: 700;
     text-decoration: none; /*Le quita el subrayado al enlace*/
 }
+body{
+    background-color: #e6eea8;
+}
+button {
+    background-color: #BED333;
+    color: white;
+    padding: 7px 7px 7px 7px;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+}
 footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 20px;
+    font-family: "Montserrat", serif;
     background-color: black;
 }
 footer, a {
+    text-decoration: none;
     color: white; /*Cambiar el color de los enlaces*/
 }
 .imagen {
@@ -41,20 +56,58 @@ footer, a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../img/Parcela.webp);
+    background-image: url(../img/parcela.webp);
     font-size: 30px;
     color: white;
     font-family: "Ubuntu", serif;
     background-size: cover; /*Cubre todo el div de la imagen*/
     background-position: center; /*Centra la imagen en el centro*/
 }
-.beneficios {
+.contenedor {
+    background-color: #e6ebbf;
+    margin: 20px 10% 20px 10%;
     padding: 30px 50px 10px 50px;
     font-size: 22px;
+    border-radius: 20px 20px 20px 20px; /*Bordes mas suaves*/
+}
+.seccion {
+    display: flex;
+    flex-direction: row;
+}
+.beneficios {
+    margin: 20px 50px 20px 5px;
+    padding: 30px 0 30px 30px;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+    border-radius: 20px 20px 20px 20px; /*Bordes mas suaves*/
+}
+.beneficios-img{
+    background-size: cover; 
+    background-position: center;
+    height: 400px;
+    width: 400px;
+    border: 5px gray solid; /*Margen a la imagen*/
+    border-radius: 15px 15px 15px 15px;
+}
+.pesticidas-img {
+    background-image: url(../img/fertilizante.jpg);
+}
+.agua-img {
+    background-image: url(../img/Agua.jpg);
+}
+.cultivo-img{
+    background-image: url(../img/Cultivo.jpg);
 }
 #beneficios {
-    margin: 20px 10% 20px 10%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Para que los div se acomoden en columnas*/
+    border: black solid;
+}
+#Proyectos {
+    border: black solid;
+}
+#exitos {
+    border: black solid;
+}
+#foro {
     border: black solid;
 }
