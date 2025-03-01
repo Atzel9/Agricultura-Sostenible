@@ -111,3 +111,60 @@ footer, a {
 #foro {
     border: black solid;
 }
+
+/*Menu hamburguesa*/
+
+/* Estilos para el icono de menú */
+.icon {
+    margin: 40px 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos para el contenedor del menú */
+.cont-menu {
+    background-color: rgb(42, 42, 42);
+    box-shadow: -2px 0px 5px 2px rgb(66, 66, 66);
+    width: 400px;
+    height: 100vh;
+    position: fixed;  /* Cambiado de absolute a fixed */
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    transform: translateX(100%); /* Mueve el menú fuera de la pantalla a la derecha */
+}
+
+
+/* Cuando el menú está activo */
+.active {
+    transform: translateX(0);
+}
+
+/* Opacidad cuando el menú está abierto */
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+/* Estilos para el listado del menú */
+.cont-menu ul {
+    padding: 100px 0 20px 0;
+    list-style: none;
+}
+
+.cont-menu ul li {
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li:hover {
+    background-color: rgb(228, 228, 228);
+    color: rgb(42, 42, 42);
+}
+
+/*Fin del menu hamburguesa*/
