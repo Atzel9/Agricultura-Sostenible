@@ -32,12 +32,12 @@ header nav li a {
 body{
     background-color: #e6eea8;
 }
-button {
+section a {
+    padding: 10px 20px;
     background-color: #BED333;
     color: white;
-    padding: 7px 7px 7px 7px;
-    border: none;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 15px;
+    display: inline-block;
 }
 footer {
     display: flex;
@@ -68,25 +68,34 @@ footer, a {
     margin: 20px 10% 20px 10%;
     padding: 30px 50px 10px 50px;
     font-size: 22px;
-    border-radius: 20px 20px 20px 20px; /*Bordes mas suaves*/
+    border-radius: 20px; /*Bordes mas suaves*/
 }
 .seccion {
     display: flex;
     flex-direction: row;
 }
-.beneficios {
-    margin: 20px 50px 20px 5px;
-    padding: 30px 0 30px 30px;
-    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
-    border-radius: 20px 20px 20px 20px; /*Bordes mas suaves*/
-}
-.beneficios-img{
+.beneficios-img{ /*Declarar dimensiones de la imagen*/
     background-size: cover; 
     background-position: center;
-    height: 400px;
-    width: 400px;
-    border: 5px gray solid; /*Margen a la imagen*/
-    border-radius: 15px 15px 15px 15px;
+    height: 300px;
+    width: 300px;
+    border: 1px #27ae60 solid; /*Margen a la imagen*/
+    border-radius: 15px;
+    margin-left: 50px;
+}
+.beneficios {
+    margin: 20px 50px 20px 5px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+    border-radius: 20px; /*Bordes mas suaves*/
+    display: flex; /*Declara el flexbox*/
+    flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
+}
+.beneficios-txt { /*Acomodar el texto dentro de los divisores*/
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: justify;
 }
 .pesticidas-img {
     background-image: url(../img/fertilizante.jpg);
@@ -99,6 +108,7 @@ footer, a {
 }
 #beneficios {
     display: flex;
+    align-items: center;
     flex-direction: column; /*Para que los div se acomoden en columnas*/
     border: black solid;
 }
@@ -111,7 +121,6 @@ footer, a {
 #foro {
     border: black solid;
 }
-
 /*Menu hamburguesa*/
 
 /* Estilos para el icono de menú */
@@ -119,7 +128,7 @@ footer, a {
     margin: 40px 50px;
     cursor: pointer;
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 /* Estilos para el contenedor del menú */
