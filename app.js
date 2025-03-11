@@ -1,9 +1,14 @@
-const iconoMenu = document.querySelector('#icono-menu'),
-      menu = document.querySelector('#menu');
+const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
 
-iconoMenu.addEventListener('click', () => {
+    menu = document.querySelector('#menu'); 
+/*Selecciona el elemento ID que corresponde a el contenedor del menu lateral*/
+
+iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la funcion que sigue */
     // Alternar el menú
+
     menu.classList.toggle('active');
+/*Hace que se desplaze dentro o fuera de la pantalla*/
+
     document.body.classList.toggle('opacity');
 
     // Cambiar el ícono
