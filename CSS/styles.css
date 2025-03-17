@@ -163,15 +163,8 @@ footer, a {
 /* Opacidad cuando el menú está abierto */
 /*Zona de pruebas*/
 .opacity {
-    /* Aseguramos que la clase .opacity cubra toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
-    position: fixed; /* Fijo en toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%; /* Asegura que cubra todo el ancho */
-    height: 100%; /* Asegura que cubra toda la altura */
-    z-index: 999; /* Asegura que esté por encima del contenido */
-    transition: all 0.5s ease; /* Transición suave */
+    background-color: rgba(0, 0, 0, 0.5); /*color de la opacidad al desplazar el menu*/
+    transition: all 0.5s ease; /* animacion de transparencia al momento de abri el menu*/
 }
 /*Zona de pruebas*/
 
