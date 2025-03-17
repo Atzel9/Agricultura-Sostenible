@@ -161,10 +161,9 @@ footer, a {
 }
 
 /* Opacidad cuando el menú está abierto */
+/*Zona de pruebas*/
 .opacity {
-    /*Zona de pruebas*/
     /* Aseguramos que la clase .opacity cubra toda la pantalla */
-.opacity {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
     position: fixed; /* Fijo en toda la pantalla */
     top: 0;
@@ -174,9 +173,7 @@ footer, a {
     z-index: 999; /* Asegura que esté por encima del contenido */
     transition: all 0.5s ease; /* Transición suave */
 }
-
-    /*Zona de pruebas*/
-}
+/*Zona de pruebas*/
 
 /*modifica propiedades de la lista*/
 .cont-menu ul {
