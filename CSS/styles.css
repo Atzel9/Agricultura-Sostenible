@@ -1,13 +1,13 @@
-*{
-    box-sizing: border-box;
+*{ /*Selector universal para aplicarlo en toda la pagina*/
+    box-sizing: border-box; /* Mantiene el tamaño de los elementos sin que el padding o border lo agranden */
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
 }
 header {
     /*Menu Sticky*/
     position: sticky; /*Para que se quede flotando en la pagina*/
-    top: 0;
+    top: 0; /*Define que el header este hasta arriba*/
     width: 100%;
     z-index: 1000;
     /*Elementos dentro del header*/
@@ -32,35 +32,38 @@ header nav li a {
 body{
     background-color: #e6eea8;
 }
-section a {
+section a { /*Para que los enlaces tengan efecto de boton*/
     padding: 10px 20px;
     background-color: #BED333;
     color: white;
-    border-radius: 15px;
-    display: inline-block;
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va hace la animacion*/
+    border-radius: 15px; /*Esquinas mas suaves*/
+    display: inline-block; /*Para que se le pueda poner dimensiones*/
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
 }
 section a:hover { /*Animacion del <a> al hacer clic*/
     transform: scale(0.95); /*Hace el boton mas pequeño*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
 }
 footer {
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; /*Para que los contenidos se acomoden como una columna*/
     padding: 10px 0 10px 20px;
-    font-family: "Montserrat", serif;
     background-color: black;
 }
 footer, a {
     text-decoration: none;
     color: white; /*Cambiar el color de los enlaces*/
 }
-.imagen {
+
+/* CLASES */
+
+.imagen { /*Hero del index*/
+    /*Padding para acomodar el texto*/
     padding-top: 25%;
     padding-bottom: 25%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*Para que los contenidos se pongan en el centro*/
+    justify-content: center; /* Alinear items en el centro */
     background-image: url(../img/Parcela1.webp);
     font-size: 30px;
     color: white;
@@ -68,7 +71,7 @@ footer, a {
     background-size: cover; /*Cubre todo el div de la imagen*/
     background-position: center; /*Centra la imagen en el centro*/
 }
-.contenedor {
+.contenedor { /*Definir estilos de los contenedores*/
     background-color: #e6ebbf;
     margin: 20px 10% 20px 10%;
     padding: 30px 50px 10px 50px;
@@ -77,9 +80,13 @@ footer, a {
     padding-left: 40px;
     padding-right: 40px;
 }
-.seccion {
-    display: flex;
-    flex-direction: row;
+.seccion { /*Acomodar el texto dentro de las secciones*/
+    border: #dfe2c3 solid;
+    padding-left: 10%;
+    padding-left: 5%;
+}
+.seccion, p { /*Acomodar el texto dentro de las secciones*/
+    text-align: justify;
 }
 .beneficios-img{ /*Declarar dimensiones de la imagen*/
     background-size: cover; 
@@ -90,7 +97,7 @@ footer, a {
     border-radius: 15px;
     margin-left: 50px;
 }
-.beneficios {
+.beneficios { /*Dar estilo a los divisores*/
     margin: 20px 50px 20px 5px;
     padding: 30px 30px 30px 30px;
     box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
@@ -104,33 +111,37 @@ footer, a {
     padding-bottom: 5%;
     text-align: justify;
 }
-.pesticidas-img {
-    background-image: url(../img/fertilizante.jpg);
+.est-img{ /*Estilo para el contenedor de 3 imagenes en la seccion de proyectos de innovacion*/
+    height: 100%;
+    width: 33.33%;
+    border: 1px #27ae60 solid; /*Margen*/
+    background-size: cover;
+    background-position: center;
 }
-.agua-img {
-    background-image: url(../img/Agua.jpg);
-}
-.cultivo-img{
-    background-image: url(../img/Cultivo.jpg);
-}
+
+/* IDENTTIFICADORES */
+
 #beneficios {
-    display: flex;
-    align-items: center;
+    display: flex; /*Para que los contenidos se puedan alinear*/
+    align-items: center; /*Alinea los elementos al centro*/
     flex-direction: column; /*Para que los div se acomoden en columnas*/
-    border: #dfe2c3 solid;
+    border: #dfe2c3 solid; /*Añade margen*/
 }
-#Proyectos {
-    border: #dfe2c3 solid;
+#img-pro { /*Para declarar la manera en que se alinean las iamgenes*/
+    height: 400px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
 }
-#exitos {
-    border: #dfe2c3 solid;
+#proyectos-secc{ /*Id para contenedor de los proyectos*/
+    background-color: #e6ebbf;
+    border: 2px #dfe2c3 solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px 20px 10px 20px;
+    font-size: 30px;
 }
-#foro {
-    border: #dfe2c3 solid;
-}
-#recursos {
-    border: #dfe2c3 solid;
-}
+
 
 /*Menu hamburguesa*/
 /* Estilos para el icono de menú */
