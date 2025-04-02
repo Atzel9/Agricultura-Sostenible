@@ -203,6 +203,19 @@ footer, a {
     font-size: 30px;
     z-index: 1;
 }
+/* ====== Estilos para el botón "Ir arriba" ====== */
+#toTop {
+    display: none; /* Inicialmente oculto, se mostrará con JavaScript */
+    position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho de la pantalla */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en color blanco */
+    border: none; /* Elimina bordes */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados */
+}
 
 
 /*Menu hamburguesa*/
