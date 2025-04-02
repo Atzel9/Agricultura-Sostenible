@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave al inicio
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     // ====== Selección de elementos ======
     const slides = document.querySelectorAll(".slide"); // Selecciona todas las diapositivas
