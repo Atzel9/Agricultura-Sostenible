@@ -211,28 +211,4 @@ footer, a {
 
 /*menu pegajoso prueba*/
 
-/* Estilo para el menú pegajoso */
-#stickyMenu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #f8f8f8;  /* Puedes cambiar el color de fondo */
-    z-index: 1000;
-    padding: 20px;
-    text-align: center;
-    transition: top 0.3s ease; /* Transición suave al ocultarse y aparecer */
-}
-
-/* Clase para ocultar el menú */
-.hidden {
-    top: -100px; /* Ajusta este valor dependiendo del tamaño de tu menú */
-}
-
-/* Asegúrate de que el menú hamburguesa esté bien posicionado */
-.icon {
-    cursor: pointer;
-}
-
-/* Aquí podrías agregar más estilos específicos para los enlaces o el menú hamburguesa */
-
 /*menu pegajoso prueba*/
