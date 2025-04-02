@@ -152,11 +152,32 @@ footer, a {
     text-align: justify;
 }
 .est-img{ /*Estilo para el contenedor de 3 imagenes en la seccion de proyectos de innovacion*/
-    height: 100%;
-    width: 33.33%;
-    border: 1px #27ae60 solid; /*Margen*/
-    background-size: cover;
-    background-position: center;
+    width: 33.3%;
+    height: 300px;
+    position: relative;
+    background-size: cover; /*Cubrir todo el contenedor con la imagen*/
+    background-position: center; /*Centrar imagen*/
+    overflow: hidden; /*Esconde el texto que sobresale del contenedor*/
+    display: flex;
+    border: #229130 1px solid; /*Añadir iamgen*/
+    /**CENTRAR TEXTO**/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.est-img h2 { /*Sar estilo al texto dentro del contenedor*/
+    position: absolute;
+    bottom: -100%; /*Hacer que el texto se vaya abajo del contenedor y no sea visible en la imagen*/
+    text-align: center; /*Paras que el texto se alinee al centro*/
+    color: #229130;
+    transition: bottom 0.3s ease; /*Animacion*/
+    text-shadow: -1px -1px 0 #214e03, 1px -1px 0 #214e03, -1px 1px 0 #214e03, 1px 1px 0 #214e03; /*Añadir borde al texto*/
+}
+.est-img:hover h2{
+    bottom: 100px;
+}
+.proyectos-secc{ /*Estilo para los contenedores de proyectos*/
+    width: 90%;
 }
 
 /* IDENTTIFICADORES */
