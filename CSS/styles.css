@@ -213,8 +213,7 @@ footer, a {
 
 /* Estilos para el menú pegajoso */
 #stickyMenu {
-    background-color: #333;
-    color: white;
+    
     position: fixed;
     width: 100%;
     top: 0;
