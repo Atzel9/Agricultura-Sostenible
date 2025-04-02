@@ -201,6 +201,7 @@ footer, a {
     padding-right: 20px;
     margin: 10px 20px 10px 20px;
     font-size: 30px;
+    z-index: 1;
 }
 
 
@@ -224,6 +225,7 @@ footer, a {
     right: 0; /*no tiene distancia con el borde derecho*/
     transition: all 0.5s ease; /*Realiza una animacion que desplaza el menu*/
     transform: translateX(100%); /* Mueve el menú fuera de la pantalla a la derecha */
+    z-index: 100;
 }
 
 
