@@ -24,6 +24,26 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
     }
 });
 
+//menun pegajoso
+ 
+let lastScrollTop = 0; // Variable para guardar la posición del scroll
+const header = document.querySelector('header'); // Seleccionamos el menú (header)
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Obtener la posición actual del scroll
+
+    if (currentScroll > lastScrollTop) {
+        // Si estamos desplazándonos hacia abajo, ocultamos el menú
+        header.style.top = "-85px"; // Ajusta esto a la altura de tu menú
+    } else {
+        // Si estamos desplazándonos hacia arriba, mostramos el menú
+        header.style.top = "0";
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita que el valor sea negativo
+}, false);
+
+// Menu pegajoso
 
 document.addEventListener('DOMContentLoaded', function() {
     const toTopButton = document.getElementById('toTop'); // Botón para regresar al inicio
