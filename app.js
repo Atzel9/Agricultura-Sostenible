@@ -1,4 +1,3 @@
-//Menu hamburguesa 
 const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
 
     menu = document.querySelector('#menu'); 
@@ -24,28 +23,25 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
         icon.classList.add('bi-list'); // y se anade el icono de hamburguesa
     }
 });
-//Fin de menu hamburguesa
 
-//menun pegajoso
 
-let lastScrollTop = 0; // Variable para guardar la posición del scroll
-const header = document.querySelector('header'); // Seleccionamos el menú (header)
+document.addEventListener('DOMContentLoaded', function() {
+    const toTopButton = document.getElementById('toTop'); // Botón para regresar al inicio
 
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Obtener la posición actual del scroll
+    // ====== Evento para mostrar el botón "Ir arriba" al hacer scroll ======
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > window.innerHeight) { // Si el usuario ha bajado más de una pantalla
+            toTopButton.style.display = 'block'; // Mostrar el botón
+        } else {
+            toTopButton.style.display = 'none'; // Ocultar el botón
+        }
+    });
 
-    if (currentScroll > lastScrollTop) {
-        // Si estamos desplazándonos hacia abajo, ocultamos el menú
-        header.style.top = "-85px"; // Ajusta esto a la altura de tu menú
-    } else {
-        // Si estamos desplazándonos hacia arriba, mostramos el menú
-        header.style.top = "0";
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita que el valor sea negativo
-}, false);
-
-// Menu pegajoso
+    // ====== Evento para volver al inicio de la página con animación ======
+    toTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave al inicio
+    });
+});
 document.addEventListener("DOMContentLoaded", function () {
     // ====== Selección de elementos ======
     const slides = document.querySelectorAll(".slide"); // Selecciona todas las diapositivas
