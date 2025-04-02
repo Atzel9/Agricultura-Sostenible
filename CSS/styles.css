@@ -213,14 +213,13 @@ footer, a {
 
 /* Estilos para el menú pegajoso */
 #stickyMenu {
-    
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 1000;
-    transition: top 0.3s;
+    transition: top 0.3s ease;
 }
+
 
 /* Contenedor de la barra de navegación */
 nav {
