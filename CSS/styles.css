@@ -5,19 +5,20 @@
     font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
 }
 header {
-
-    top: 0; /*Define que el header este hasta arriba*/
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    /*Elementos dentro del header*/
+    background-color: #BED333;
     color: white;
-    background-color: #BED333; 
     border-bottom: 5px rgb(252, 244, 244) solid;
     height: 85px;
     padding: 10px 15px;
-    display: flex; /*Para organizar los elementos*/
-    justify-content: space-between; /*Para separar el título y el menú*/
-    align-items: center; /*Para alinear verticalmente*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
 header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
@@ -29,6 +30,8 @@ header nav li a {
     text-decoration: none; /*Le quita el subrayado al enlace*/
 }
 body{
+    background-color: #e6eea8;
+    padding-top: 85px; /* Deja espacio para el header pegajoso */
     background-color: #e6eea8;
 }
 section a { /*Para que los enlaces tengan efecto de boton*/
@@ -269,27 +272,8 @@ footer, a {
 
 /*menu pegajoso prueba*/
 /* Menú pegajoso */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #BED333;
-    color: white;
-    border-bottom: 5px rgb(252, 244, 244) solid;
-    height: 85px;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
-}
 
 /* Espacio para el header */
-body {
-    padding-top: 85px; /* Deja espacio para el header pegajoso */
-    background-color: #e6eea8;
-}
+
 
 /*menu pegajoso prueba*/
