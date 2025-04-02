@@ -1,3 +1,4 @@
+//Menu hamburguesa
 const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
 
     menu = document.querySelector('#menu'); 
@@ -23,6 +24,7 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
         icon.classList.add('bi-list'); // y se anade el icono de hamburguesa
     }
 });
+//Fin de menu hamburguesa
 
 //menun pegajoso
 // Variable para almacenar la última posición de desplazamiento del usuario
