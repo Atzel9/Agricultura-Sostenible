@@ -27,11 +27,10 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
 //Fin de menu hamburguesa
 
 //menun pegajoso
-// Menu pegajoso
 // Variable para almacenar la última posición de desplazamiento del usuario
-let lastScrollTop = 0; 
+let lastScrollTop = 0;
 
-// Obtiene la referencia al elemento del menú que tiene el ID 'stickyMenu'
+// Obtiene la referencia al menú pegajoso
 const stickyMenu = document.getElementById('stickyMenu');
 
 // Agrega un evento que escucha el desplazamiento (scroll) de la ventana
@@ -39,15 +38,16 @@ window.addEventListener('scroll', function() {
     // Obtiene la posición actual del desplazamiento vertical
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Verificamos si el scroll es hacia abajo o hacia arriba
+    // Si el scroll es hacia abajo, ocultamos el menú
     if (scrollTop > lastScrollTop) {
-        // Si se desplaza hacia abajo, ocultamos el menú
         stickyMenu.classList.add('hidden');
     } else {
-        // Si se desplaza hacia arriba, mostramos el menú
+        // Si el scroll es hacia arriba, mostramos el menú
         stickyMenu.classList.remove('hidden');
     }
 
-    // Actualizamos la última posición del scroll
+    // Actualiza la última posición del scroll
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
 });
+
+// Menu pegajoso

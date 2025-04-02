@@ -211,48 +211,28 @@ footer, a {
 
 /*menu pegajoso prueba*/
 
-/* Estilos para el menú pegajoso */
+/* Estilo para el menú pegajoso */
 #stickyMenu {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #f8f8f8;  /* Puedes cambiar el color de fondo */
     z-index: 1000;
-    transition: top 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    transition: top 0.3s ease; /* Transición suave al ocultarse y aparecer */
 }
 
-
-/* Contenedor de la barra de navegación */
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-}
-
-/* Lista de enlaces de navegación */
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-/* Elementos de la lista dentro de la navegación */
-nav ul li {
-    margin: 0 15px;
-}
-
-/* Estilos para los enlaces dentro de la navegación */
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Cambia el color del enlace al pasar el mouse */
-nav ul li a:hover {
-    color: #FFD700;
-}
-
-/* Clase para ocultar el menú cuando se quiera ocultar dinámicamente */
+/* Clase para ocultar el menú */
 .hidden {
-    top: -60px;
+    top: -100px; /* Ajusta este valor dependiendo del tamaño de tu menú */
 }
+
+/* Asegúrate de que el menú hamburguesa esté bien posicionado */
+.icon {
+    cursor: pointer;
+}
+
+/* Aquí podrías agregar más estilos específicos para los enlaces o el menú hamburguesa */
+
 /*menu pegajoso prueba*/
