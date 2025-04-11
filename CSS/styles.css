@@ -252,8 +252,8 @@ footer, a {
     flex-direction: column;
     background-color: #e6ebbf;
     border: 2px #dfe2c3 solid;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: 10px 20px 10px 20px;
     font-size: 30px;
 }
