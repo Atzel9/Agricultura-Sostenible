@@ -46,12 +46,11 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
 }
 footer {
-    font-weight: bold;
-    display: flex; 
-    flex-direction: column; /*Para que los contenidos se acomoden como una columna*/
-    padding: 10px 0 10px 20px;
     background-color: black;
-    padding-top: 30px;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-weight: bold;
 }
 footer, a {
     text-decoration: none;
@@ -197,6 +196,7 @@ footer, a {
     border-radius: 5px; /* Bordes redondeados */
 }
 .recurso{
+    height: 300px;
     background-color: #f0f0f0;
     padding: 20px;
     display: flex;
@@ -204,12 +204,32 @@ footer, a {
     align-items: flex-start;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
+}
+.recurso:hover{
+    transform: scale(0.97); /*Hace el boton mas pequeño*/
 }
 .img-rec{
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    height: 90%;
     background-color: #c4e8c2; /* Verdecito suave */
     border-radius: 8px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 40px; /* Espacio entre los enlaces */
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50; /* Un verde cuando pasas el cursor */
 }
 /* IDENTTIFICADORES */
 
