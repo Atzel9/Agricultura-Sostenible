@@ -6,6 +6,32 @@ body {
     background: linear-gradient(-20deg, #7CB342, #BED333, #FFB74D); /*Degrada el fondo con tres colores*/
     font-family: Arial, sans-serif; /*Tipo de Fuente*/
 }
+header {
+    /*Menu Sticky*/
+    position: sticky; /*Para que se quede flotando en la pagina*/
+    top: 0; /*Define que el header este hasta arriba*/
+    width: 100%;
+    z-index: 1000;
+    /*Elementos dentro del header*/
+    color: white;
+    background-color: #BED333; 
+    border-bottom: 5px rgb(252, 244, 244) solid;
+    height: 85px;
+    padding: 10px 15px;
+    display: flex; /*Para organizar los elementos*/
+    flex-direction: row;
+    justify-content: space-between; /*Para separar el título y el menú*/
+    align-items: center; /*Para alinear verticalmente*/
+}
+header nav li {
+    display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
+    padding: 0 20px;
+}
+header nav li a {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    text-decoration: none; /*Le quita el subrayado al enlace*/
+}
 
 /*forma del formulario*/
 .inicio-container {
