@@ -24,42 +24,26 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
     }
 });
 
-//menun pegajoso
- 
-let lastScrollTop = 0; // Variable para guardar la posición del scroll
-const header = document.querySelector('header'); // Seleccionamos el menú (header)
-
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Obtener la posición actual del scroll
-
-    if (currentScroll > lastScrollTop) {
-        // Si estamos desplazándonos hacia abajo, ocultamos el menú
-        header.style.top = "-85px"; // Ajusta esto a la altura de tu menú
-    } else {
-        // Si estamos desplazándonos hacia arriba, mostramos el menú
-        header.style.top = "0";
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita que el valor sea negativo
-}, false);
-
-// Menu pegajoso
 
 document.addEventListener('DOMContentLoaded', function() {
-    const toTopButton = document.getElementById('toTop'); // Botón para regresar al inicio
+    const toTopButtons = document.querySelectorAll('.toTop'); // Selecciona todos los botones con clase 'toTop'
 
-    // ====== Evento para mostrar el botón "Ir arriba" al hacer scroll ======
+    // Mostrar u ocultar los botones al hacer scroll
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > window.innerHeight) { // Si el usuario ha bajado más de una pantalla
-            toTopButton.style.display = 'block'; // Mostrar el botón
-        } else {
-            toTopButton.style.display = 'none'; // Ocultar el botón
-        }
+        toTopButtons.forEach(button => {
+            if (window.pageYOffset > window.innerHeight) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
     });
 
-    // ====== Evento para volver al inicio de la página con animación ======
-    toTopButton.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave al inicio
+    // Desplazamiento suave al hacer clic en cualquiera de los botones
+    toTopButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
 });
 
