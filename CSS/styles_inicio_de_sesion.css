@@ -86,3 +86,35 @@ text-decoration: none; /*elimina cualquier estilo que este predeterminado*/
 .facebook { background: #000; }
 .twitter { background: #000; } 
 .instagram { background: #000; }
+
+/*ESTILO FOOTER*/
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-weight: bold;
+}
+footer, a {
+    text-decoration: none;
+    text-align: center;
+    color: white; /*Cambiar el color de los enlaces*/
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 40px; /* Espacio entre los enlaces */
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50; /* Un verde cuando pasas el cursor */
+}
