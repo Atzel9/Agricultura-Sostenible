@@ -48,6 +48,7 @@ footer {
     flex-direction: column; /*Para que los contenidos se acomoden como una columna*/
     padding: 10px 0 10px 20px;
     background-color: black;
+    font-weight: bold;
 }
 footer, a {
     text-decoration: none;
@@ -128,8 +129,8 @@ header {
     border-bottom: 5px rgb(252, 244, 244) solid;
     height: 85px;
     padding: 10px 15px;
-    display: flex; /*pantalla anclada*/ 
-    justify-content: space-between; /*distribuye los espacios hijos dejando el máximo espacio posible entre ellos.*/
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
@@ -143,34 +144,50 @@ body {
 /*menu pegajoso prueba*/
 
 .externo{
-    margin: 1% 5% ; /*margen a arriba abajo y los lados*/
-    border-radius: 20px; /*borde*/
-    background-color: #e6ebbf; /*color*/
-    border: 3px #dfe2c3 solid; /*color del borde*/
+    margin: 1% 5% ;
+    border-radius: 20px;
+    background-color: #e6ebbf;
+    border: 3px #dfe2c3 solid;
 }
 .seccion{
-    margin: 20px 50px 20px 50px; /*margen externo*/
-    padding: 30px 30px 30px 30px; /*margen interno*/
-    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5); /*sombra*/
+    margin: 20px 50px 20px 50px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
     border-radius: 20px; /*Bordes mas suaves*/
     display: flex; /*Declara el flexbox*/
     flex-direction: row; /*Acomoda el texto y las imagenes en fila*/ 
 }
 
 .interno{
-    width: 60%; /*ancho*/
-    padding-top: 5%; /*margen interno de arriba*/
-    padding-bottom: 5%; /*margen interno de abajo*/
-    text-align: justify; /*se alinea uniformemente a los lados*/
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: justify;
 }
 
 .fondo-exito{
-     flex: 1; /*ocupa el espacio que este disponible*/
-     margin: 110px 10px 10px 20px; /*margen externo*/
-  min-width: 200px; /*ancho minimo*/
-  height: 300px; /*altura*/
-  background-size: cover; /*Sirve para escalar (agrandar o reducir) una imagen de fondo.*/
-  background-position: center; /*colocar una imagen de fondo justo en el centro del elemento donde se está aplicando.*/
-  border-radius: 20px; /*borde redondo*/
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*sombra*/
+     flex: 1;
+     margin: 110px 10px 10px 20px;
+  min-width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 40px; /* Espacio entre los enlaces */
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50; /* Un verde cuando pasas el cursor */
 }
