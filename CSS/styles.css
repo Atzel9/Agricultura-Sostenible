@@ -181,7 +181,12 @@ footer, a {
     bottom: 100px;
 }
 .proyectos-secc{ /*Estilo para los contenedores de proyectos*/
+    padding-bottom: 20px;
+    padding-right: 20px;
     width: 90%;
+}
+.proyectos-secc p{
+    font-size: 25px;
 }
 .toTop {
     display: none; /* Inicialmente oculto, se mostrará con JavaScript */
@@ -210,8 +215,8 @@ footer, a {
     transform: scale(0.97); /*Hace el boton mas pequeño*/
 }
 .img-rec{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: #c4e8c2; /* Verdecito suave */
     border-radius: 8px;
 }
@@ -254,21 +259,25 @@ footer, a {
     border: 2px #dfe2c3 solid;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 20px;
     margin: 10px 20px 10px 20px;
     font-size: 30px;
+    border-radius: 20px;
 }
 #proyectos-secc h2 {
     align-content: end;
     justify-content: end;
     padding-top: 20px;
 }
+
+    /*RECURSOS PARA AGRICULTORES*/
 #sec-rec{ /*Estilo de la seccion para recursos de agricultores*/
     display: grid; /* Para dividir los divs en columnas */
     grid-template-columns: repeat(2, 1fr); /* 2 columnas de tamaño igual */
     gap: 20px; /* Espacio entre los elementos */
     padding: 40px; /* Espacio interno general del contenedor */
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: 0 auto; /*Centrar los contenedores*/
+    box-sizing: border-box; /*Evitar que el padding empuje*/
     border-radius: 20px;
     background-color: #e6e9d1;
     box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);

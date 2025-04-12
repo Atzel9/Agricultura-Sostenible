@@ -48,6 +48,7 @@ footer {
     flex-direction: column; /*Para que los contenidos se acomoden como una columna*/
     padding: 10px 0 10px 20px;
     background-color: black;
+    font-weight: bold;
 }
 footer, a {
     text-decoration: none;
@@ -173,4 +174,20 @@ body {
   background-position: center;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 40px; /* Espacio entre los enlaces */
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50; /* Un verde cuando pasas el cursor */
 }
