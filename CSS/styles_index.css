@@ -1,0 +1,264 @@
+*{ /*Selector universal para aplicarlo en toda la pagina*/
+    box-sizing: border-box; /* Mantiene el tamaño de los elementos sin que el padding o border lo agranden */
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
+}
+body{
+    background-color: #e6eea8;
+}
+section a { /*Para que los enlaces tengan efecto de boton*/
+    padding: 10px 20px;
+    background-color: #BED333;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px; /*Esquinas mas suaves*/
+    display: inline-block; /*Para que se le pueda poner dimensiones*/
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
+}
+section a:hover { /*Animacion del <a> al hacer clic*/
+    transform: scale(0.95); /*Hace el boton mas pequeño*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
+}
+
+/* CLASES */
+
+/*ESTILO AL HEADER*/
+.header {
+    /*Menu Sticky*/
+    position: sticky; /*Para que se quede flotando en la pagina*/
+    top: 0; /*Define que el header este hasta arriba*/
+    width: 100%;
+    z-index: 1000;
+    /*Elementos dentro del header*/
+    color: white;
+    background-color: #BED333; 
+    border-bottom: 5px rgb(252, 244, 244) solid;
+    height: 85px;
+    padding: 10px 15px;
+    display: flex; /*Para organizar los elementos*/
+    flex-direction: row;
+    justify-content: space-between; /*Para separar el título y el menú*/
+    align-items: center; /*Para alinear verticalmente*/
+}
+.header nav li {
+    display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
+    padding: 0 20px;
+}
+.header nav li a {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    text-decoration: none; /*Le quita el subrayado al enlace*/
+    color: white;
+}
+/*----HEADER----*/
+
+/*HERO DIAPOSITIVAS*/
+.hero {
+    position: relative; /* Permite posicionar los elementos internos de manera absoluta */
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    overflow: hidden; /* Oculta cualquier desbordamiento de las diapositivas */
+}
+/* ====== Estilos de las diapositivas ====== */
+.slide {
+    position: absolute; /* Se posicionan superpuestas una sobre otra */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupan todo el ancho */
+    height: 100%; /* Ocupan todo el alto */
+    opacity: 0; /* Se ocultan por defecto */
+    transition: opacity 1s ease-in-out; /* Transición suave al cambiar de diapositiva */
+}
+/* ====== Mostrar la diapositiva activa ====== */
+.slide.active {
+    opacity: 1; /* Solo la diapositiva activa es visible */
+}
+/* ====== Imágenes de las diapositivas ====== */
+.slide img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: 100%; /* La imagen ocupa todo el alto */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+}
+/* ====== Texto sobre las imágenes ====== */
+.slide .text {
+    position: absolute; /* Se posiciona sobre la imagen */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+    color: white; /* Texto en color blanco */
+    text-align: center; /* Texto alineado al centro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre la imagen */
+}
+/* ====== Estilos del título ====== */
+.slide h1 {
+    font-size: 4em; /* Tamaño grande para destacar */
+    margin-bottom: 0.5em; /* Espacio entre el título y el párrafo */
+}
+/* ====== Estilos del párrafo ====== */
+.slide p {
+    font-size: 1.5em; /* Tamaño adecuado para mejorar la legibilidad */
+}
+/*-----Hero Diapositivas----*/
+.contenedor { /*Definir estilos de los contenedores*/
+    background-color: #e6ebbf;
+    margin: 20px 10% 20px 10%;
+    padding: 30px 50px 10px 50px;
+    font-size: 22px;
+    border-radius: 20px; /*Bordes mas suaves*/
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.seccion { /*Acomodar el texto dentro de las secciones*/
+    border: #dfe2c3 solid;
+    padding-left: 5%;
+}
+.seccion, p { /*Acomodar el texto dentro de las secciones*/
+    text-align: justify;
+}
+
+/*ESTILOS BENEFICIOS*/
+.beneficios-img{ /*Declarar dimensiones de la imagen*/
+    background-size: cover; 
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    border: 1px #27ae60 solid; /*Margen a la imagen*/
+    border-radius: 15px;
+    margin-left: 50px;
+}
+.beneficios { /*Dar estilo a los divisores*/
+    margin: 20px 50px 20px 5px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+    border-radius: 20px; /*Bordes mas suaves*/
+    display: flex; /*Declara el flexbox*/
+    flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
+}
+.beneficios-txt { /*Acomodar el texto dentro de los divisores*/
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: justify;
+}
+/*----BENEFICIOS----*/
+
+.proyectos-secc{ /*Estilo para los contenedores de proyectos*/
+    padding-bottom: 20px;
+    padding-right: 20px;
+    width: 90%;
+}
+.proyectos-secc p{
+    font-size: 25px;
+}
+.toTop {
+    display: none; /* Inicialmente oculto, se mostrará con JavaScript */
+    position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho de la pantalla */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en color blanco */
+    border: none; /* Elimina bordes */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados */
+}
+/*ESTILOS FOOTER*/
+.footer {
+    display: flex;
+    flex-direction: column; /*Coloca los contenedores en columna*/
+    align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/
+    padding: 20px; /*Agrega espacio interior alrededor del contenido*/
+    background-color: #000; /* Establece un fondo negro*/
+    color: white; /*Define el color del texto en blanco*/
+    gap: 10px; /*Agrega espacio vertical entre los elementos*/
+  }
+  .footer-links {
+    display: flex; /*Hace que los enlaces estén en una fila horizontal*/
+    justify-content: center; /*Centra los enlaces horizontalmente*/
+    gap: 20px; /*Agrega separación horizontal entre los enlaces*/
+  }
+  .footer-links a {
+    color: white; /*Color de los enlaces en blanco*/
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
+    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
+  }
+  .footer-links a:hover {
+    color: #4bca56; /*Cambia el color al pasar el mouse en el enlace*/
+  }
+  .footer-copy {
+    margin: 0; /*Elimina el margen por defecto del párrafo*/
+    font-size: 0.9rem; /*Tamaño de fuente ligeramente más pequeño*/
+  }
+  
+/*---FOOTER----*/
+
+
+/* IDENTTIFICADORES */
+
+#beneficios {
+    display: flex; /*Para que los contenidos se puedan alinear*/
+    align-items: center; /*Alinea los elementos al centro*/
+    flex-direction: column; /*Para que los div se acomoden en columnas*/
+    border: #dfe2c3 solid; /*Añade margen*/
+}
+
+
+/*Menu hamburguesa*/
+/* Estilos para el icono de menú */
+.icon {
+    margin: 40px 50px; /* margen de arriba y a la derecha/izquierda*/
+    cursor: pointer;  /*indica que se puede clickear*/
+    position: relative; /* posicion relativa*/
+    z-index: 100; /*es una capa que se sobrepone sobre el 1 y 99 capas*/
+}
+
+/* Estilos para el contenedor del menú */
+.cont-menu {
+    background-color: rgb(42, 42, 42); 
+    box-shadow: -2px 0px 5px 2px rgb(66, 66, 66); /*define la sombra del elemento*/
+    width: 400px; /*ancho*/
+    height: 100vh; /*altura que tomara de la pantalla*/
+    position: fixed;  /* Cambiado de absolute a fixed */
+    top: 0; /*no tiene distancia con el borde superior*/
+    right: 0; /*no tiene distancia con el borde derecho*/
+    transition: all 0.5s ease; /*Realiza una animacion que desplaza el menu*/
+    transform: translateX(100%); /* Mueve el menú fuera de la pantalla a la derecha */
+    z-index: 999; /*Para que este encima de los demas objetos*/
+}
+
+/* Cuando el menú está activo */
+.active {
+    transform: translateX(0); /*el menu no es desplazado y es totalmente visible*/
+}
+
+/* Opacidad cuando el menú está abierto */
+/*Zona de pruebas*/
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5); /*color de la opacidad al desplazar el menu*/
+    transition: all 0.5s ease; /* animacion de transparencia al momento de abri el menu*/
+}
+/*Zona de pruebas*/
+
+/*modifica propiedades de la lista*/
+.cont-menu ul {
+    padding: 100px 0 20px 0; /*margen interno*/
+    list-style: none; /*elimina las viñetas o puntitios*/
+}
+
+/*apariencia para la lista de elementoss*/
+.cont-menu ul li a{
+    color: white;  /*color de la fuente*/
+    display: block;  /*toma todo el ancho del elemento y se apila*/
+    font-size: 25px; /*tamano de la fuente*/
+    text-decoration: none; /*le quita los puntos*/
+    padding: 10px 50px; /*margen interno*/
+    cursor: pointer; /*evento al pasar el maus*/
+}
+
+/*al pasar el maus por la lista del menu*/
+.cont-menu ul li:hover {
+    background-color: rgb(228, 228, 228); /*cambia el color de fondo a blanco*/
+    color: rgb(42, 42, 42); /*cambia el color del texto*/
+}
+
+/*Fin del menu hamburguesa*/

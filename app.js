@@ -24,10 +24,10 @@ iconoMenu.addEventListener('click', () => { /*cuando haces click ejecuta la func
     }
 });
 
-//menun pegajoso
+//Menu pegajoso
   
 let lastScrollTop = 0; // Variable para guardar la posición del scroll
-const header = document.querySelector('header'); // Seleccionamos el menú (header)
+const header = document.querySelector('.header'); // Seleccionamos el menú (header)
 
 window.addEventListener('scroll', function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Obtener la posición actual del scroll
@@ -45,6 +45,7 @@ window.addEventListener('scroll', function() {
 
 // Menu pegajoso
 
+//Botón ir arriba
 document.addEventListener('DOMContentLoaded', function() {
     const toTopButtons = document.querySelectorAll('.toTop'); // Selecciona todos los botones con clase 'toTop'
 

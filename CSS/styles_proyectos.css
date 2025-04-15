@@ -1,0 +1,209 @@
+*{ /*Selector universal para aplicarlo en toda la pagina*/
+    box-sizing: border-box; /* Mantiene el tamaño de los elementos sin que el padding o border lo agranden */
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
+}
+body{
+    background-color: #e6eea8;
+}
+
+/*CLASES*/
+
+/*ESTILO AL HEADER*/
+.header {
+    /*Menu Sticky*/
+    position: sticky; /*Para que se quede flotando en la pagina*/
+    top: 0; /*Define que el header este hasta arriba*/
+    width: 100%;
+    z-index: 1000;
+    /*Elementos dentro del header*/
+    color: white;
+    background-color: #BED333; 
+    border-bottom: 5px rgb(252, 244, 244) solid;
+    height: 85px;
+    padding: 10px 15px;
+    display: flex; /*Para organizar los elementos*/
+    flex-direction: row;
+    justify-content: space-between; /*Para separar el título y el menú*/
+    align-items: center; /*Para alinear verticalmente*/
+}
+.header nav li {
+    display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
+    padding: 0 20px;
+}
+.header nav li a {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    text-decoration: none; /*Le quita el subrayado al enlace*/
+    color: white;
+}
+/*----HEADER----*/
+
+.toTop {
+    display: none; /* Inicialmente oculto, se mostrará con JavaScript */
+    position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho de la pantalla */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en color blanco */
+    border: none; /* Elimina bordes */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/*DESTACADOS*/
+.est-img{ /*Estilo para el contenedor de 3 imagenes en la seccion de proyectos de innovacion*/
+    width: 33.3%;
+    height: 300px;
+    position: relative;
+    background-size: cover; /*Cubrir todo el contenedor con la imagen*/
+    background-position: center; /*Centrar imagen*/
+    overflow: hidden; /*Esconde el texto que sobresale del contenedor*/
+    display: flex;
+    border: #229130 1px solid; /*Añadir iamgen*/
+    /**CENTRAR TEXTO**/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.est-img h2 { /*Sar estilo al texto dentro del contenedor*/
+    position: absolute;
+    bottom: -100%; /*Hacer que el texto se vaya abajo del contenedor y no sea visible en la imagen*/
+    text-align: center; /*Paras que el texto se alinee al centro*/
+    color: #229130;
+    transition: bottom 0.3s ease; /*Animacion*/
+    text-shadow: -1px -1px 0 #214e03, 1px -1px 0 #214e03, -1px 1px 0 #214e03, 1px 1px 0 #214e03; /*Añadir borde al texto*/
+}
+.est-img:hover h2{
+    bottom: 100px;
+}
+/*----Estilo a destacados----*/
+
+.proyectos-secc{ /*Estilo para los contenedores de proyectos*/
+    padding-bottom: 20px;
+    padding-right: 20px;
+    width: 90%;
+}
+.proyectos-secc p{
+    font-size: 25px;
+}
+
+/*ESTILOS FOOTER*/
+.footer {
+    display: flex;
+    flex-direction: column; /*Coloca los contenedores en columna*/
+    align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/
+    padding: 20px; /*Agrega espacio interior alrededor del contenido*/
+    background-color: #000; /* Establece un fondo negro*/
+    color: white; /*Define el color del texto en blanco*/
+    gap: 10px; /*Agrega espacio vertical entre los elementos*/
+  }
+  .footer-links {
+    display: flex; /*Hace que los enlaces estén en una fila horizontal*/
+    justify-content: center; /*Centra los enlaces horizontalmente*/
+    gap: 20px; /*Agrega separación horizontal entre los enlaces*/
+  }
+  .footer-links a {
+    color: white; /*Color de los enlaces en blanco*/
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
+    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
+  }
+  .footer-links a:hover {
+    color: #4bca56; /*Cambia el color al pasar el mouse en el enlace*/
+  }
+  .footer-copy {
+    margin: 0; /*Elimina el margen por defecto del párrafo*/
+    font-size: 0.9rem; /*Tamaño de fuente ligeramente más pequeño*/
+  }
+  
+/*---FOOTER----*/
+
+/*IDENTIFICADORES*/
+
+#img-pro { /*Para declarar la manera en que se alinean las iamgenes*/
+    height: 400px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+#proyectos-secc{ /*Id para contenedor de los proyectos*/
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6ebbf;
+    border: 2px #dfe2c3 solid;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 10px 20px 10px 20px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+#proyectos-secc h2 {
+    align-content: end;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+/*Menu hamburguesa*/
+/* Estilos para el icono de menú */
+.icon {
+    margin: 40px 50px; /* margen de arriba y a la derecha/izquierda*/
+    cursor: pointer;  /*indica que se puede clickear*/
+    position: relative; /* posicion relativa*/
+    z-index: 100; /*es una capa que se sobrepone sobre el 1 y 99 capas*/
+}
+
+/* Estilos para el contenedor del menú */
+.cont-menu {
+    background-color: rgb(42, 42, 42); 
+    box-shadow: -2px 0px 5px 2px rgb(66, 66, 66); /*define la sombra del elemento*/
+    width: 400px; /*ancho*/
+    height: 100vh; /*altura que tomara de la pantalla*/
+    position: fixed;  /* Cambiado de absolute a fixed */
+    top: 0; /*no tiene distancia con el borde superior*/
+    right: 0; /*no tiene distancia con el borde derecho*/
+    transition: all 0.5s ease; /*Realiza una animacion que desplaza el menu*/
+    transform: translateX(100%); /* Mueve el menú fuera de la pantalla a la derecha */
+    z-index: 999; /*Para que este encima de los demas objetos*/
+}
+
+/* Cuando el menú está activo */
+.active {
+    transform: translateX(0); /*el menu no es desplazado y es totalmente visible*/
+}
+
+/* Opacidad cuando el menú está abierto */
+/*Zona de pruebas*/
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5); /*color de la opacidad al desplazar el menu*/
+    transition: all 0.5s ease; /* animacion de transparencia al momento de abri el menu*/
+}
+/*Zona de pruebas*/
+
+/*modifica propiedades de la lista*/
+.cont-menu ul {
+    padding: 100px 0 20px 0; /*margen interno*/
+    list-style: none; /*elimina las viñetas o puntitios*/
+}
+
+/*apariencia para la lista de elementoss*/
+.cont-menu ul li a{
+    color: white;  /*color de la fuente*/
+    display: block;  /*toma todo el ancho del elemento y se apila*/
+    font-size: 25px; /*tamano de la fuente*/
+    text-decoration: none; /*le quita los puntos*/
+    padding: 10px 50px; /*margen interno*/
+    cursor: pointer; /*evento al pasar el maus*/
+}
+
+/*al pasar el maus por la lista del menu*/
+.cont-menu ul li:hover {
+    background-color: rgb(228, 228, 228); /*cambia el color de fondo a blanco*/
+    color: rgb(42, 42, 42); /*cambia el color del texto*/
+}
+
+/*Fin del menu hamburguesa*/
