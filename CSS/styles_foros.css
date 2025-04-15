@@ -10,64 +10,6 @@ body{
 
 /*CLASES*/
 
-
-/*HERO*/
-.hero {
-    position: relative; /* Permite posicionar los elementos internos de manera absoluta */
-    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
-    overflow: hidden; /* Oculta cualquier desbordamiento de las diapositivas */
-}
-/* ====== Estilos de las diapositivas ====== */
-
-.slide {
-    position: absolute; /* Se posicionan superpuestas una sobre otra */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupan todo el ancho */
-    height: 100%; /* Ocupan todo el alto */
-    opacity: 0; /* Se ocultan por defecto */
-    transition: opacity 1s ease-in-out; /* Transición suave al cambiar de diapositiva */
-}
-
-/* ====== Mostrar la diapositiva activa ====== */
-
-.slide.active {
-    opacity: 1; /* Solo la diapositiva activa es visible */
-}
-
-/* ====== Imágenes de las diapositivas ====== */
-
-.slide img {
-    width: 100%; /* La imagen ocupa todo el ancho */
-    height: 100%; /* La imagen ocupa todo el alto */
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
-}
-
-/* ====== Texto sobre las imágenes ====== */
-
-.slide .text {
-    position: absolute; /* Se posiciona sobre la imagen */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Centra completamente */
-    color: white; /* Texto en color blanco */
-    text-align: center; /* Texto alineado al centro */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre la imagen */
-}
-
-/* ====== Estilos del título ====== */
-
-.slide h1 {
-    font-size: 4em; /* Tamaño grande para destacar */
-    margin-bottom: 0.5em; /* Espacio entre el título y el párrafo */
-}
-
-/* ====== Estilos del párrafo ====== */
-
-.slide p {
-    font-size: 1.5em; /* Tamaño adecuado para mejorar la legibilidad */
-}
-
 /*ESTILO AL HEADER*/
 .header {
     /*Menu Sticky*/
@@ -85,7 +27,6 @@ body{
     flex-direction: row;
     justify-content: space-between; /*Para separar el título y el menú*/
     align-items: center; /*Para alinear verticalmente*/
-    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
 .header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
@@ -110,26 +51,6 @@ body{
     border: none; /* Elimina bordes */
     cursor: pointer; /* Muestra una mano al pasar el cursor */
     border-radius: 5px; /* Bordes redondeados */
-}
-.recurso{
-    height: 300px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
-}
-.recurso:hover{
-    transform: scale(0.97); /*Hace el boton mas pequeño*/
-}
-.img-rec{
-    width: 100%;
-    height: 100%;
-    background-color: #c4e8c2; /* Verdecito suave */
-    border-radius: 8px;
 }
 
 /*ESTILOS FOOTER*/
@@ -163,17 +84,6 @@ body{
 /*---FOOTER----*/
 
 /*IDENTIFICADORES*/
-#sec-rec{ /*Estilo de la seccion para recursos de agricultores*/
-    display: grid; /* Para dividir los divs en columnas */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de tamaño igual */
-    gap: 20px; /* Espacio entre los elementos */
-    padding: 40px; /* Espacio interno general del contenedor */
-    margin: 0 auto; /*Centrar los contenedores*/
-    box-sizing: border-box; /*Evitar que el padding empuje*/
-    border-radius: 20px;
-    background-color: #e6e9d1;
-    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
-}
 
 /*Menu hamburguesa*/
 /* Estilos para el icono de menú */

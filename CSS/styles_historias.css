@@ -4,8 +4,14 @@
     padding: 0;
     font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
 }
-header {
+body{
+    background-color: #e6eea8;
+}
 
+
+.header {
+    /*Menu Sticky*/
+    position: sticky; /*Para que se quede flotando en la pagina*/
     top: 0; /*Define que el header este hasta arriba*/
     width: 100%;
     z-index: 1000;
@@ -16,44 +22,61 @@ header {
     height: 85px;
     padding: 10px 15px;
     display: flex; /*Para organizar los elementos*/
+    flex-direction: row;
     justify-content: space-between; /*Para separar el título y el menú*/
     align-items: center; /*Para alinear verticalmente*/
+    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
-header nav li {
+.header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
     padding: 0 20px;
 }
-header nav li a {
+.header nav li a {
     font-family: "Montserrat", serif;
     font-weight: 700;
     text-decoration: none; /*Le quita el subrayado al enlace*/
-}
-body{
-    background-color: #e6eea8;
-}
-section a { /*Para que los enlaces tengan efecto de boton*/
-    padding: 10px 20px;
-    background-color: #BED333;
     color: white;
-    border-radius: 15px; /*Esquinas mas suaves*/
-    display: inline-block; /*Para que se le pueda poner dimensiones*/
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
 }
-section a:hover { /*Animacion del <a> al hacer clic*/
-    transform: scale(0.95); /*Hace el boton mas pequeño*/
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
+
+.toTop {
+    display: none; /* Inicialmente oculto, se mostrará con JavaScript */
+    position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho de la pantalla */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en color blanco */
+    border: none; /* Elimina bordes */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados */
 }
-footer {
-    display: flex; 
-    flex-direction: column; /*Para que los contenidos se acomoden como una columna*/
-    padding: 10px 0 10px 20px;
-    background-color: black;
-    font-weight: bold;
-}
-footer, a {
-    text-decoration: none;
-    color: white; /*Cambiar el color de los enlaces*/
-}
+
+.footer {
+    display: flex;
+    flex-direction: column; /*Coloca los contenedores en columna*/
+    align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/
+    padding: 20px; /*Agrega espacio interior alrededor del contenido*/
+    background-color: #000; /* Establece un fondo negro*/
+    color: white; /*Define el color del texto en blanco*/
+    gap: 10px; /*Agrega espacio vertical entre los elementos*/
+  }
+  .footer-links {
+    display: flex; /*Hace que los enlaces estén en una fila horizontal*/
+    justify-content: center; /*Centra los enlaces horizontalmente*/
+    gap: 20px; /*Agrega separación horizontal entre los enlaces*/
+  }
+  .footer-links a {
+    color: white; /*Color de los enlaces en blanco*/
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
+    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
+  }
+  .footer-links a:hover {
+    color: #4bca56; /*Cambia el color al pasar el mouse en el enlace*/
+  }
+  .footer-copy {
+    margin: 0; /*Elimina el margen por defecto del párrafo*/
+    font-size: 0.9rem; /*Tamaño de fuente ligeramente más pequeño*/
+  }
 
 /*Menu hamburguesa*/
 /* Estilos para el icono de menú */
@@ -75,8 +98,8 @@ footer, a {
     right: 0; /*no tiene distancia con el borde derecho*/
     transition: all 0.5s ease; /*Realiza una animacion que desplaza el menu*/
     transform: translateX(100%); /* Mueve el menú fuera de la pantalla a la derecha */
+    z-index: 999; /*Para que este encima de los demas objetos*/
 }
-
 
 /* Cuando el menú está activo */
 .active {
@@ -98,7 +121,7 @@ footer, a {
 }
 
 /*apariencia para la lista de elementoss*/
-.cont-menu ul li {
+.cont-menu ul li a{
     color: white;  /*color de la fuente*/
     display: block;  /*toma todo el ancho del elemento y se apila*/
     font-size: 25px; /*tamano de la fuente*/
@@ -114,34 +137,6 @@ footer, a {
 }
 
 /*Fin del menu hamburguesa*/
-
-
-/*menu pegajoso prueba*/
-/* Menú pegajoso */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #BED333;
-    color: white;
-    border-bottom: 5px rgb(252, 244, 244) solid;
-    height: 85px;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
-}
-
-/* Espacio para el header */
-body {
-    padding-top: 85px; /* Deja espacio para el header pegajoso */
-    background-color: #e6eea8;
-}
-
-/*menu pegajoso prueba*/
 
 .externo{
     margin: 1% 5% ;
@@ -174,20 +169,4 @@ body {
   background-position: center;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.footer-links {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    gap: 40px; /* Espacio entre los enlaces */
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #4caf50; /* Un verde cuando pasas el cursor */
 }

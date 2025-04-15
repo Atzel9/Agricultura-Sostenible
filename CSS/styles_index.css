@@ -40,6 +40,7 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     flex-direction: row;
     justify-content: space-between; /*Para separar el título y el menú*/
     align-items: center; /*Para alinear verticalmente*/
+    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
 .header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
