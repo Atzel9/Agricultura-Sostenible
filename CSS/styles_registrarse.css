@@ -5,7 +5,7 @@
     font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
 }
 body{
-    background-color: #e6eea8;
+    background: linear-gradient(-20deg, #BED333, #e2ec96); /*Degrada el fondo con tres colores*/
 }
 
 /*CLASES*/
@@ -40,6 +40,32 @@ body{
     color: white;
 }
 /*----HEADER----*/
+
+.input {
+    width: 90%; 
+    padding: 10px; /*margen interno*/
+    margin: 10px 0; /*margen externo*/
+    border: 1px solid #ccc; /*borde de un pixel*/
+    border-radius: 5px; /*Borde de las esquinas del input*/
+    box-sizing: border-box; /*hace que no se combine el margen o width*/
+    gap: 10px;
+}
+.button {
+    width: 100%; /*ancho*/
+    padding: 10px; /*margen interno*/
+    background: #667eea; /*color del boton*/
+    color: white; /*letras blancas*/
+    border: none; /*elimina el borde predeterminado del boton*/
+    border-radius: 5px; /*agregaborde redondo*/
+    cursor: pointer; /*hace referencia al momento de pasar el maus*/
+    transition: 0.3s; /*aÃ±ade una animacion cuando pasas el maus*/
+}
+.button:hover{
+    background: #5a67d8;
+}
+.p{
+    font-size: 0.85rem;
+}
 
 .toTop {
     display: none; /* Inicialmente oculto, se mostrará con JavaScript */
@@ -85,6 +111,22 @@ body{
 /*---FOOTER----*/
 
 /*IDENTIFICADORES*/
+
+#registro-cont{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.2rem;
+    width: 500px;
+}
 
 /*Menu hamburguesa*/
 /* Estilos para el icono de menú */
