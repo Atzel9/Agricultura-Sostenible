@@ -122,11 +122,17 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
 }
+.recurso p{
+    font-size: 1.2rem;
+}
 .recurso:hover{
     transform: scale(0.97); /*Hace el boton mas pequeño*/
 }
+.recurso-cont {
+    width: 60%;
+}
 .img-rec{
-    width: 100%;
+    width: 40%;
     height: 100%;
     background-color: #c4e8c2; /* Verdecito suave */
     border-radius: 8px;

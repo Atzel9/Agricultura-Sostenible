@@ -41,6 +41,8 @@ body{
 }
 /*----HEADER----*/
 
+
+/*REGISTRARSE ESTILOS*/
 .input {
     width: 90%; 
     padding: 10px; /*margen interno*/
@@ -66,6 +68,15 @@ body{
 .p{
     font-size: 0.85rem;
 }
+.terminos {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.boton-registro {
+    margin-top: 10px;
+}
+/*///REGISTARSE*/
 
 .toTop {
     display: none; /* Inicialmente oculto, se mostrará con JavaScript */
