@@ -134,8 +134,10 @@ body{
 .img-rec{
     width: 40%;
     height: 100%;
-    background-color: #c4e8c2; /* Verdecito suave */
+    background-color: #c4e8c2; 
     border-radius: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
 /*ESTILOS FOOTER*/
