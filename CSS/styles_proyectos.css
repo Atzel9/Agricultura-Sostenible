@@ -54,34 +54,6 @@ body{
     border-radius: 5px; /* Bordes redondeados */
 }
 
-/*DESTACADOS*/
-.est-img{ /*Estilo para el contenedor de 3 imagenes en la seccion de proyectos de innovacion*/
-    width: 33.3%;
-    height: 300px;
-    position: relative;
-    background-size: cover; /*Cubrir todo el contenedor con la imagen*/
-    background-position: center; /*Centrar imagen*/
-    overflow: hidden; /*Esconde el texto que sobresale del contenedor*/
-    display: flex;
-    border: #229130 1px solid; /*Añadir iamgen*/
-    /**CENTRAR TEXTO**/
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.est-img h2 { /*Sar estilo al texto dentro del contenedor*/
-    position: absolute;
-    bottom: -100%; /*Hacer que el texto se vaya abajo del contenedor y no sea visible en la imagen*/
-    text-align: center; /*Paras que el texto se alinee al centro*/
-    color: #229130;
-    transition: bottom 0.3s ease; /*Animacion*/
-    text-shadow: -1px -1px 0 #214e03, 1px -1px 0 #214e03, -1px 1px 0 #214e03, 1px 1px 0 #214e03; /*Añadir borde al texto*/
-}
-.est-img:hover h2{
-    bottom: 100px;
-}
-/*----Estilo a destacados----*/
-
 .proyectos-secc{ /*Estilo para los contenedores de proyectos*/
     padding-bottom: 20px;
     padding-right: 20px;
@@ -89,6 +61,22 @@ body{
 }
 .proyectos-secc p{
     font-size: 25px;
+}
+.Estilo-cont {
+    position: absolute;
+    background-color: #e6ebbf;
+    border: 2px #dfe2c3 solid;
+    padding: 20px 50px 20px 50px;
+    margin: 500px 70px 10px 70px;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 350px;
 }
 
 /*ESTILOS FOOTER*/
@@ -123,23 +111,21 @@ body{
 
 /*IDENTIFICADORES*/
 
-#img-pro { /*Para declarar la manera en que se alinean las iamgenes*/
-    height: 400px;
+#img-pro { 
+    position: relative;
+    background: 
+    linear-gradient(to top, rgba(230, 238, 168, 1) 10%, rgba(0, 0, 0, 0) 55%),
+    url('../img/rotacion.webp') center/cover no-repeat;
+    height: 600px;
     width: 100%;
-    display:flex;
-    flex-direction: row;
 }
 #proyectos-secc{ /*Id para contenedor de los proyectos*/
-    position: relative;
-    bottom: 60px;
     display: flex;
     flex-direction: column;
     background-color: #e6ebbf;
     border: 2px #dfe2c3 solid;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    margin: 10px 20px 10px 20px;
+    padding: 20px 50px 20px 50px;
+    margin: 10px 70px 10px 70px;
     font-size: 30px;
     border-radius: 20px;
 }
