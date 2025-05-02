@@ -80,25 +80,34 @@ body{
     background-color: #BED333; 
     border-bottom: 5px rgb(252, 244, 244) solid;
     height: 85px;
-    padding: 10px 15px;
+    padding: 10px 50px 10px 50px;
     display: flex; /*Para organizar los elementos*/
     flex-direction: row;
-    justify-content: space-between; /*Para separar el título y el menú*/
     align-items: center; /*Para alinear verticalmente*/
     transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
+    justify-content: space-between;
 }
 .header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
     padding: 0 20px;
 }
-.header nav li a {
+.header nav ul li a {
     font-family: "Montserrat", serif;
     font-weight: 700;
     text-decoration: none; /*Le quita el subrayado al enlace*/
     color: white;
 }
+.cont-header {
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    align-items: center;
+}
 /*----HEADER----*/
 
+.index {
+    color: white;
+}
 .toTop {
     display: none; /* Inicialmente oculto, se mostrará con JavaScript */
     position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
