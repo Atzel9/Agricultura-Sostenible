@@ -88,8 +88,8 @@ text-decoration: none; /*elimina cualquier estilo que este predeterminado*/
 .twitter { background: #000; } 
 .instagram { background: #000; }
 
-/*Estilo de Header*/
-header {
+/*ESTILO AL HEADER*/
+.header {
     /*Menu Sticky*/
     position: sticky; /*Para que se quede flotando en la pagina*/
     top: 0; /*Define que el header este hasta arriba*/
@@ -105,47 +105,53 @@ header {
     flex-direction: row;
     justify-content: space-between; /*Para separar el título y el menú*/
     align-items: center; /*Para alinear verticalmente*/
+    transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
 }
-header nav li {
+.header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
     padding: 0 20px;
 }
-header nav li a {
+.header nav li a {
     font-family: "Montserrat", serif;
     font-weight: 700;
     text-decoration: none; /*Le quita el subrayado al enlace*/
-}
-/*ESTILO FOOTER*/
-
-footer {
-    background-color: black;
     color: white;
-    text-align: center;
-    padding: 30px 20px;
-    font-weight: bold;
 }
-footer, a {
-    text-decoration: none;
-    text-align: center;
-    color: white; /*Cambiar el color de los enlaces*/
-}
+/*----HEADER----*/
 
-.footer-links {
+
+/*ESTILOS FOOTER*/
+.footer {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    gap: 40px; /* Espacio entre los enlaces */
-    margin-bottom: 15px;
-}
+    flex-direction: column; /*Coloca los contenedores en columna*/
+    align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/
+    padding: 20px; /*Agrega espacio interior alrededor del contenido*/
+    background-color: #000; /* Establece un fondo negro*/
+    color: white; /*Define el color del texto en blanco*/
+    gap: 10px; /*Agrega espacio vertical entre los elementos*/
+  }
+  .footer-links {
+    display: flex; /*Hace que los enlaces estén en una fila horizontal*/
+    justify-content: center; /*Centra los enlaces horizontalmente*/
+    gap: 20px; /*Agrega separación horizontal entre los enlaces*/
+  }
+  .footer-links a {
+    color: white; /*Color de los enlaces en blanco*/
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
+    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
+  }
+  .footer-links a:hover {
+    color: #4bca56; /*Cambia el color al pasar el mouse en el enlace*/
+  }
+  .footer-copy {
+    margin: 0; /*Elimina el margen por defecto del párrafo*/
+    font-size: 0.9rem; /*Tamaño de fuente ligeramente más pequeño*/
+  }
+  
+/*---FOOTER----*/
 
-.footer-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
 
-.footer-links a:hover {
-    color: #4caf50; /* Un verde cuando pasas el cursor */
-}
+
 /*Menu hamburguesa*/
 /* Estilos para el icono de menú */
 .icon {
@@ -169,7 +175,6 @@ footer, a {
     z-index: 999; /*Para que este encima de los demas objetos*/
 }
 
-
 /* Cuando el menú está activo */
 .active {
     transform: translateX(0); /*el menu no es desplazado y es totalmente visible*/
@@ -186,23 +191,31 @@ footer, a {
 /*modifica propiedades de la lista*/
 .cont-menu ul {
     padding: 100px 0 20px 0; /*margen interno*/
-    list-style: none; /*elimina las viñetas o puntitios*/
+    list-style: none; /*elimina las viñetas o puntitos*/
 }
 
 /*apariencia para la lista de elementoss*/
-.cont-menu ul li {
+.cont-menu ul li a{
     color: white;  /*color de la fuente*/
     display: block;  /*toma todo el ancho del elemento y se apila*/
     font-size: 25px; /*tamano de la fuente*/
     text-decoration: none; /*le quita los puntos*/
     padding: 10px 50px; /*margen interno*/
-    cursor: pointer; /*evento al pasar el maus*/
+    cursor: pointer; /*evento al pasar el mouse*/
+    transition: color 0.3s ease;
+}
+.cont-menu ul li a i{
+    transition: color 0.3s ease;
+}
+.cont-menu ul li a:hover,
+.cont-menu ul li a:hover i {
+    color: rgb(4, 41, 4);
 }
 
-/*al pasar el maus por la lista del menu*/
+/*al pasar el mouse por la lista del menu*/
 .cont-menu ul li:hover {
     background-color: rgb(228, 228, 228); /*cambia el color de fondo a blanco*/
-    color: rgb(42, 42, 42); /*cambia el color del texto*/
+    transition: color 0.3s ease;
 }
 
 /*Fin del menu hamburguesa*/

@@ -134,13 +134,21 @@ body{
     font-size: 25px; /*tamano de la fuente*/
     text-decoration: none; /*le quita los puntos*/
     padding: 10px 50px; /*margen interno*/
-    cursor: pointer; /*evento al pasar el maus*/
+    cursor: pointer; /*evento al pasar el mouse*/
+    transition: color 0.3s ease;
+}
+.cont-menu ul li a i{
+    transition: color 0.3s ease;
+}
+.cont-menu ul li a:hover,
+.cont-menu ul li a:hover i {
+    color: rgb(4, 41, 4);
 }
 
-/*al pasar el maus por la lista del menu*/
+/*al pasar el mouse por la lista del menu*/
 .cont-menu ul li:hover {
     background-color: rgb(228, 228, 228); /*cambia el color de fondo a blanco*/
-    color: rgb(42, 42, 42); /*cambia el color del texto*/
+    transition: color 0.3s ease;
 }
 
 /*Fin del menu hamburguesa*/
