@@ -57,7 +57,7 @@ body{
     bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
     right: 20px; /* Distancia desde el lado derecho de la pantalla */
     padding: 10px 15px; /* Espaciado interno */
-    background-color: #BED333; /* Color verde */
+    background-color: #007BFF; /* Color azul */
     color: white; /* Texto en color blanco */
     border: none; /* Elimina bordes */
     cursor: pointer; /* Muestra una mano al pasar el cursor */
@@ -163,3 +163,134 @@ body{
 }
 
 /*Fin del menu hamburguesa*/
+
+/**/
+
+
+
+
+
+.externo{
+    margin: 1% 5% ;
+    border-radius: 20px;
+    background-color: #e6ebbf;
+    border: 3px #dfe2c3 solid;
+}
+.seccion{
+    margin: 20px 50px 20px 50px;
+    padding: 10px 30px 30px 30px;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+    border-radius: 20px; /*Bordes mas suaves*/
+    display: flex; /*Declara el flexbox*/
+    flex-direction: row; /*Acomoda el texto y las imagenes en fila*/ 
+}
+
+.interno{
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: justify;
+}
+
+
+.comencemos{
+    margin: 5% 0%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.formright{
+    display: flex;
+}
+/**/
+
+.imgmenu{
+
+        width: 100%;
+        height: 400px;
+        background-image: url('../img/green-sprouts-winter-wheat-emerge-600nw-2553658033.webp');
+        background-size: cover;
+        background-position: center;
+}
+
+.txtmenu{
+
+    padding-top: 160px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+
+/*formulario*/
+
+.formright{
+    margin: 5% 5%;
+}
+
+/*forma del formulario*/
+.inicio-container {
+    background: #BED333; /*Fondo blanco*/
+    padding: 20px; /*Margen interno*/
+    border-radius: 10px; /*Agrega bordes a las esquinas*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Agrega sombras*/
+    text-align: center; /*Alinea el Texto*/
+    width: 600px; /*Ancho del formulario*/
+}
+
+/*Modifica el titulo que dice iniciar sesion*/
+.inicio-container h1 {
+    margin-bottom: 20px; /*tiene una separacion en la parte de abajo*/
+}
+
+.input-field {
+width: 100%; /*ancho maximo*/
+padding: 10px; /*margen interno*/
+margin: 10px 0; /*margen externo*/
+border: 1px solid #ccc; /*borde de un pixel*/
+border-radius: 5px; /*Borde de las esquinas del input*/
+box-sizing: border-box; /*hace que no se combine el margen o width*/
+background-color: #e6eea8;
+ }
+
+.input-field-special{
+    width: 100%; /*ancho maximo*/
+    padding: 10px; /*margen interno*/
+    margin: 10px 0; /*margen externo*/
+    border: 1px solid #ccc; /*borde de un pixel*/
+    border-radius: 5px; /*Borde de las esquinas del input*/
+    box-sizing: border-box; /*hace que no se combine el margen o width*/
+    background-color: #e6eea8;
+    height: 70px;
+}
+
+ /*Boton de ingresar*/
+.inicio-btn {
+    width: 100%; /*ancho*/
+    padding: 10px; /*margen interno*/
+    background: black; /*color del boton*/
+    color: white; /*letras blancas*/
+    border: none; /*elimina el borde predeterminado del boton*/
+    border-radius: 5px; /*agregaborde redondo*/
+    cursor: pointer; /*hace referencia al momento de pasar el maus*/
+    transition: background 0.3s; /*añade una animacion cuando pasas el maus*/
+}
+/*cambia el color de fondo del boton ingresar*/
+.inicio-btn:hover {
+    background: #f4a300;
+}
+/*cambia las porpiedades del link con la frase registrate*/
+.registro {
+    margin-top: 10px; /*margen superior*/
+    font-size: 14px; /*tamañp de fuente*/
+}
+/*modifica la etiqueta <a> dentro del parrafo*/
+.registro a {
+    color: #667eea; /*para cambiar el color*/
+    text-decoration: none; /*le quita el subrayado*/
+}
+/*al momento de pasar al maus se añade un delineado*/
+.registro a:hover {
+    text-decoration: underline; /*delineado*/
+}
