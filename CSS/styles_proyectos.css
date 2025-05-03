@@ -69,7 +69,8 @@ body{
     padding-right: 20px;
     width: 90%;
 }
-.proyectos-secc p{
+.proyectos-secc p,
+.proyectos-secc a{
     font-size: 25px;
 }
 .Estilo-cont {
