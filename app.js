@@ -1,3 +1,4 @@
+// Menu hamburguesa
 const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
 
     menu = document.querySelector('#menu'); 
