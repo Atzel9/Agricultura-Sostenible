@@ -1,0 +1,12 @@
+.info {
+    margin: 5vh 35vh 5vh 10vh;
+    padding: 10px 10px 10px 30px;
+    background-color: #e6ebbf;
+    border: #dfe2c3 solid;
+    border-radius: 15px;
+}
+.tit {
+    font-size: 1.5rem;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
