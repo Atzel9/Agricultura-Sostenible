@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Contactos</title>
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
-            <h1>Contactos (Beta)</h1>
+            <h1>Contactos.</h1>
         </div>
         <nav class="cont-header">
             <ul>
@@ -47,26 +47,42 @@
             <p>Contactate con nosotros</p>
         </div>
     </div>
-
+<main>
     <section class="externo"> <!--el fondo de mero atras-->
-        <h1 class="comencemos"><i class="bi bi-caret-down-fill"></i>Comencemos una conversación<i class="bi bi-caret-down-fill"></i></h1>
-        <section class="seccion"> <!--los cuadros de informacion-->
+        <h1 class="comencemos" onmouseenter="irAlFinal()"><i class="bi bi-caret-down-fill"></i>Comencemos una conversación<i class="bi bi-caret-down-fill"></i></h1>
+        <section class="seccion" > <!--los cuadros de informacion-->
 
            
+            
 
-            <div class="interno"> <!--contenido-->
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet congue nibh. Phasellus feugiat semper tortor, at pellentesque est. Quisque tincidunt faucibus arcu nec efficitur. Proin vitae efficitur odio, vel sagittis mi. Etiam et dignissim nisl, lacinia luctus nisi. Ut ac sem et nisl condimentum hendrerit eget a turpis. Sed quis nisl nisi. Vestibulum est libero, consectetur eget vehicula non, mollis nec augue. Etiam placerat est a lectus viverra, sit amet hendrerit arcu molestie. Aenean non nisl pharetra, imperdiet est sit amet, egestas tellus. Donec ac odio malesuada, mattis velit at, tempor felis.
+            <section class="interno"> <!--contenido-->
+                <div class="apilar">
+                <h1 class="h1-size">¿Sobre qué puedes comentar?</h1><br>
 
-              
+                <b> Consultas sobre productos o servicios:</b> Si tienes preguntas sobre nuestros productos o servicios,
+                no dudes en <span style="color: #BED333;">comentarlas</span>. Estamos aquí para ayudarte. <br>
+                <br>
+                <b> Sugerencias de mejora: </b> Nos interesa saber cómo podemos mejorar nuestro sitio o servicios.
+                <span style="color: #BED333;">Tu opinión es importante. </span><br>
+                <br>
+                <b> Problemas técnicos: </b>Si encontraste algún <span style="color: #BED333;"> error o problema </span> en el sitio, por favor descríbelo 
+                para que podamos solucionarlo rápidamente. <br>
+                <br>
+                <b> Comentarios generales: </b><span style="color: #BED333;">Cuéntanos</span> qué te parece nuestra página o si hay algo que te gustaría
+                cambiar. <br>
+                <br>
+                <b> Solicitudes de soporte: </b>Si necesitas <span style="color: #BED333;">ayuda</span> con tu cuenta o algún servicio, por favor,
+                explícanos tu solicitud para poder ofrecerte la mejor asistencia.              
             </div>
-
+            </section>
        
 
-
-            <div>
-            <aside class="formright">
+            
+            <div class="apilarform">
+            <section class="formright">
                  <div class="inicio-container">
-                 <h1>Envía tu comentario</h1>
+                 <h1>¿Tienes dudas? Escríbenos</h1>
+                 
                  <!--Formulario de mensajeria-->
                  <form>
                      <!--contenedor con el nombre-->
@@ -74,24 +90,28 @@
                      <!--contenedor con la correo eletronico-->
                      <input type="text" class="input-field" placeholder="Correo Electronico" required>
                      <!--contenedor con el mensaje-->
-                     <input type="text" class="input-field-special" placeholder="Escribe un comentario" required>
+                     <textarea class="input-field-special" placeholder="Escribe un comentario" required></textarea>
                      <!--Boton de enviar-->
                      <button type="submit" class="inicio-btn">Enviar</button>
-             
-                     
                      </form>
-                     
-                 </div>
-            </aside>
+                    </div>
+            </section>
+
+                    <p class="otros"><b>También nos puedes contactar por:</b></p>
+
+                    <div class="social-login">
+                        <!--Enlaces para Inicar sesión con Redes Sociales -->
+                        <a href="https://www.youtube.com/watch?v=Mecelo2DCnE" class="youtube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
         </div>
         </section>
-
-
-
-
+    </main>
 
     <!--Inicio del footer-->
-    <footer class="footer">
+    <footer class="footer" id="final-pagina">
         <div class="footer-links">
           <a href="#">Sobre nosotros</a>
           <a href="/html/politica.html">Política de privacidad</a>
@@ -99,8 +119,16 @@
         </div>
         <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
       </footer>
+
+        <!-- Botón para regresar arriba -->
+        <button class="toTop" title="Ir arriba"><i class="bi bi-caret-up"></i></button>
+
+
+    
+
+
     <!--codigo de javaScript-->
-    <script src="contactos.js"></script>
+    <script src="../contactos.js"></script>
 
 </body>
 </html>
