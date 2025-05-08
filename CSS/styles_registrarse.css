@@ -54,13 +54,13 @@ body{
 
 /*REGISTRARSE ESTILOS*/
 .input {
-    width: 90%; 
+    width: 90%; /*Ancho*/
     padding: 10px; /*margen interno*/
     margin: 10px 0; /*margen externo*/
     border: 1px solid #ccc; /*borde de un pixel*/
     border-radius: 5px; /*Borde de las esquinas del input*/
     box-sizing: border-box; /*hace que no se combine el margen o width*/
-    gap: 10px;
+    gap: 10px; /*Espaciado entre los elementos dentro*/
 }
 .button {
     width: 100%; /*ancho*/
@@ -70,9 +70,9 @@ body{
     border: none; /*elimina el borde predeterminado del boton*/
     border-radius: 5px; /*agregaborde redondo*/
     cursor: pointer; /*hace referencia al momento de pasar el maus*/
-    transition: 0.3s; /*aÃ±ade una animacion cuando pasas el maus*/
+    transition: 0.3s; /*añade una animacion cuando pasas el maus*/
 }
-.button:hover{
+.button:hover{ /*Animacion del boton para cuando el mouse pasa*/
     background: #5a67d8;
 }
 .p{
@@ -134,19 +134,19 @@ body{
 /*IDENTIFICADORES*/
 
 #registro-cont{
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-size: 1.2rem;
-    width: 500px;
+    margin: 0 auto; /*Eliminar margen*/
+    margin-top: 30px; /*Para empujar contenido desde arriba*/
+    margin-bottom: 30px; /*Para empujar contenido desde abajo*/
+    background-color: white; /*Color de fondo*/
+    padding: 20px; /*Espaciado dentro*/
+    display: flex; /*Para organizar mejor los elementos*/
+    flex-direction: column; /*Para que los elementos se acomoden como en columna*/
+    gap: 20px; /*Espaciado entre cada elementos*/
+    border-radius: 10px; /*Bordes mas suaves*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Sombra detras del contenedor*/
+    text-align: center; /*Alinear el texto al centro*/
+    font-size: 1.2rem; /*Ajustar el tamñano del texto*/
+    width: 500px; /*Ancho*/
 }
 
 /*Menu hamburguesa*/

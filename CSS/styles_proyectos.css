@@ -70,23 +70,23 @@ body{
     width: 90%;
 }
 .proyectos-secc p,
-.proyectos-secc a{
+.proyectos-secc a{ /*Ajustar fuente*/
     font-size: 25px;
 }
-.Estilo-cont {
-    position: relative;
+.Estilo-cont { /*Estilos al contenedor donde se presenta la información*/
+    position: relative; /*Para que el contenedor se pueda posicionar correctamente en el hero*/
     background-color: #e6ebbf;
-    border: 2px #dfe2c3 solid;
+    border: 2px #dfe2c3 solid; /*Margen*/
     padding: 20px 50px 20px 50px;
     margin: 150px 70px 10px 70px;
     font-size: 1.5rem;
-    border-radius: 20px;
+    border-radius: 20px; /*Bordes suaves*/
 }
 .hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    display: flex; /*Para acomodar los dos contenedores*/
+    align-items: center; /*Centrar elementos de manera horizontal*/
+    justify-content: center; /*Centrar elementos de manera vertical*/
+    position: relative; /*Para que se pueda posicionar correctamente*/
 }
 
 /*ESTILOS FOOTER*/
@@ -121,27 +121,27 @@ body{
 
 /*IDENTIFICADORES*/
 
-#img-pro { 
-    position: absolute;
+#img-pro { /*Imagen de hero*/
+    position: absolute; /*Para posicionarlo desde del body*/
     background: 
     linear-gradient(to top, rgba(230, 238, 168, 1) 10%, rgba(0, 0, 0, 0) 55%),
-    url('../img/rotacion.webp') center/cover no-repeat;
+    url('../img/rotacion.webp') center/cover no-repeat; /*Se añade el pequeño degradado debajo*/
     height: 600px;
     width: 100%;
 }
 #proyectos-secc{ /*Id para contenedor de los proyectos*/
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #e6ebbf;
-    border: 2px #dfe2c3 solid;
+    position: relative; /*Para permitir un posicionamiento correcto*/
+    display: flex; /*Para organizar los elementos dentro*/
+    flex-direction: column; /*Para que los elementos se acomoden como columna*/
+    background-color: #e6ebbf; /*Color del fondo*/
+    border: 2px #dfe2c3 solid; /*Margen*/
     padding: 20px 50px 20px 50px;
     margin: 10px 70px 10px 70px;
     font-size: 30px;
     border-radius: 20px;
-    z-index: 3;
+    z-index: 3; /*Para que se ponga delante de los otros elementos y no se oculte la información*/
 }
-#proyectos-secc h2 {
+#proyectos-secc h2 { /*Estilos a los titulos*/
     align-content: end;
     justify-content: end;
     padding-top: 20px;
