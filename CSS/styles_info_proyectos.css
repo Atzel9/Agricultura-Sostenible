@@ -1,9 +1,21 @@
 .info { /*Estilo para el contenedor en donde se encuentra la info*/
-    margin: 5vh 35vh 5vh 10vh;
+    margin: 5vh 40vh 5vh 10vh;
     padding: 10px 10px 10px 30px;
     background-color: #e6ebbf;
     border: #dfe2c3 solid; /*Margen*/
     border-radius: 15px; /*Bordes redondos*/
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /*Sombra para un mjeor estilo*/
+}
+.img-info {
+    background-size: cover; /*Cubrir toda la parte*/
+    background-position: center; /*Centrar la imagen en el centro*/
+    border-radius: 10px; /*Borde mas suave*/
+    margin-bottom: 20px; /*Espaciado debajo*/
+}
+.info p { /*Separación entre los parrafos*/
+    margin-bottom: 16px; /*Espaciado entre los parrafos*/
+    line-height: 1.8; /*Aumentar el espacio de la linea*/
+    font-size: 18px; /*Ajustar la fuente*/
 }
 .tit { /*Clase para hacer el titulo mas grane*/
     font-size: 1.5rem;
