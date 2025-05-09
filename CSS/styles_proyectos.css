@@ -71,7 +71,10 @@ body{
 }
 .proyectos-secc p,
 .proyectos-secc a{ /*Ajustar fuente*/
-    font-size: 25px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
 }
 .Estilo-cont { /*Estilos al contenedor donde se presenta la información*/
     position: relative; /*Para que el contenedor se pueda posicionar correctamente en el hero*/
@@ -142,6 +145,7 @@ body{
     z-index: 3; /*Para que se ponga delante de los otros elementos y no se oculte la información*/
 }
 #proyectos-secc h2 { /*Estilos a los titulos*/
+    font-size: 25px;
     align-content: end;
     justify-content: end;
     padding-top: 20px;
