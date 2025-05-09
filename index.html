@@ -17,12 +17,13 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
-            <h1>Bienvenidos a agricultura sostenible</h1>
+            <h1 data-trad="titulo">Bienvenidos a agricultura sostenible</h1>
         </div>
         <nav class="cont-header">
             <ul>
-                <li><a href="../Agricultura-Sostenible/html/contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="html/registrarse.html" title="Registrarse">Registrarse</a></li>
+                <li><a href="../Agricultura-Sostenible/html/contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
+                <li><a href="html/registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
+                <li><button id="traducir">Traducir</button></li>
             </ul>
             <!--menu hamburguesa-->
             <div id="icono-menu" class="icon">
@@ -33,12 +34,12 @@
     <!-- Menú oculto -->
     <div class="cont-menu" id="menu">
         <ul>
-            <li><a href="index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="html/proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="html/recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="html/historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="html/foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="html/inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+            <li><a href="index.html"><i class="bi bi-house-fill" data-trad="Inicio"></i>Inicio</a></li>
+            <li><a href="html/proyectos.html"><i class="bi bi-flower2" data-trad="Proyectos"></i>Proyectos de innovacion</a></li>
+            <li><a href="html/recursos.html"><i class="bi bi-tree-fill" data-trad="Recursos"></i>Recursos para agricultores</a></li>
+            <li><a href="html/historias.html"><i class="bi bi-book-fill" data-trad="Historias"></i>Historias de exito</a></li>
+            <li><a href="html/foros.html"><i class="bi bi-people-fill" data-trad="Foro"></i>Foro de Innovacion</a></li>
+            <li><a href="html/inicio_sesion.html"><i class="bi bi-person-fill" data-trad="Sesion"></i>Iniciar sesión</a></li>
         </ul>
     </div>
     <div class="hero"><!--Seccion para el hero-->
@@ -46,7 +47,7 @@
         <div class="slide active">
             <img src="img/Diapositiva1.webp" alt="Imagen 1"> <!-- Imagen de fondo -->
             <div class="text">
-                <h1>Implementa la agricultura del futuro en tu campo</h1>
+                <h1 data-trad="Implementa">Implementa la agricultura del futuro en tu campo</h1>
             </div>
         </div>
 
@@ -54,7 +55,7 @@
         <div class="slide">
             <img src="img/Diapositiva2.jpg" alt="Imagen 2">
             <div class="text">
-                <h1>Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad</h1>
+                <h1 data-trad="Cultiva">Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad</h1>
             </div>
         </div>
 
@@ -62,7 +63,7 @@
         <div class="slide">
             <img src="img/Diapositiva3.jpg" alt="Imagen 3">
             <div class="text">
-                <h1>Transforma tu tierra con tecnología inteligente y prácticas responsables</h1>
+                <h1 data-trad="Transforma">Transforma tu tierra con tecnología inteligente y prácticas responsables</h1>
             </div>
         </div>
     </div>
@@ -71,64 +72,64 @@
     <section id="beneficios" class="contenedor">
         <div class="beneficios">
             <div class="beneficios-txt">
-                <h3>Menos pesticidas</h3> <br>
-                <p>Reducir el uso de productos químicos para controlar plagas y enfermedades, priorizando métodos más naturales y menos dañinos para el medio ambiente.<br>Control biologico el cual es el uso de insectos que combaten plagas o cultivos resistentes para resistir las plagas y enfermedades.</p>
+                <h3 data-trad="Menos">Menos pesticidas</h3> <br>
+                <p data-trad="Menos-descripcion">Reducir el uso de productos químicos para controlar plagas y enfermedades, priorizando métodos más naturales y menos dañinos para el medio ambiente.<br>Control biologico el cual es el uso de insectos que combaten plagas o cultivos resistentes para resistir las plagas y enfermedades.</p>
             </div>
             <div style="background-image: url(img/fertilizante.jpg);" class="beneficios-img" alt="Persona con pesticida"></div>
         </div>
         <div class="beneficios">
             <div class="beneficios-txt">
-                <h3>Menos agua</h3> <br>
-                <p>Utilizar tecnologías prácticas que optimicen el uso del agua como el riego por goteo o la recuperación de agua pluviales para prevenir el desperdicio y mantener la eficiencia y asegurando la disponibilidad de recursos hídricos a largo plazo.</p>
+                <h3 data-trad="Menos2">Menos agua</h3> <br>
+                <p data-trad="Menos2-descripcion">Utilizar tecnologías prácticas que optimicen el uso del agua como el riego por goteo o la recuperación de agua pluviales para prevenir el desperdicio y mantener la eficiencia y asegurando la disponibilidad de recursos hídricos a largo plazo.</p>
             </div>
             <div style="background-image: url(img/Agua.jpg);" class="beneficios-img" alt="Sistemas de riego"></div>
         </div>
         <div class="beneficios">
             <div class="beneficios-txt">
-                <h3>Mejor rendimiento</h3> <br>
-                <P>Maximizar la producción de cultivos utilizando prácicas que no dañen y protegan el medio ambiente, con el uso de fertilizantes orgánicos y la rotación de cultivos, para aumentar la calidad y cantidad en la cosecha</P>
+                <h3 data-trad="rendimiento">Mejor rendimiento</h3> <br>
+                <P data-trad="rendimiento-descripcion">Maximizar la producción de cultivos utilizando prácicas que no dañen y protegan el medio ambiente, con el uso de fertilizantes orgánicos y la rotación de cultivos, para aumentar la calidad y cantidad en la cosecha</P>
             </div>
             <div style="background-image: url(img/Cultivo.jpg);" class="beneficios-img" alt="Cultivos"></div>
         </div>
     </section>
     <!--Seccion Proyectos-->
     <section class="contenedor seccion">
-        <h3>&quot;Cultivando el Futuro: Innovación al Servicio del Planeta&quot;</h3> <br>
-        <p>En la era de la tecnología, la agricultura está evolucionando como nunca antes. Los avances en inteligencia artificial, drones, sensores inteligentes y técnicas de precisión están revolucionando la forma en que cultivamos nuestros alimentos.<br><br>
+        <h3 data-trad="Cultivando-el-Futuro">&quot;Cultivando el Futuro: Innovación al Servicio del Planeta&quot;</h3> <br>
+        <p data-trad="Culti-descripcion1">En la era de la tecnología, la agricultura está evolucionando como nunca antes. Los avances en inteligencia artificial, drones, sensores inteligentes y técnicas de precisión están revolucionando la forma en que cultivamos nuestros alimentos.<br><br>
             Descubre cómo estas innovaciones no solo aumentan la eficiencia y productividad, sino que también protegen nuestro medio ambiente, reducen el desperdicio de recursos y promueven prácticas agrícolas sostenibles para las generaciones futuras.<br><br>
             Explora nuestros Proyectos de Innovación y únete a la transformación del campo hacia un futuro más limpio, inteligente y resiliente.</p> <br>
-        <a href="html/proyectos.html" title="Proyectos de Innovación"><p>Proyectos de Innovación</p></a>
+        <a href="html/proyectos.html" title="Proyectos de Innovación" data-trad="Culti-btn"><p>Proyectos de Innovación</p></a>
     </section>
         <!--Seccion Recursos-->
     <section class="contenedor seccion">
-        <h3>&quot;Empodera tu Campo: Recursos Prácticos para una Agricultura Sostenible y Exitosa&quot;</h3> <br>
-        <p>¿Quieres mejorar tus cultivos, ahorrar agua y aumentar tu productividad sin comprometer el medio ambiente?
+        <h3 data-trad="Empodera-tu-campo">&quot;Empodera tu Campo: Recursos Prácticos para una Agricultura Sostenible y Exitosa&quot;</h3> <br>
+        <p data-trad="Empo-descripcion1">¿Quieres mejorar tus cultivos, ahorrar agua y aumentar tu productividad sin comprometer el medio ambiente?
             En esta sección, encontrarás guías prácticas, consejos expertos y materiales diseñados específicamente para ayudarte a implementar técnicas innovadoras y sostenibles en tu día a día. <br><br>
             
             🌱 Optimiza tus recursos : Aprende a usar el agua, la tierra y la energía de manera eficiente. <br>
             💡 Innovación al alcance : Descubre herramientas modernas que harán tu trabajo más fácil y rentable. <br>
             🌍 Cuida el planeta : Aplica prácticas que protegen el medio ambiente mientras impulsas tu negocio.</p> <br>
-        <a href="html/foros.html" title="Recursos para agricultores">Recursos para agricultores</a>
+        <a href="html/foros.html" title="Recursos para agricultores" data-trad="Empo-btn">Recursos para agricultores</a>
     </section>
     <!--Seccion Exitos-->
     <section class="contenedor seccion">
-        <h3>&quot;Historias que Inspiran: Agricultores Transformando su Futuro con Innovación&quot;</h3> <br>
-        <P>Descubre cómo agricultores como tú están revolucionando su trabajo mediante técnicas innovadoras y prácticas sostenibles. Estas historias reales te mostrarán cómo la tecnología, el conocimiento y la creatividad pueden transformar desafíos en oportunidades. <br><br>
+        <h3 data-trad="Historias-que-inspiran">&quot;Historias que Inspiran: Agricultores Transformando su Futuro con Innovación&quot;</h3> <br>
+        <P data-trad="Histo-descripcion1">Descubre cómo agricultores como tú están revolucionando su trabajo mediante técnicas innovadoras y prácticas sostenibles. Estas historias reales te mostrarán cómo la tecnología, el conocimiento y la creatividad pueden transformar desafíos en oportunidades. <br><br>
 
             🌾 De la tradición al futuro : Conoce a quienes han adoptado nuevas tecnologías para aumentar su productividad sin perder su conexión con la tierra.<br>
             💧 Soluciones inteligentes : Historias de agricultores que optimizaron el uso del agua y redujeron costos mientras protegían el medio ambiente.<br>
             🌍 Impacto positivo : Casos de éxito donde la sostenibilidad no solo benefició los cultivos, sino también las comunidades y ecosistemas locales.</P> <br>
-        <a href="html/historias.html" title="Historias de éxito">Historias de éxito</a>
+        <a href="html/historias.html" title="Historias de éxito" data-trad="Histo-btn">Historias de éxito</a>
     </section>
     <!--Seccion Foros-->
     <section class="contenedor seccion">
-        <h3>&quot;Conecta, Comparte, Crece: Únete a Nuestra Comunidad Global de Agricultores&quot;</h3> <br>
-        <p>¿Quieres ser parte de una conversación que está transformando el futuro de la agricultura? En nuestros foros, agricultores de todo el mundo se reúnen para compartir experiencias, resolver desafíos y explorar las últimas innovaciones en el campo.<br><br>
+        <h3 data-trad="ForosSeccion">&quot;Conecta, Comparte, Crece: Únete a Nuestra Comunidad Global de Agricultores&quot;</h3> <br>
+        <p data-trad="ForosSeccion-descripcion">¿Quieres ser parte de una conversación que está transformando el futuro de la agricultura? En nuestros foros, agricultores de todo el mundo se reúnen para compartir experiencias, resolver desafíos y explorar las últimas innovaciones en el campo.<br><br>
 
             👥 Construye conexiones globales : Conoce a agricultores de diferentes regiones y culturas que enfrentan desafíos similares a los tuyos.<br>
             💡 Aprende de expertos y pares : Participa en discusiones con especialistas y otros agricultores que están aplicando soluciones innovadoras.<br>
             🌱 Inspírate con nuevas ideas : Descubre tendencias, técnicas y herramientas que están revolucionando la agricultura sostenible.</p> <br>
-        <a href="html/foros.html" title="Foros">Explorar foros</a>
+        <a href="html/foros.html" title="Foros" data-trad="ForosSeccion-btn">Explorar foros</a>
     </section>
 
     <!-- Botón para regresar arriba -->
@@ -137,15 +138,16 @@
     <!--Inicio del footer-->
     <footer class="footer">
         <div class="footer-links">
-          <a href="#">Sobre nosotros</a>
-          <a href="/html/politica.html">Política de privacidad</a>
-          <a href="#">Contáctanos</a>
+          <a href="#" data-trad="Nosotros">Sobre nosotros</a>
+          <a href="/html/politica.html" data-trad="Politica">Política de privacidad</a>
+          <a href="#" data-trad="Contactanos">Contáctanos</a>
         </div>
-        <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
+        <p class="footer-copy" data-trad="copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
       </footer>
       
     <!--codigo de javaScript-->
     <script src="app.js"></script>
+    <script src="traducciones/traducciones.js"></script>
     
 </body>
 </html>
