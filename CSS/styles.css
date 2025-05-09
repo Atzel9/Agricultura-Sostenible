@@ -45,6 +45,10 @@ body{
     z-index: 10;
     align-items: center;
 }
+
+.cont-header ul li button {
+    background-color: #BED333;
+}
 /*----HEADER----*/
 
 .index {
