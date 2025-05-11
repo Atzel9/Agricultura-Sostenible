@@ -68,21 +68,29 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /*Efecto de sombra por detras*/
     transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
 }
-.recurso p{
-    font-size: 1.2rem;
-}
 .recurso:hover{
     transform: scale(0.97); /*Hace el boton mas pequeño*/
 }
 .recurso-cont {
     width: 60%;
 }
+.recurso-cont h3 a, 
+.recurso-cont h3 a:visited {
+    color: inherit;  /* Hereda el color del h3 */
+    text-decoration: none;  /* Sin subrayado */
+}
+.recurso-cont p a,
+.recurso-cont p a:visited{/*Estilo para que el parrafo no cambie de color*/
+    font-size: 1.2rem;     /*Aumentar el tamaño*/
+    text-decoration: none; /*Quitar subrayado*/
+    color: black;        /*Cambiar color*/
+}
 .img-rec{ /*Estilo para la imagen dentro de la tarjeta*/
-    width: 40%; /*Ancho*/
-    height: 100%; /*Alto*/
+    width: 40%;                  /*Ancho*/
+    height: 100%;                /*Alto*/
     background-color: #c4e8c2; /*Color de fondo*/
-    border-radius: 8px; /*Bordes mas suaves*/
-    background-size: cover; /*Cubrir todo el contenedor*/
+    border-radius: 8px;          /*Bordes mas suaves*/
+    background-size: cover;      /*Cubrir todo el contenedor*/
     background-position: center; /*Centrar la imagen*/
 }
 
