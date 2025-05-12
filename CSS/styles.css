@@ -29,6 +29,54 @@ body{
     transition: top 0.3s; /* Transición suave para aparecer/desaparecer */
     justify-content: space-between;
 }
+
+/* Contenedor del buscador */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px; /* Ancho inicial (solo la lupa) */
+    transition: width 0.3s ease; /* Transición suave al expandir */
+    overflow: hidden; /* Oculta el contenido fuera del contenedor */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-left: auto;
+}
+
+/* Botón de la lupa */
+.search-container button {
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #BED333;
+}
+
+/* Input de búsqueda (oculto inicialmente) */
+.search-container input {
+    display: none; /* Oculta completamente el input */
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    flex: 1; /* Toma el espacio restante */
+    font-size: 14px; /* Tamaño de fuente */
+    background-color: white;
+    color: white;
+}
+
+/* Efecto al hacer hover sobre el contenedor */
+.search-container:hover {
+    width: 170px; /* Ancho expandido */
+}
+
+.search-container:hover input {
+    display: block; /* Muestra el input */
+}
+
 .header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
     padding: 0 20px;
