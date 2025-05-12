@@ -1,0 +1,24 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+#bitacora {
+    font-family: 'Roboto', sans-serif;
+    margin: 5vh 10vh 5vh 10vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    background-color: #f9ffc8;
+    border: black 1px solid;
+    overflow: auto;
+    height: 80vh;
+}
+.version {
+    font-weight: bold;
+}
+.fecha  {
+    font-style: italic;
+}
+.tab  {
+    text-indent: 30px;
+}
