@@ -70,7 +70,7 @@ body{
 
 /* Efecto al hacer hover sobre el contenedor */
 .search-container:hover {
-    width: 170px; /* Ancho expandido */
+    width: 150px; /* Ancho expandido */
 }
 
 .search-container:hover input {
