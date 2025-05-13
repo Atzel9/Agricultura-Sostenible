@@ -52,6 +52,23 @@
         ,"innovacion-energia-descripcion":"The use of solar panels on farms allows harnessing the sun's energy to power irrigation systems, machinery, or storage. This renewable source reduces energy costs and makes agricultural production more self-sufficient."
         ,"innovacion-sistemas":"Intelligent Rainwater Harvesting Systems"
         ,"innovacion-sistemas-descripcion":"These systems collect, filter, and store rainwater for later use in irrigation or cleaning. With sensors and automation, it can be managed efficiently, reducing dependence on traditional water sources."
+
+        ,"Recursos":" Resources for farmers"
+        ,"Recursos-descubre":"Discover techniques"
+        ,"Recursos-explora":"Explore tools and technologies"
+        ,"Recursos-consejos":"Harvest tips"
+        ,"Recursos-guia":"Basic guide to optimize water use"
+        ,"Recursos-ahorrar":"Discover how to save water in your crops by implementing simple practices such as watering early in the morning, using ground cover to retain moisture, and adjusting the amount of water according to the specific needs of each plant."
+        ,"Recursos-calendario":"Seasonal planting calendar"
+        ,"Recursos-aprende":"Learn to plan your planting according to the seasons and climate. Know which crops thrive in spring, summer, fall, and winter to maximize your productivity throughout the year."
+        ,"Recursos-tecnicas":"Techniques to improve soil fertility"
+        ,"Recursos-manten":"Keep your soil healthy and fertile with accessible methods such as crop rotation, using homemade organic fertilizer, and covering with plant residues to prevent erosion and retain nutrients."
+        ,"Recursos-identificar":"How to identify common pests and control them"
+        ,"Recursos-detecta":"Detect the most common pests in your crops and learn to combat them naturally using repellent plants, beneficial insects, and other ecological solutions that protect your plants without harming the environment."
+        ,"Recursos-reducir":"Tips to reduce food waste after harvest"
+        ,"Recursos-evita":"Avoid post-harvest losses with simple practices such as storing products in cool, dry places, using airtight containers, and planning distribution to ensure your food reaches the market fresh."
+        ,"Recursos-beneficios":"Benefits of crop association"
+        ,"Recursos-optimiza":"Optimize your space and improve the balance of your field by planting complementary plants together. For example, combine corn with beans or onions with carrots to take advantage of their mutual benefits and increase your production."
     }
     , "es": {
         "titulo": "Bienvenido a la Agricultura Sostenible"
@@ -105,5 +122,23 @@
         ,"innovacion-energia-descripcion":"El uso de paneles solares en granjas permite aprovechar la energía del sol para alimentar sistemas de riego, maquinaria o almacenamiento. Esta fuente renovable reduce los costos energéticos y hace que la producción agrícola sea más autosuficiente."
         ,"innovacion-sistemas":"Sistemas de Recuperación de Agua de Lluvia Inteligentes"
         ,"innovacion-sistemas-descripcion":"Estos sistemas recolectan, filtran y almacenan agua de lluvia para su uso posterior en el riego o limpieza. Con sensores y automatización, se puede gestionar de forma eficiente, reduciendo la dependencia de fuentes de agua tradicionales."
+
+        ,"Recursos":" Recursos para agricultores"
+        ,"Recursos-descubre":"Descubré técnicas"
+        ,"Recursos-explora":"Explora las herramientas y tecnologías"
+        ,"Recursos-consejos":"Consejos de cosecha"
+        ,"Recursos-guia":"Guía básica para optimizar el uso del agua"
+        ,"Recursos-ahorrar":"Descubre cómo ahorrar agua en tus cultivos implementando prácticas sencillas como regar temprano en la mañana, usar cobertura vegetal para conservar la humedad y ajustar la cantidad de agua según las necesidades específicas de cada planta."
+        ,"Recursos-calendario":"Calendario de siembra estacional"
+        ,"Recursos-aprende":"Aprende a planificar tu siembra de acuerdo con las estaciones y el clima. Conoce qué cultivos prosperan en primavera, verano, otoño e invierno para maximizar tu productividad durante todo el año."
+        ,"Recursos-tecnicas":"Técnicas para mejorar la fertilidad del suelo"
+        ,"Recursos-manten":"Mantén tu suelo saludable y fértil con métodos accesibles como la rotación de cultivos, el uso de abono orgánico casero y la cobertura con residuos vegetales que previenen la erosión y conservan los nutrientes."
+        ,"Recursos-identificar":"Como identificar plagas comunes y controlarlas"
+        ,"Recursos-detecta":"Detecta las plagas más frecuentes en tus cultivos y aprende a combatirlas de forma natural utilizando plantas repelentes, insectos beneficiosos y otras soluciones ecológicas que protegen tus plantas sin dañar el medio ambiente."
+        ,"Recursos-reducir":"Consejos para reducir desperdicio de alimentos después de la cosecha"
+        ,"Recursos-evita":"Evita pérdidas después de la cosecha con prácticas simples como almacenar productos en lugares frescos y secos, usar envases herméticos y planificar la distribución para asegurar que tus alimentos lleguen frescos al mercado."
+        ,"Recursos-beneficios":"Beneficios de la asociación de cultivos"
+        ,"Recursos-optimiza":"Optimiza tu espacio y mejora el equilibrio de tu campo cultivando plantas complementarias juntas. Por ejemplo, combina maíz con frijoles o cebollas con zanahorias para aprovechar sus beneficios mutuos y aumentar tu producción."
+
     }
 }
