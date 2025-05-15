@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <!--Estlio CSS-->
     <link rel="stylesheet" href="../CSS/styles_historias.css ">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <!--Enlace a iconos de Bostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
@@ -17,18 +18,19 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="../index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
-            <h1>Historias de éxito</h1>
+            <h1 data-trad="Historias">Historias de éxito</h1>
         </div>
         <div class="search-container">
            <button id="search-button" title="Buscar">
                 <i class="bi bi-search"></i>
            </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar" data-trad="Buscar">
         </div>
         <nav class="cont-header">
             <ul>
-                <li><a href="contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="registrarse.html" title="Registrarse">Registrarse</a></li>
+                <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
+                <li><a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
+                <li><button id="traducir"><img src="../img/usa.png" alt="" id="iconoBtn"></button></li>
             </ul>
             <!--menu hamburguesa-->
             <div id="icono-menu" class="icon">
@@ -39,12 +41,12 @@
     <!-- Menú oculto -->
     <div class="cont-menu" id="menu">
         <ul>
-            <li><a href="../index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+            <li><a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
+            <li><a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
+            <li><a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
+            <li><a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
+            <li><a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
+            <li><a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
         </ul>
     </div>
 
@@ -52,28 +54,29 @@
 
     <section class="seccion"> <!--los cuadros de informacion-->
         <div class="interno"> <!--contenido-->
-            <h1>Historias de Exito</h1> <br>
+            <h1 data-trad="Historias">Historias de Exito</h1> <br>
             <br>
-            <p>
-                 <b><h3>Proyecto "Zero Budget Natural Farming" (ZBNF)</h3></b> <br>
+            <p data-trad="Historias-oportunidad">La agricultura sostenible no solo es una necesidad ambiental, sino también una oportunidad
+                 <b><h3 data-trad="Historias-oportunidad1">Proyecto "Zero Budget Natural Farming" (ZBNF)</h3></b> <br>
                     <br>
-                 En India Ubicación: Andhra Pradesh, India
-                 Principio clave: Agricultura sin costos externos ni productos químicos <br>
+                 <p data-trad="Historias-oportunidad2">En India Ubicación: Andhra Pradesh, India
+                 Principio clave: Agricultura sin costos externos ni productos químicos</p> <br>
                  <br>
-                 El proyecto ZBNF ha revolucionado la agricultura en India al capacitar a más de 6 millones de
+                 <p data-trad="Historias-oportunidad3">El proyecto ZBNF ha revolucionado la agricultura en India al capacitar a más de 6 millones de
                  agricultores en técnicas naturales que eliminan el uso de fertilizantes y pesticidas químicos. 
                  Mediante la implementación de prácticas como la fermentación natural, la rotación de cultivos 
                  y el uso de abonos verdes, los agricultores han reducido sus costos operativos en un 80% y han 
-                 mejorado significativamente la calidad del suelo. <br>
+                 mejorado significativamente la calidad del suelo.</p> <br>
                  <br>
-                 Además, se ha registrado un aumento del 30%
-                 en los rendimientos de cultivos como el arroz y el maíz.
+                 <p data-trad="Historias-oportunidad4">Además, se ha registrado un aumento del 30%
+                 mejorado significativamente la calidad del suelo.
+                 en los rendimientos de cultivos como el arroz y el maíz.</p> <br>
                  
-                 Este modelo no solo ha fortalecido
+                 <p data-trad="Historias-oportunidad5">Este modelo no solo ha fortalecido
                  la seguridad alimentaria, sino que también ha disminuido la dependencia de préstamos
-                 externos, mejorando la estabilidad económica de las familias rurales. <br>
+                 externos, mejorando la estabilidad económica de las familias rurales.</p> <br>
 
-                 Fuente: India Together - ZBNF
+                 <p data-trad="Historias-oportunidad6">Fuente: India Together - ZBNF</p>
             </p>
         </div>
             <div
@@ -86,21 +89,21 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Sistema Agroforestal en Costa Rica</h3></b> <br>
+                 <b><h3 data-trad="Historias-CR">Sistema Agroforestal en Costa Rica</h3></b> <br>
                  <br>
-                 Ubicación: Región de Talamanca, Costa Rica <br>
-                 Principio clave: Integración de árboles y cultivos <br>
+                 <p data-trad="Historias-CR1">Ubicación: Región de Talamanca, Costa Rica <br>
+                 Principio clave: Integración de árboles y cultivos</p> <br>
                  <br>
                 
-                 En la región de Talamanca, pequeños agricultores indígenas han adoptado sistemas agroforestales
+                 <p data-trad="Historias-CR2">En la región de Talamanca, pequeños agricultores indígenas han adoptado sistemas agroforestales
                  que combinan cultivos como el cacao con árboles maderables y frutales nativos. Esta práctica 
                  ha permitido restaurar ecosistemas degradados, aumentar la biodiversidad y mejorar la capacidad
                  del suelo para retener agua. Como resultado, los agricultores han duplicado sus ingresos 
                  gracias a la venta de productos certificados como orgánicos y sostenibles en mercados
                  internacionales. Este enfoque también ha contribuido a la mitigación del cambio climático 
-                 mediante la captura de carbono. <br>
+                 mediante la captura de carbono.</p> <br>
 
-                 Fuente: World Agroforestry
+                 <p data-trad="Historias-CR3">Fuente: World Agroforestry</p>
             </p>
         </div>
         <div
@@ -111,24 +114,24 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Agricultura Regenerativa en Estados Unidos</h3></b> <br>
+                 <b><h3 data-trad="Historias-EU">Agricultura Regenerativa en Estados Unidos</h3></b> <br>
                  <br>
-                 Ubicación: Dakota del Norte, EE.UU. <br>
-                 Principio clave: Recuperación del suelo mediante prácticas regenerativas <br>
+                 <p data-trad="Historias-EU1">Ubicación: Dakota del Norte, EE.UU. <br>
+                 Principio clave: Recuperación del suelo mediante prácticas regenerativas</p> <br>
                  <br>
 
-                 Gabe Brown, un agricultor de Dakota del Norte, ha sido pionero en la agricultura regenerativa
+                 <p data-trad="Historias-EU2">Gabe Brown, un agricultor de Dakota del Norte, ha sido pionero en la agricultura regenerativa
                  al implementar técnicas como la cobertura vegetal permanente, la rotación diversificada de
                  cultivos y el pastoreo controlado. Estas prácticas han restaurado la salud del suelo, 
-                 aumentando su contenido de materia orgánica en un 500% en menos de dos décadas. <br>
+                 aumentando su contenido de materia orgánica en un 500% en menos de dos décadas.</p> <br>
                  <br>
                  
-                 Además,Gabe ha logrado reducir los costos operativos en un 75% y ha incrementado la rentabilidad
+                 <p data-trad="Historias-EU3">Además,Gabe ha logrado reducir los costos operativos en un 75% y ha incrementado la rentabilidad
                  de su granja al diversificar sus productos y comercializarlos directamente a consumidores
                  locales. Este caso sirve como un ejemplo claro de cómo la agricultura puede ser tanto
-                 productiva como respetuosa con el medio ambiente. <br>
+                 productiva como respetuosa con el medio ambiente.</p> <br>
 
-                 Fuente: USDA - Gabe Brown
+                 <p data-trad="Historias-EU4">Fuente: USDA - Gabe Brown</p>
             </p>
         </div>
         <div
@@ -139,22 +142,22 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Cultivos Verticales en Singapur: Innovación en Espacios Urbanos</h3></b> <br>
+                 <b><h3 data-trad="Historias-SG">Cultivos Verticales en Singapur: Innovación en Espacios Urbanos</h3></b> <br>
                  <br>
-                 En Singapur una ciudad-estado densamente poblada la falta de espacio ha impulsado la adopción
+                 <p data-trad="Historias-SG1">En Singapur una ciudad-estado densamente poblada la falta de espacio ha impulsado la adopción
                  de cultivos verticales. Empresas como Sky Greens han desarrollado sistemas hidropónicos y
                  aeropónicos que permiten producir alimentos frescos en espacios reducidos utilizando un
                  noventa por ciento menos de agua que la agricultura tradicional. Estos avances no solo han
                  reducido la dependencia de importaciones de alimentos sino que también han disminuido 
-                 significativamente la huella de carbono asociada al transporte de productos. <br>
+                 significativamente la huella de carbono asociada al transporte de productos.</p> <br>
                  <br>
-                 Además la
+                 <p data-trad="Historias-SG2">Además la
                  implementación de estas tecnologías ha generado empleos en áreas especializadas como la
                  ingeniería agrícola y la gestión de sistemas sostenibles. Este caso demuestra cómo la
                  innovación puede resolver desafíos urbanos y garantizar la seguridad alimentaria en entornos
-                 con limitaciones de recursos. <br>
+                 con limitaciones de recursos.</p> <br>
 
-                 Fuente: Sky Greens - Technology
+                 <p data-trad="Historias-SG3">Fuente: Sky Greens - Technology</p>
                  
             </p>
         </div>
@@ -167,21 +170,21 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Café Sostenible en Colombia: Adaptándose al Cambio Climático</h3></b> <br>
+                 <b><h3 data-trad="Historias-Cl">Café Sostenible en Colombia: Adaptándose al Cambio Climático</h3></b> <br>
                  <br>
-                 En Colombia pequeños productores de café han formado alianzas con organizaciones
+                 <p data-trad="Historias-Cl1">En Colombia pequeños productores de café han formado alianzas con organizaciones
                  internacionales para implementar prácticas agrícolas sostenibles a través del programa
                  Café y Clima. Este proyecto ha introducido técnicas como el sombreado de cultivos el
-                 uso de biodigestores para gestionar residuos y la reforestación de áreas circundantes. <br>
+                 uso de biodigestores para gestionar residuos y la reforestación de áreas circundantes.</p> <br>
                  <br>
-                 Como resultado se ha logrado una reducción del veinticinco por ciento en emisiones de
+                 <p data-trad="Historias-Cl2">Como resultado se ha logrado una reducción del veinticinco por ciento en emisiones de
                  gases de efecto invernadero y la certificación de más de diez mil hectáreas bajo
                  estándares de café sostenible. Además los productores han visto una mejora significativa
                  en los precios pagados por sus cosechas gracias a la certificación orgánica. Este
                  ejemplo ilustra cómo la colaboración entre agricultores gobiernos y empresas puede
-                 generar soluciones climáticas efectivas mientras fortalece la economía local. <br>
+                 generar soluciones climáticas efectivas mientras fortalece la economía local.</p> <br>
 
-                 Fuente: GIZ - Café y Clima
+                 <p data-trad="Historias-Cl3">Fuente: GIZ - Café y Clima</p>
             </p>
         </div>
         <div
@@ -192,21 +195,21 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Agroecología en Brasil: La Cooperativa COOPFAM</h3></b> <br>
+                 <b><h3 data-trad="Historias-BS">Agroecología en Brasil: La Cooperativa COOPFAM</h3></b> <br>
                  <br>
-                 En Minas Gerais Brasil la cooperativa COOPFAM ha liderado la transición hacia la agroecología
+                 <p data-trad="Historias-BS1">En Minas Gerais Brasil la cooperativa COOPFAM ha liderado la transición hacia la agroecología
                  abandonando el uso de pesticidas químicos y adoptando prácticas como la policultura la
                  integración de ganadería y agricultura y la gestión integral de recursos naturales.
                  Estas iniciativas han aumentado la biodiversidad local en un sesenta por ciento y han
-                 mejorado la resiliencia de las tierras ante sequías e inundaciones. <br>
+                 mejorado la resiliencia de las tierras ante sequías e inundaciones.</p> <br>
                  <br>
-                 Reconocida
+                 <p data-trad="Historias-BS2">Reconocida
                  internacionalmente por su contribución a la seguridad alimentaria y la conservación
                  del medio ambiente COOPFAM es un modelo claro de cómo la agricultura puede ser tanto
                  productiva como respetuosa con el entorno natural promoviendo un equilibrio entre
-                 desarrollo económico y protección ambiental. <br>
+                 desarrollo económico y protección ambiental.</p> <br>
 
-                 Fuente: IFOAM - COOPFAM
+                 <p data-trad="Historias-BS3">Fuente: IFOAM - COOPFAM</p>
             </p>
         </div>
         <div
@@ -217,20 +220,20 @@
     <section class="seccion">
         <div class="interno">
             <p>
-                 <b><h3>Reduciendo el Desperdicio Alimentario: Full Harvest en California</h3></b> <br>
+                 <b><h3 data-trad="Historias-CA">Reduciendo el Desperdicio Alimentario: Full Harvest en California</h3></b> <br>
                  <br>
-                 En California la empresa Full Harvest ha creado un mercado digital que conecta a agricultores
+                 <p data-trad="Historias-CA1">En California la empresa Full Harvest ha creado un mercado digital que conecta a agricultores
                   con compradores interesados en productos imperfectos o excedentes. Este enfoque innovador ha
                    reducido más de diez millones de libras de desperdicio alimentario anualmente mientras
-                    proporciona ingresos adicionales a los agricultores participantes. <br>
+                    proporciona ingresos adicionales a los agricultores participantes.</p> <br>
                     <br>
-                    Además ha sensibilizado
+                    <p data-trad="Historias-CA2">Además ha sensibilizado
                     a los consumidores sobre la importancia de aprovechar todos los alimentos
                     independientemente de su apariencia. Este caso destaca cómo la tecnología puede ser una
                     herramienta poderosa para promover la sostenibilidad en la cadena alimentaria
-                    beneficiando tanto a los productores como al medio ambiente. <br>
+                    beneficiando tanto a los productores como al medio ambiente.</p> <br>
 
-                    Fuente: Full Harvest - Sitio oficial
+                    <p data-trad="Historias-CA3">Fuente: Full Harvest - Sitio oficial</p>
             </p>
         </div>
         <div
@@ -245,14 +248,16 @@
     <!--Inicio de footer-->
     <footer class="footer">
         <div class="footer-links">
-          <a href="#">Sobre nosotros</a>
-          <a href="politica.html">Política de privacidad</a>
-          <a href="contactos.html">Contáctanos</a>
+          <a href="#" data-trad="Nosotros">Sobre nosotros</a>
+          <a href="politica.html" data-trad="Politica">Política de privacidad</a>
+          <a href="contactos.html" data-trad="Contactanos">Contáctanos</a>
         </div>
-        <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
+        <p class="footer-copy" data-trad="copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
       </footer>
       
     <!--codigo de javaScript-->
     <script src="../Historias.js"></script>
+    <script src="../traducciones/traducciones.js"></script>
+    <script src="../buscador.js"></script>
 </body>
 </html>
