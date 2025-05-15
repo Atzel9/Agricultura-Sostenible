@@ -65,12 +65,18 @@ body{
     flex: 1; /* Toma el espacio restante */
     font-size: 14px; /* Tamaño de fuente */
     background-color: white;
-    color: white;
+    color: black;
 }
 
 /* Efecto al hacer hover sobre el contenedor */
 .search-container:hover {
     width: 150px; /* Ancho expandido */
+}
+
+/* Resaltado de búsqueda */
+.search-highlight {
+    background-color: yellow;
+    font-weight: bold;
 }
 
 .search-container:hover input {
