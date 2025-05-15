@@ -1,6 +1,7 @@
 {
     "en": {
         "titulo": "Welcome to Sostainable Agriculture"
+        , "Buscar": "Search..."
         , "Contacto": "Contact"
         , "Registrarse":" Sign Up"
         , "Inicio":" Home"
@@ -103,9 +104,16 @@
         ,"Historias-CA1":"In California, the company Full Harvest has created a digital marketplace that connects farmers with buyers interested in imperfect or surplus products. This innovative approach has reduced over 10 million pounds of food waste annually while providing additional income to participating farmers."
         ,"Historias-CA2":"Additionally, it has raised consumer awareness about the importance of utilizing all food, regardless of its appearance. This case highlights how technology can be a powerful tool to promote sustainability in the food chain, benefiting both producers and the environment."
         ,"Historias-CA3":"Source: Full Harvest - Official site"
+
+        ,"Usuario": "Username"
+        ,"Contraseña": "Password"
+        ,"Ingresar":"Log in"
+        ,"noCuenta":" Don't have an account?"
+        ,"Registrate":"Sign up"
     }
     , "es": {
         "titulo": "Bienvenido a la Agricultura Sostenible"
+        ,"Buscar": "Buscar..."
         , "Contacto": "Contacto"
         , "Registrarse":" Registrarse"
         , "Inicio":" Inicio"
@@ -207,5 +215,11 @@
         ,"Historias-CA1":"En California la empresa Full Harvest ha creado un mercado digital que conecta a agricultores con compradores interesados en productos imperfectos o excedentes. Este enfoque innovador ha reducido más de diez millones de libras de desperdicio alimentario anualmente mientras proporciona ingresos adicionales a los agricultores participantes."
         ,"Historias-CA2":"Además ha sensibilizado a los consumidores sobre la importancia de aprovechar todos los alimentos independientemente de su apariencia. Este caso destaca cómo la tecnología puede ser una herramienta poderosa para promover la sostenibilidad en la cadena alimentaria beneficiando tanto a los productores como al medio ambiente."
         ,"Historias-CA3":"Fuente: Full Harvest - Sitio oficial"
+
+        ,"Usuario": "Usuario"
+        ,"Contraseña": "Contraseña"
+        ,"Ingresar":"Ingresar"
+        ,"noCuenta":" ¿No tienes cuenta?"
+        ,"Registrate":"Registrate"
     }
 }

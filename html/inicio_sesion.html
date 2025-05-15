@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <!--Estlio CSS-->
     <link rel="stylesheet" href="../CSS/styles_inicio_de_sesion.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <!--Nombre de la pestaña-->
     <title>Inicia sesión en Agrisomora</title>
 </head>
@@ -14,18 +15,19 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="../index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
-            <h1>Iniciar sesión</h1>
+            <h1 data-trad="Sesion">Iniciar sesión</h1>
         </div>
         <div class="search-container">
            <button id="search-button" title="Buscar">
                 <i class="bi bi-search"></i>
            </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar" data-trad="Buscar">
         </div>
         <nav class="cont-header">
             <ul>
-                <li><a href="contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="registrarse.html" title="Registrarse">Registrarse</a></li>
+                <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
+                <li><a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
+                <li><button id="traducir"><img src="../img/usa.png" alt="" id="iconoBtn"></button></li>
             </ul>
             <!--menu hamburguesa-->
             <div id="icono-menu" class="icon">
@@ -36,25 +38,25 @@
     <!-- Menú oculto -->
     <div class="cont-menu" id="menu">
         <ul>
-            <li><a href="../index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+            <li><a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
+            <li><a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
+            <li><a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
+            <li><a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
+            <li><a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
+            <li><a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
         </ul>
     </div>
 
     <div class="inicio-container">
-    <h1>Inicia sesión</h1>
+    <h1 data-trad="Sesion">Inicia sesión</h1>
     <!--Formulario de Inicio de sesión-->
     <form>
         <!--contenedor con el usuario-->
-        <input type="text" class="input-field" placeholder="Usuario" required>
+        <input type="text" class="input-field" placeholder="Usuario" data-trad="Usuario" required>
         <!--contenedor con la contraseña-->
-        <input type="password" class="input-field" placeholder="Contraseña" required>
+        <input type="password" class="input-field" placeholder="Contraseña" data-trad="Contraseña" required>
         <!--Boton de enviar-->
-        <button type="submit" class="inicio-btn">Ingresar</button>
+        <button type="submit" class="inicio-btn" data-trad="Ingresar">Ingresar</button>
 
         <!--Otras opciones de sesión-->
         <div class="social-login">
@@ -66,19 +68,20 @@
         </div>
         </form>
         <!--Opcion por si no tienes una cuenta y hagas una-->
-        <p class="registro">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        <p class="registro"><p  data-trad="noCuenta">¿No tienes cuenta?</p> <a href="#" data-trad="Registrate">Regístrate</a></p>
     </div>
 
     <!--Inicio del footer-->
     <footer class="footer">
         <div class="footer-links">
-          <a href="#">Sobre nosotros</a>
-          <a href="politica.html">Política de privacidad</a>
-          <a href="contactos.html">Contáctanos</a>
+          <a href="#" data-trad="Nosotros">Sobre nosotros</a>
+          <a href="politica.html" data-trad="Politica">Política de privacidad</a>
+          <a href="contactos.html" data-trad="Contactanos">Contáctanos</a>
         </div>
-        <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
+        <p class="footer-copy" data-trad="copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
       </footer>
     <!--codigo de javaScript-->
     <script src="../app.js"></script>
+    <script src="../traducciones/traducciones.js"></script>
 </body>
 </html>
