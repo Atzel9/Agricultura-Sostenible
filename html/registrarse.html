@@ -18,18 +18,24 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="../index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
-            <h1>Registrarte</h1>
+            <h1 data-trad="Registrarte">Registrarte</h1>
         </div>
         <div class="search-container">
            <button id="search-button" title="Buscar">
                 <i class="bi bi-search"></i>
            </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar" data-trad="Buscar">
         </div>
         <nav class="cont-header">
             <ul>
-                <li><a href="contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="registrarse.html" title="Registrarse">Registrarse</a></li>
+                <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
+                <li><a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
+                <li class="dropdown-lang">
+                    <button id="traducir" class="lang-btn">
+                       <img src="../img/usa.png" alt="" id="iconoBtn">
+                            <span id="lang-label">EN</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                    </button>
             </ul>
             <!--menu hamburguesa-->
             <div id="icono-menu" class="icon">
@@ -40,44 +46,45 @@
     <!-- Menú oculto -->
     <div class="cont-menu" id="menu">
         <ul>
-            <li><a href="../index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+            <li><a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
+            <li><a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
+            <li><a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
+            <li><a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
+            <li><a href="foros.html"  data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
+            <li><a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
         </ul>
     </div>
     <div id="registro-cont">
-        <h1>Registrate</h1>
+        <h1 data-trad="Registrate">Registrate</h1>
         <form>
-            <input type="text" class="input" placeholder="Nombre de usuario" required>
-            <input type="email" class="input" placeholder="Correo Electrónico" required>
-            <input type="password" class="input" placeholder="Introduce una contraseña" required>
-            <input type="password" class="input" placeholder="Confirma la contraseña" required>
+            <input type="text" class="input" placeholder="Usuario" required data-trad="Nombre">
+            <input type="email" class="input" placeholder="Correo electronico" required data-trad="Correo">
+            <input type="password" class="input" placeholder="Contraseña" data-trad="contraseña">
+            <input type="password" class="input" placeholder="Confirmar contraseña" required data-trad="Confirmar">
     
             <div class="terminos">
-                <p>Al hacer click en "Registrarse" aceptas la <a href="politica.html">Política de privacidad</a></p>
+                <p data-trad="AceptarPoli">Al hacer click en "Registrarse" aceptas la <a href="politica.html">Política de privacidad</a></p>
             </div>
     
             <div class="boton-registro">
-                <button class="button">Registrarse</button>
+                <button class="button" data-trad="Registrarse">Registrarse</button>
             </div>
         </form>
     </div>
     <!--Inicio de footer-->
     <footer class="footer">
         <div class="footer-links">
-          <a href="#">Sobre nosotros</a>
-          <a href="politica.html">Política de privacidad</a>
-          <a href="contactos.html">Contáctanos</a>
+          <a href="#" data-trad="Nosotros">Sobre nosotros</a>
+          <a href="politica.html" data-trad="Politica">Política de privacidad</a>
+          <a href="contactos.html" data-trad="Contactanos">Contáctanos</a>
         </div>
-        <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
+        <p class="footer-copy" data-trad="copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
       </footer>
 
         <!--codigo de javaScript-->
         <script src="../app.js"></script>
         <script src="../buscador.js"></script>
+        <script src="../traducciones/traducciones.js"></script>
     
 </body>
 </html>
