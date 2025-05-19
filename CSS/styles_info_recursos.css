@@ -1,0 +1,48 @@
+.back-cont { /*Ajustar el texto*/
+    margin: 15px auto 5px 10px;
+}
+
+.back { /*Estilo al enlace para regresar a Recursos para agricultores*/
+    font-size: 25px; /*Ajustar el tamaño del texto para que sea mas visible*/
+    color: #B3D333;
+    font-weight: bold; /*Texto en negritas*/
+    text-decoration: none; /*Quitar subrayado*/
+    text-shadow: 0.1px -0.2px 0.2px rgba(132,182,37,0.74); /*Sombra para mejor legibidad*/
+    transition: color 0.5s ease; /*Animación cuando pasa el cursor*/
+}
+.back:hover { /*Animación cuando pasa el cursor*/
+    color: #69ac11;
+}
+
+#section { /*Estilo donde va esatr el contenido*/
+    margin: 5vh auto;
+    width: 82%;
+    padding: 2.5rem 3rem;
+    background-color: #e6ebbf; /*Color dentro*/
+    border: #dfe2c3 solid; /*Bordes*/
+    border-radius: 15px; /*Bordes suaves*/
+}
+
+p {
+    margin-bottom: 16px; /*Espaciado entre los parrafos*/
+}
+.tab {
+    margin-left: 30px; /*Espaciado*/
+}
+.bold {
+    font-weight: bold; /*Hacer las letras negritas*/
+}
+.tip {
+    font-style: italic; /*Hace que la fuente se incline*/
+    color: #434343; /*Cambia el color de la fuente*/
+}
+
+#int {
+    display: flex; /*Se utiliza el flex para organizar mejorar la organización*/
+    flex-direction: column; /*Para que se acomode como columna*/
+    margin: 5vh auto; /*Para que se centre*/
+    width: 82%; /*Ancho*/
+    background-color: #e6ebbf; /*Añadir fondo*/
+    border: #dfe2c3 solid; /*Añade margen*/
+    border-radius: 15px; /*Bordes suaves*/
+}

@@ -21,7 +21,6 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
 }
 
-/* CLASES */
 
 /*ESTILO AL HEADER*/
 .header {
@@ -127,21 +126,21 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 }
 
 /*ESTILOS BENEFICIOS*/
-.beneficios-img{ /*Declarar dimensiones de la imagen*/
-    background-size: cover; 
-    background-position: center;
-    height: 300px;
-    width: 300px;
-    border: 1px #27ae60 solid; /*Margen a la imagen*/
-    border-radius: 15px;
-    margin-left: 50px;
+#beneficios {
+    display: flex; /*Para que los contenidos se puedan alinear*/
+    align-items: center; /*Alinea los elementos al centro*/
+    flex-direction: column; /*Para que los div se acomoden en columnas*/
+    border: #dfe2c3 solid; /*Añade margen*/
 }
 .beneficios { /*Dar estilo a los divisores*/
-    margin: 20px 50px 20px 5px;
+    max-width: 100%;
+    margin: 20px auto; /*Añade margen*/
     padding: 30px 30px 30px 30px;
     box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
     border-radius: 20px; /*Bordes mas suaves*/
     display: flex; /*Declara el flexbox*/
+    flex-wrap: wrap; /*Ajustar el contenedor si ya no tiene mas espacio*/
+    justify-content: center;
     flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
 }
 .beneficios-txt { /*Acomodar el texto dentro de los divisores*/
@@ -150,7 +149,17 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     padding-bottom: 5%;
     text-align: justify;
 }
-/*----BENEFICIOS----*/
+.beneficios-img{ /*Declarar dimensiones de la imagen*/
+    display: block;
+    background-size: cover; 
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    border: 1px #27ae60 solid; /*Margen a la imagen*/
+    border-radius: 15px;
+    margin-left: 50px;
+}
+/*----FIN BENEFICIOS----*/
 
 .proyectos-secc{ /*Estilo para los contenedores de proyectos*/
     padding-bottom: 20px;
@@ -201,16 +210,6 @@ section a:hover { /*Animacion del <a> al hacer clic*/
   }
   
 /*---FOOTER----*/
-
-
-/* IDENTTIFICADORES */
-
-#beneficios {
-    display: flex; /*Para que los contenidos se puedan alinear*/
-    align-items: center; /*Alinea los elementos al centro*/
-    flex-direction: column; /*Para que los div se acomoden en columnas*/
-    border: #dfe2c3 solid; /*Añade margen*/
-}
 
 
 /*Menu hamburguesa*/

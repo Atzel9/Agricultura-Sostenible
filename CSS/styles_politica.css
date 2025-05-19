@@ -1,0 +1,18 @@
+#politica {
+        margin: 5vh auto;
+    width: 90%;
+    padding: 2rem 1.5rem;
+    background-color: #e6ebbf; /*Color dentro*/
+    border: #dfe2c3 solid; /*Bordes*/
+    border-radius: 15px; /*Bordes suaves*/
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 25px;
+}
+.sub {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
