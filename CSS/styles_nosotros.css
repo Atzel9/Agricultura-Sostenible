@@ -1,4 +1,19 @@
 #nosotros {
-    height: 100%;
+    margin: 5vh auto;
+    width: 90%;
+    padding: 2rem 1.5rem;
+    background-color: #e6ebbf; /*Color dentro*/
+    border: #dfe2c3 solid; /*Bordes*/
+    border-radius: 15px; /*Bordes suaves*/
+}
+.tit {
+    font-weight: bold;
+    font-size: 25px;
+}
+.img {
     width: 100%;
+    height: 500px;
+    background: url(../img/fresas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
