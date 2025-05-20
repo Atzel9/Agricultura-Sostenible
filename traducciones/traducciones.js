@@ -1,61 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnTraducir = document.getElementById('traducir');
-    const icono = document.getElementById('iconoBtn');
+    // Elementos del DOM relacionados con el menú de idiomas
+    const btnIdioma = document.getElementById('btn-idioma');
+    const banderaIdioma = document.getElementById('bandera-idioma');
+    const etiquetaIdioma = document.getElementById('etiqueta-idioma');
+    const menuIdiomas = document.getElementById('menu-idiomas');
+    const contenedorIdiomas = document.querySelector('.idiomas-desplegable');
 
-    // Establecer el idioma predeterminado como español si no está guardado en localStorage
-    if (!localStorage.getItem('lang')) {
-        localStorage.setItem('lang', 'es');
+    // Diccionario de iconos y etiquetas por idioma
+    const iconos = {
+        es: { src: getRutaImg('mexico.png'), alt: 'Español', label: 'ES' },
+        en: { src: getRutaImg('usa.png'), alt: 'English', label: 'EN' }
+    };
+
+    // Detecta la ruta correcta para imágenes y JSON según la ubicación de la página
+    function getRutaImg(img) {
+        return window.location.pathname.includes('/html/') ? `../img/${img}` : `img/${img}`;
+    }
+    function getRutaJson() {
+        return window.location.pathname.includes('/html/') ? '../traducciones/traducciones.json' : 'traducciones/traducciones.json';
     }
 
-    let currentLang = localStorage.getItem('lang'); // Recupera el idioma guardado
+    // Establece el idioma predeterminado en localStorage si no existe
+    if (!localStorage.getItem('idioma')) {
+        localStorage.setItem('idioma', 'es');
+    }
+    let idiomaActual = localStorage.getItem('idioma');
 
-    // Cargar traducciones
-    fetch('../traducciones/traducciones.json')
-        .then(response => response.json())
-        .then(translations => {
-            // Aplicar traducciones al cargar la página
-            aplicarTraducciones(translations[currentLang]);
+    // Carga el archivo de traducciones y aplica el idioma actual
+    fetch(getRutaJson())
+        .then(respuesta => respuesta.json())
+        .then(traducciones => {
+            aplicarTraducciones(traducciones[idiomaActual]);
+            actualizarUIIdioma(idiomaActual);
 
-            // Cambiar imagen del botón según el idioma actual
-            if (currentLang === 'en') {
-                icono.src = '../img/usa.png';
-                icono.alt = 'Icono1';
-            } else {
-                icono.src = '../img/mexico.png';
-                icono.alt = 'Icono2';
-            }
+            // Abre/cierra el menú de idiomas al hacer clic en el botón
+            btnIdioma.addEventListener('click', (e) => {
+                e.stopPropagation();
+                contenedorIdiomas.classList.toggle('abierto');
+            });
 
-            // Cambiar idioma al hacer clic en el botón
-            btnTraducir.addEventListener('click', () => {
-                currentLang = currentLang === 'es' ? 'en' : 'es';
-                localStorage.setItem('lang', currentLang); // Guardar el idioma seleccionado
-                aplicarTraducciones(translations[currentLang]);
+            // Cambia el idioma al seleccionar una opción del menú
+            menuIdiomas.querySelectorAll('li').forEach(item => {
+                item.addEventListener('click', () => {
+                    const idiomaSeleccionado = item.getAttribute('data-idioma');
+                    if (idiomaSeleccionado !== idiomaActual) {
+                        idiomaActual = idiomaSeleccionado;
+                        localStorage.setItem('idioma', idiomaActual);
+                        aplicarTraducciones(traducciones[idiomaActual]);
+                        actualizarUIIdioma(idiomaActual);
+                    }
+                    contenedorIdiomas.classList.remove('abierto');
+                });
+            });
 
-                // Cambiar imagen del botón
-                if (icono.src.includes('usa.png')) {
-                    icono.src = '../img/mexico.png'; // Cambia la imagen al español
-                    icono.alt = 'Icono2'; // Cambia el texto alternativo al español
-                } else {
-                    icono.src = '../img/usa.png'; // Cambia la imagen al inglés
-                    icono.alt = 'Icono1'; // Cambia el texto alternativo al inglés
-                }
+            // Cierra el menú si se hace clic fuera de él
+            document.addEventListener('click', () => {
+                contenedorIdiomas.classList.remove('abierto');
             });
         })
         .catch(error => console.error('Error cargando traducciones:', error));
 
-    function aplicarTraducciones(translations) {
-        // Seleccionar todos los elementos con data-trad
+    /**
+     * Actualiza la UI del botón de idioma (bandera y etiqueta)
+     * @param {string} idioma - Código del idioma actual ('es' o 'en')
+     */
+    function actualizarUIIdioma(idioma) {
+        banderaIdioma.src = iconos[idioma].src;
+        banderaIdioma.alt = iconos[idioma].alt;
+        etiquetaIdioma.textContent = iconos[idioma].label;
+    }
+
+    /**
+     * Aplica las traducciones a todos los elementos con el atributo data-trad
+     * Si el elemento es un input, traduce el placeholder; si no, el innerHTML.
+     * @param {Object} traducciones - Objeto con las traducciones del idioma actual
+     */
+    function aplicarTraducciones(traducciones) {
         const elementos = document.querySelectorAll('[data-trad]');
-        
         elementos.forEach(elemento => {
-            const key = elemento.getAttribute('data-trad');
-            if (translations[key]) {
+            const clave = elemento.getAttribute('data-trad');
+            if (traducciones[clave]) {
                 if (elemento.tagName === 'INPUT') {
-                    // Si es un input, actualiza el placeholder
-                    elemento.placeholder = translations[key];
+                    elemento.placeholder = traducciones[clave];
                 } else {
-                    // Si no, actualiza el contenido
-                    elemento.innerHTML = translations[key];
+                    elemento.innerHTML = traducciones[clave];
                 }
             }
         });

@@ -31,7 +31,17 @@
             <ul>
                 <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
                 <li><a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
-                <li><button id="traducir"><img src="../img/usa.png" alt="" id="iconoBtn"></button></li>
+                <li class="idiomas-desplegable">
+                   <button id="btn-idioma" class="btn-idioma">
+                        <img src="../img/usa.png" alt="" id="bandera-idioma">
+                        <span id="etiqueta-idioma">EN</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                   </button>
+                   <ul class="menu-idiomas" id="menu-idiomas">
+                        <li data-idioma="es"><img src="../img/mexico.png" alt="Español" style="width:20px;"> Español</li>
+                        <li data-idioma="en"><img src="../img/usa.png" alt="English" style="width:20px;"> English</li>
+                    </ul>
+                </li>
             </ul>
             <!--menu hamburguesa-->
             <div id="icono-menu" class="icon">
