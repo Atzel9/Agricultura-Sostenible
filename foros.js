@@ -1,4 +1,4 @@
-const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
+  const iconoMenu = document.querySelector('#icono-menu'), /*selecciona el elemento con el ID*/
 
     menu = document.querySelector('#menu'); 
 /*Selecciona el elemento ID que corresponde a el contenedor del menu lateral*/
@@ -49,40 +49,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    // ====== Selección de elementos ======
-    const slides = document.querySelectorAll(".slide"); // Selecciona todas las diapositivas
-    let currentSlide = 0; // Índice de la diapositiva actual
-    const intervalTime = 5000; // Tiempo entre cada cambio de diapositiva (5 segundos)
-    let slideInterval; // Variable para almacenar el intervalo de cambio automático
+const iconoMenu2 = document.querySelector('#icono-menu2'),
+      menu2 = document.querySelector('#menu2'),
+      mainContent = document.querySelector('#main-content');
 
-    // ====== Función para mostrar una diapositiva específica ======
-    function showSlide(n) {
-        slides.forEach((slide, index) => {
-            slide.classList.remove('active'); // Elimina la clase 'active' de todas las diapositivas
-            if (index === n) {
-                slide.classList.add('active'); // Agrega la clase 'active' a la diapositiva actual
-            }
-        });
+iconoMenu2.addEventListener('click', () => {
+    menu2.classList.toggle('active2');
+    mainContent.classList.toggle('shifted');
+
+    const icon = iconoMenu2.querySelector('i');
+    if (icon.classList.contains('bi-list')) {
+        icon.classList.remove('bi-list');
+        icon.classList.add('bi-x');
+    } else {
+        icon.classList.remove('bi-x');
+        icon.classList.add('bi-list');
     }
-
-    // ====== Función para avanzar a la siguiente diapositiva ======
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length; // Calcula el índice de la siguiente diapositiva
-        showSlide(currentSlide); // Muestra la nueva diapositiva
-    }
-
-    // ====== Iniciar el carrusel automáticamente ======
-    slideInterval = setInterval(nextSlide, intervalTime); // Cambia de diapositiva cada 5 segundos
 });
-
-//sirve para que al momento de tocar la frase se dirija hacia abajo
-function irAlFinal() {
-    document.getElementById("final-pagina").scrollIntoView({ behavior: "smooth" });
-  }
-
-//menu desplegable del menu de temas
-  function toggleMenu() {
-    const menu = document.getElementById("menus");
-    menu.classList.toggle("activo");
-  }
