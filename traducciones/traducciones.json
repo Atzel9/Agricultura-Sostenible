@@ -1,6 +1,6 @@
 {
     "en": {
-        "titulo": "Welcome to Sostainable Agriculture"
+        "titulo": "Agrisomora"
         , "Buscar": "Search..."
         , "Contacto": "Contact"
         , "Registrarse":" Sign Up"
@@ -35,7 +35,7 @@
         , "Contactanos":" Contact us"
         , "copy":" 2025 Agrisomora. All rights reserved."
 
-        ,"Innovacion-bienvenida":" Innovation projects"
+        ,"Innovacion-bienvenida":" Innovation <hr> projects"
         ,"Innovacion-descripcion":" Agriculture is undergoing a revolution driven by technology and sustainability. In this section, you will discover projects that apply artificial intelligence, smart sensors, precision irrigation systems, clean energy, and new agricultural practices designed to make crops more efficient and eco-friendly.<br><br>Each project we present aims not only to increase productivity but also to care for our soils, water, and the environment. Here you can explore modern solutions that are already changing the way we work the land and that could inspire the next big step in your own field.<br><br>Join us on this journey of innovation and sustainability, and see how technology and commitment to a better world come together in each of these projects."
         ,"Innovacion-riego":" Smart irrigation"
         ,"Innovacion-riego-descripcion":" Smart irrigation allows optimizing water use through sensors, timers, and data analysis. These systems detect soil moisture and weather conditions to supply only the necessary amount of water, reducing waste and improving crop yield."
@@ -54,7 +54,7 @@
         ,"innovacion-sistemas":"Intelligent Rainwater Harvesting Systems"
         ,"innovacion-sistemas-descripcion":"These systems collect, filter, and store rainwater for later use in irrigation or cleaning. With sensors and automation, it can be managed efficiently, reducing dependence on traditional water sources."
 
-        ,"Recursos":" Resources for farmers"
+        ,"Recursos1":" Resources for <hr> farmers"
         ,"Recursos-descubre":"Discover techniques"
         ,"Recursos-explora":"Explore tools and technologies"
         ,"Recursos-consejos":"Harvest tips"
@@ -71,7 +71,7 @@
         ,"Recursos-beneficios":"Benefits of crop association"
         ,"Recursos-optimiza":"Optimize your space and improve the balance of your field by planting complementary plants together. For example, combine corn with beans or onions with carrots to take advantage of their mutual benefits and increase your production."
 
-        ,"Historias":"Success stories"
+        ,"Historias1":"Success <hr> stories"
         ,"Historias-oportunidad":"Sustainable agriculture is not only an environmental necessity but also an opportunity"
         ,"Historias-oportunidad1": "Project \"Zero Budget Natural Farming\" (ZBNF)"
         ,"Historias-oportunidad2":"Andhra Pradesh, India Key Principle: Farming without external costs or chemical products"
@@ -110,6 +110,7 @@
         ,"Ingresar":"Log in"
         ,"noCuenta":" Don't have an account?"
         ,"Registrate":"Sign up"
+        ,"Sesion1":"Log in"
 
         ,"Registrarte":"Sign up"
         ,"Registrase":"Sign up"
@@ -140,7 +141,7 @@
         ,"Contactos-redes":"You can also contact us through:"
     }
     , "es": {
-        "titulo": "Bienvenido a la Agricultura Sostenible"
+        "titulo": "Agrisomora"
         ,"Buscar": "Buscar..."
         , "Contacto": "Contacto"
         , "Registrarse":" Registrarse"
@@ -174,7 +175,7 @@
         , "Contactanos":" Contáctanos"
         , "copy":" 2025 Agrisomora. Todos los derechos reservados."
 
-        ,"Innovacion-bienvenida":" Proyectos de innovación"
+        ,"Innovacion-bienvenida":" Proyectos de<hr> innovación"
         ,"Innovacion-descripcion":" La agricultura está viviendo una revolución impulsada por la tecnología y la sostenibilidad. En esta sección descubrirás proyectos que aplican inteligencia artificial, sensores inteligentes, sistemas de riego de precisión, energías limpias y nuevas prácticas agrícolas diseñadas para hacer más eficientes y ecológicos los cultivos.<br><br>Cada proyecto que presentamos busca no solo aumentar la productividad, sino también cuidar nuestros suelos, el agua y el medio ambiente. Aquí podrás explorar soluciones modernas que ya están cambiando la forma de trabajar la tierra y que podrían inspirar el siguiente gran paso en tu propio campo.<br><br>Acompáñanos en este recorrido de innovación y sostenibilidad, y conoce cómo la tecnología y el compromiso por un mundo mejor se unen en cada uno de estos proyectos."
         ,"Innovacion-riego":" Riego inteligente"
         ,"Innovacion-riego-descripcion":" El riego inteligente permite optimizar el uso del agua mediante sensores, temporizadores y análisis de datos. Estos sistemas detectan la humedad del suelo y las condiciones climáticas para suministrar solo la cantidad necesaria de agua, reduciendo el desperdicio y mejorando el rendimiento de los cultivos."
@@ -193,7 +194,7 @@
         ,"innovacion-sistemas":"Sistemas de Recuperación de Agua de Lluvia Inteligentes"
         ,"innovacion-sistemas-descripcion":"Estos sistemas recolectan, filtran y almacenan agua de lluvia para su uso posterior en el riego o limpieza. Con sensores y automatización, se puede gestionar de forma eficiente, reduciendo la dependencia de fuentes de agua tradicionales."
 
-        ,"Recursos":" Recursos para agricultores"
+        ,"Recursos1":" Recursos para<hr> agricultores"
         ,"Recursos-descubre":"Descubré técnicas"
         ,"Recursos-explora":"Explora las herramientas y tecnologías"
         ,"Recursos-consejos":"Consejos de cosecha"
@@ -210,7 +211,7 @@
         ,"Recursos-beneficios":"Beneficios de la asociación de cultivos"
         ,"Recursos-optimiza":"Optimiza tu espacio y mejora el equilibrio de tu campo cultivando plantas complementarias juntas. Por ejemplo, combina maíz con frijoles o cebollas con zanahorias para aprovechar sus beneficios mutuos y aumentar tu producción."
 
-        ,"Historias":"Historias de éxito"
+        ,"Historias1":"Historias de <hr> éxito"
         ,"Historias-oportunidad":"La agricultura sostenible no solo es una necesidad ambiental, sino también una oportunidad"
         ,"Historias-oportunidad1": "Proyecto \"Zero Budget Natural Farming\" (ZBNF)"
         ,"Historias-oportunidad2":"En India Ubicación: Andhra Pradesh, India, Principio clave: Agricultura sin costos externos ni productos químicos"
@@ -249,6 +250,7 @@
         ,"Ingresar":"Ingresar"
         ,"noCuenta":" ¿No tienes cuenta?"
         ,"Registrate":"Registrate"
+        ,"Sesion1":" Iniciar sesión"
 
         ,"Registrarte":"Registrarte"
         ,"Registrase":"Registrarse"
