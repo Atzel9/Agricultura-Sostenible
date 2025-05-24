@@ -30,6 +30,12 @@ body{
     justify-content: space-between;
 }
 
+.cont-header a img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
 /* Contenedor del buscador */
 .search-container {
     display: flex;
@@ -272,3 +278,90 @@ body{
 }
 
 /*Fin del menu hamburguesa*/
+
+/* Responsive Header SOLO para 1070 o menos*/
+@media screen and (max-width: 1070px) {
+
+    .cont-header h1 {
+        font-size: 25px;
+    }
+
+    .icon {
+        display: block !important; /* Muestra el icono hamburguesa */
+        margin: 10px 0 10px auto;
+    }
+    
+}
+
+/* Responsive Header SOLO para 430px o menos */
+@media screen and (max-width: 430px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        padding: 10px 10px;
+    }
+
+    .cont-header {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-top: 10%;
+    }
+
+    .search-container {
+        width: 40%;
+        margin: -17% 55% -8%;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        background: white;
+        transition: none;
+        overflow: visible;
+        display: flex;
+    }
+    .search-container button {
+        color: #BED333;
+        background: none;
+        font-size: 22px;
+        padding: 8px 10px;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+    .search-container input {
+        display: block;
+        width: 80%;
+        border: none;
+        outline: none;
+        padding: 8px 10px;
+        font-size: 16px;
+        background: transparent;
+        color: #333;
+    }
+
+    .cont-header ul.menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .cont-header h1 {
+        font-size: 17px;
+    }
+
+    .main-nav {
+        display: none !important; /* Oculta el menú normal en móvil */
+    }
+
+    .icon {
+        display: block !important; /* Muestra el icono hamburguesa */
+        margin: 10px 0 10px auto;
+        z-index: 2999;
+    }
+    
+    .cont-menu {
+        z-index: 2000;
+    }
+}
+
