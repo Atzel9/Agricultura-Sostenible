@@ -1,3 +1,21 @@
+.back {
+    display: flex; /*Para organizar los elementos*/
+    flex-direction: column; /*Para que los contenedores se pongan en modo columna*/
+    gap: 5px; /*Espaciado entre los contenedores*/
+}
+.iconos {
+    font-size: 1.5rem; /*Ajustar el texto*/
+    font-weight: bold; /*Letras negritas*/
+    color: #b3d333; /*Cambiar color al texto*/
+    text-shadow: 0.5px 0.5px 2px rgba(107, 151, 48, 0.7); /*Sombra por detras para que la letra sea mas legible*/
+    text-decoration: none; /*Quitar subrayado*/
+    margin-top: 3vh; /*Margen hacia arriba*/
+    margin-bottom: 3vh;/*Margen hacia abajo*/
+    transition: color 0.5s ease; /*Transisción suave al pasar el mouse*/
+}
+.iconos:hover {
+    color: #69ac11; /*Se cambia el color del texro cuando pasa el mouse*/
+}
 .info { /*Estilo para el contenedor en donde se encuentra la info*/
     margin: 5vh 40vh 5vh 10vh;
     padding: 10px 10px 10px 30px;
@@ -9,6 +27,7 @@
 .img-info {
     background-size: cover; /*Cubrir toda la parte*/
     background-position: center; /*Centrar la imagen en el centro*/
+    max-width: 600px;
     border-radius: 10px; /*Borde mas suave*/
     margin-bottom: 20px; /*Espaciado debajo*/
 }
@@ -16,9 +35,16 @@
     margin-bottom: 16px; /*Espaciado entre los parrafos*/
     line-height: 1.8; /*Aumentar el espacio de la linea*/
     font-size: 18px; /*Ajustar la fuente*/
+    color: #464646;
 }
 .tit { /*Clase para hacer el titulo mas grane*/
     font-size: 1.5rem;
     margin-top: 3vh;
     margin-bottom: 3vh;
+}
+.tit p {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
 }

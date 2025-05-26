@@ -109,6 +109,7 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 }
 /*-----Hero Diapositivas----*/
 .contenedor { /*Definir estilos de los contenedores*/
+    box-sizing: border-box;
     background-color: #e6ebbf;
     margin: 20px 10% 20px 10%;
     padding: 30px 50px 10px 50px;
@@ -128,36 +129,38 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 /*ESTILOS BENEFICIOS*/
 #beneficios {
     display: flex; /*Para que los contenidos se puedan alinear*/
-    align-items: center; /*Alinea los elementos al centro*/
     flex-direction: column; /*Para que los div se acomoden en columnas*/
+    align-items: center; /*Alinear contenido de manera vertical*/
+    gap: 30px; /*Espacio entre los contenedores*/
+    box-sizing: border-box;
     border: #dfe2c3 solid; /*Añade margen*/
 }
 .beneficios { /*Dar estilo a los divisores*/
     max-width: 100%;
-    margin: 20px auto; /*Añade margen*/
-    padding: 30px 30px 30px 30px;
-    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+    box-sizing: border-box;
+    padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 0 0 10px rgba(145, 180, 196, 0.5); /*Crea una sombra*/
     border-radius: 20px; /*Bordes mas suaves*/
     display: flex; /*Declara el flexbox*/
-    flex-wrap: wrap; /*Ajustar el contenedor si ya no tiene mas espacio*/
-    justify-content: center;
     flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
+    justify-content: space-evenly; /*Para que cada contenedor-hijo cubre el contenedor-padre con el mismo espacio entre ellos*/
+    gap: 10px; /*Espacio entre lo elementos*/
+    flex-wrap: wrap; /*Ajustar el contenedor si ya no tiene mas espacio*/
 }
 .beneficios-txt { /*Acomodar el texto dentro de los divisores*/
+    box-sizing: border-box;
     width: 60%;
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: justify;
 }
 .beneficios-img{ /*Declarar dimensiones de la imagen*/
-    display: block;
     background-size: cover; 
     background-position: center;
     height: 300px;
     width: 300px;
     border: 1px #27ae60 solid; /*Margen a la imagen*/
     border-radius: 15px;
-    margin-left: 50px;
 }
 /*----FIN BENEFICIOS----*/
 
