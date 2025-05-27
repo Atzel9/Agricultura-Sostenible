@@ -217,13 +217,6 @@ body{
 
 /*Fin del menu hamburguesa*/
 
-
-
-
-
-
-
-
 /* MENU ICONO */
 .icon2 {
     margin: 40px 50px;
@@ -320,4 +313,29 @@ body{
     color: white;
     border-radius: 20px;
     border: 3px rgb(77, 69, 69) solid;
+}
+
+.iconodes{
+    position: fixed;
+    background-color: #BED333;
+    height: 40px;
+    width: 40px;
+    padding-left: 3px;
+    border: 2px solid rgb(77, 69, 69);
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+
+
+
+
+/*en construccion*/
+
+.iconodes :hover{
+    background-color: #000;
+    transition: margin-left 0.5s ease;
+    margin-left: 0;
 }

@@ -49,9 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//menu de temas desplegable
 const iconoMenu2 = document.querySelector('#icono-menu2'),
       menu2 = document.querySelector('#menu2'),
       mainContent = document.querySelector('#main-content');
+
+
+
+
+
+
 
 iconoMenu2.addEventListener('click', () => {
     menu2.classList.toggle('active2');
@@ -66,3 +73,23 @@ iconoMenu2.addEventListener('click', () => {
         icon.classList.add('bi-list');
     }
 });
+
+
+  
+
+
+  const boton = document.getElementById('botonMenu');
+ 
+
+  let abierto = true; // Estado inicial: visible en -50%
+
+  boton.addEventListener('click', () => {
+    if (abierto) {
+     
+      boton.style.transform = 'translateX(500%)';
+    } else {
+      
+      boton.style.transform = 'translateX(-50%)';
+    }
+    abierto = !abierto; // Alternar estado
+  });
