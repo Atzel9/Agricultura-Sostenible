@@ -293,8 +293,16 @@ body{
     
 }
 
+@media screen and (min-width: 701px) and (max-width: 900px) {
+    
+    .cont-header a,
+    .cont-header h1 {
+        font-size: 18px;
+    }
+}
+
 /* Responsive Header SOLO para 430px o menos */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 470px) {
     .header {
         flex-direction: column;
         align-items: stretch;
@@ -304,13 +312,18 @@ body{
 
     .cont-header {
         justify-content: flex-start;
-        margin-bottom: 10px;
+        margin-bottom: 10%;
         margin-top: 10%;
+    }
+
+    .cont-header a,
+    .cont-header h1 {
+        margin-top: -10%;
     }
 
     .search-container {
         width: 40%;
-        margin: -17% 55% -8%;
+        margin: -90px 55% -8%;
         border-radius: 20px;
         border: 1px solid #ccc;
         background: white;
@@ -349,19 +362,83 @@ body{
     .cont-header h1 {
         font-size: 17px;
     }
-
-    .main-nav {
-        display: none !important; /* Oculta el menú normal en móvil */
-    }
-
-    .icon {
-        display: block !important; /* Muestra el icono hamburguesa */
-        margin: 10px 0 10px auto;
-        z-index: 2999;
-    }
     
     .cont-menu {
         z-index: 2000;
     }
 }
 
+@media screen and (min-width:471px) and (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        padding: 10px 10px;
+    }
+
+    .cont-header {
+        justify-content: flex-start;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .cont-header a,
+    .cont-header h1 {
+        margin-top: -50px;
+    }
+
+    .search-container {
+        width: 40%;
+        margin: -90px 55% -8%;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        background: white;
+        transition: none;
+        overflow: visible;
+        display: flex;
+        margin-left: 40%;
+        margin-top: -19%;
+    }
+    .search-container button {
+        color: #BED333;
+        background: none;
+        font-size: 22px;
+        padding: 8px 10px;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+    .search-container input {
+        display: block;
+        width: 80%;
+        border: none;
+        outline: none;
+        padding: 8px 10px;
+        font-size: 16px;
+        background: transparent;
+        color: #333;
+    }
+
+    .cont-header ul.menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        margin-bottom: -9%;
+        margin-left: 22%;
+    }
+
+    .cont-header h1 {
+        font-size: 17px;
+    }
+    
+    .cont-menu {
+        z-index: 2000;
+    }
+
+    .icon {
+        margin-top: -10%;
+    }
+}

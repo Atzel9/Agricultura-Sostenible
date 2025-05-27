@@ -132,6 +132,9 @@ text-decoration: none; /*elimina cualquier estilo que este predeterminado*/
 
 /*ESTILOS FOOTER*/
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: column; /*Coloca los contenedores en columna*/
     align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/

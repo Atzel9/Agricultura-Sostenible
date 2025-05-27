@@ -31,7 +31,11 @@
 /*IDENTIFICADORES*/
 
 #img-pro { /*Imagen de hero*/
-    position: absolute; /*Para posicionarlo desde del body*/
+    position: absolute; /* Se posicionan superpuestas una sobre otra */
+    top: 0; /*Para que se ponga hasta arriba*/
+    left: 0; /*Para que se ponga en la esquina*/
+    width: 100%; /* Ocupan todo el ancho */
+    height: 100%; /* Ocupan todo el alto */
     background: 
     linear-gradient(to top, rgba(230, 238, 168, 1) 10%, rgba(0, 0, 0, 0) 55%),
     url('../img/rotacion.webp') center/cover no-repeat; /*Se añade el pequeño degradado debajo*/
