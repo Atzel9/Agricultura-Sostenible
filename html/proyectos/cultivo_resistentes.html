@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrícultura Sostenible</title>
-    <!--Logo de la página-->
-    <link rel="icon" href="../../img/logo.png">
+    <title>Agrisomora</title>
+    <link rel="icon" href="../../img/logo.png" type="image/png">
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +18,7 @@
 <body>
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
-            <a href="../../index.html"><i class="bi bi-house-door-fill index" style="font-size: 30px;"></i></a>
+            <a href="../../index.html"><img src="../../img/logo.png" alt=""></a>
             <h1>Proyectos de innovación</h1>
         </div>
         <div class="search-container">
@@ -73,17 +72,52 @@
         <button class="toTop" title="Ir arriba"><i class="bi bi-chevron-up"></i></button>
 
         <!--Inicio de footer-->
-        <footer class="footer">
-            <div class="footer-links">
-              <a href="../nosotros.html">Sobre nosotros</a>
-              <a href="../politica.html">Política de privacidad</a>
-              <a href="../contactos.html">Contáctanos</a>
+       <footer>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <div class="logo-info">
+                    <img src="../../img/logo.png" alt="">
+                    <p data-trad="Lema">Cosechando futuro, cultivando vida</p>
+                </div>
+                <div class="contacto-info">
+                    <p><i class="bi-telephone-fill"></i>351 176 5744</p>
+                    <p><i class="bi-envelope-fill"></i> Agrisomora</p>
+                    <p><i class="bi-geo-alt-fill"></i> 2025, CBTiS 52</p>
+                </div>
             </div>
-            <p class="footer-copy">&copy; 2025 Agrisomora. Todos los derechos reservados.</p>
-          </footer>
+            <div class="footer-links">
+                <h3 data-trad="enlaces">ENLACES</h3>
+                <ul>
+                    <li><a href="../../html/nosotros.html" data-trad="Nosotros">Sobre nosotros</a></li>
+                    <li><a href="../../html/politica.html" data-trad="Politica">Política de privacidad</a></li>
+                    <li><a href="../../html/contactos.html" data-trad="Contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3 data-trad="Redes">REDES SOCIALES</h3>
+                <div class="social-iconos">
+                    <a href="#" target="_blank"><i class="bi-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="bi-twitter-x"></i></a>
+                    <a href="#" target="_blank"><i class="bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-boletin">
+                <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
+                <form>
+                    <input type="text" placeholder="Nombre" required data-trad="Nom">
+                    <input type="email" placeholder="Correo electrónico" required data-trad="Correo">
+                    <button type="submit" data-trad="Suscribirse">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p data-trad="copy">&copy;2025 Agrisomora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
     
             <!--codigo de javaScript-->
             <script src="../../js/app.js"></script>
             <script src="../../js/buscador.js"></script>
+            <script src="../../traducciones/traducciones.js"></script>
 </body>
 </html>
