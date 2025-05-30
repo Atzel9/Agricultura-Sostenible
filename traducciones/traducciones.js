@@ -1,42 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Elementos del DOM relacionados con el menú de idiomas
-    const btnIdioma = document.getElementById('btn-idioma');
-    const banderaIdioma = document.getElementById('bandera-idioma');
-    const etiquetaIdioma = document.getElementById('etiqueta-idioma');
-    const menuIdiomas = document.getElementById('menu-idiomas');
-    const contenedorIdiomas = document.querySelector('.idiomas-desplegable');
+    const btnIdioma = document.getElementById('btn-idioma'); // Botón que activa/desactiva el menú de idiomas
+    const banderaIdioma = document.getElementById('bandera-idioma'); // Imagen de la bandera del idioma actual
+    const etiquetaIdioma = document.getElementById('etiqueta-idioma'); // Texto que muestra el código del idioma (ES/EN)
+    const menuIdiomas = document.getElementById('menu-idiomas'); // Menú desplegable con opciones de idioma
+    const contenedorIdiomas = document.querySelector('.idiomas-desplegable'); // Contenedor del menú desplegable
 
-    // Diccionario de iconos y etiquetas por idioma
+    // Define las banderas y etiquetas para español y inglés
     const iconos = {
         es: { src: getRutaImg('mexico.png'), alt: 'Español', label: 'ES' },
         en: { src: getRutaImg('usa.png'), alt: 'English', label: 'EN' }
     };
 
-    // Detecta la ruta correcta para imágenes y JSON según la ubicación de la página
+    // Determina la ruta correcta para las imágenes basada en la ubicación de la página
     function getRutaImg(img) {
         return window.location.pathname.includes('/html/') ? `../img/${img}` : `img/${img}`;
     }
+    // Similar a la anterior pero para el archivo JSON de traducciones
     function getRutaJson() {
         return window.location.pathname.includes('/html/') ? '../traducciones/traducciones.json' : 'traducciones/traducciones.json';
     }
 
-    // Establece el idioma predeterminado en localStorage si no existe
+    // Usa localStorage para persistir la selección de idioma
     if (!localStorage.getItem('idioma')) {
+        // Si no hay idioma guardado, establece español ('es') como predeterminado
         localStorage.setItem('idioma', 'es');
     }
     let idiomaActual = localStorage.getItem('idioma');
 
-    // Carga el archivo de traducciones y aplica el idioma actual
+    // Solicita el archivo JSON de traducciones
     fetch(getRutaJson())
-        .then(respuesta => respuesta.json())
+        .then(respuesta => respuesta.json()) // Convierte la respuesta en un objeto JSON
         .then(traducciones => {
-            aplicarTraducciones(traducciones[idiomaActual]);
-            actualizarUIIdioma(idiomaActual);
+            aplicarTraducciones(traducciones[idiomaActual]); // Aplica las traducciones del idioma actual
+            actualizarUIIdioma(idiomaActual); // Cambia la bandera y etiqueta del botón de idioma
 
             // Abre/cierra el menú de idiomas al hacer clic en el botón
             btnIdioma.addEventListener('click', (e) => {
-                e.stopPropagation();
-                contenedorIdiomas.classList.toggle('abierto');
+                e.stopPropagation(); // Evita que el clic se propague y cierre el menú inmediatamente
+                contenedorIdiomas.classList.toggle('abierto'); // Alterna la clase "abierto" en el contenedor de idiomas
             });
 
             // Cambia el idioma al seleccionar una opción del menú
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         aplicarTraducciones(traducciones[idiomaActual]);
                         actualizarUIIdioma(idiomaActual);
                     }
-                    contenedorIdiomas.classList.remove('abierto');
+                    contenedorIdiomas.classList.remove('abierto'); // Cierra el menú después de seleccionar
                 });
             });
 
@@ -58,16 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 contenedorIdiomas.classList.remove('abierto');
             });
         })
-        .catch(error => console.error('Error cargando traducciones:', error));
+        .catch(error => console.error('Error cargando traducciones:', error)); // Captura posibles errores
 
     /**
      * Actualiza la UI del botón de idioma (bandera y etiqueta)
-     * @param {string} idioma - Código del idioma actual ('es' o 'en')
      */
     function actualizarUIIdioma(idioma) {
-        banderaIdioma.src = iconos[idioma].src;
-        banderaIdioma.alt = iconos[idioma].alt;
-        etiquetaIdioma.textContent = iconos[idioma].label;
+        banderaIdioma.src = iconos[idioma].src; // Cambia la bandera usando el objeto iconos
+        banderaIdioma.alt = iconos[idioma].alt; // Cambia el texto alternativo de la imagen
+        etiquetaIdioma.textContent = iconos[idioma].label; // Actualiza el texto de la etiqueta con el código del idioma
     }
 
     /**

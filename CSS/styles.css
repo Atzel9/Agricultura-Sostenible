@@ -107,58 +107,58 @@ body{
 }
 
 .idiomas-desplegable {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Para posicionar el menú de idiomas */
+    display: inline-block; /* Para que el botón y el menú estén en línea */
 }
 
 .btn-idioma {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: white;
-    font-size: 16px;
+    background: none; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente */
+    gap: 5px; /* Espacio entre el icono y el texto */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
 .menu-idiomas {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 100;
-    right: 0;
-    border-radius: 8px;
-    padding: 0;
-    margin: 0;
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posiciona el menú relativo al botón */
+    background-color: #f9f9f9; /* Fondo del menú */
+    min-width: 120px; /* Ancho mínimo del menú */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menú */
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    right: 0; /* Alinea el menú a la derecha del botón */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 0; /* Sin padding interno */
+    margin: 0; /* Sin margen externo */
 }
 
 .menu-idiomas li {
-    color: #333;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    list-style: none;
-    border-bottom: 1px solid #eee;
-    transition: background 0.2s;
+    color: #333; /* Color del texto de los elementos del menú */
+    padding: 10px 16px; /* Espaciado interno de los elementos del menú */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente */
+    gap: 8px; /* Espacio entre el icono y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    list-style: none; /* Elimina las viñetas de la lista */
+    border-bottom: 1px solid #eee; /* Línea divisoria entre los elementos */
+    transition: background 0.2s; /* Transición suave al cambiar el fondo */
 }
 
-.menu-idiomas li:last-child {
-    border-bottom: none;
+.menu-idiomas li:last-child { /* Elimina la línea divisoria del último elemento */
+    border-bottom: none; 
 }
 
 .menu-idiomas li:hover {
-    background-color: #BED333;
-    color: white;
+    background-color: #BED333; /* Cambia el fondo al pasar el mouse */
+    color: white;   /* Cambia el color del texto al pasar el mouse */
 }
 
-.idiomas-desplegable.abierto .menu-idiomas {
-    display: block;
+.idiomas-desplegable.abierto .menu-idiomas { 
+    display: block; /* Muestra el menú cuando está abierto */
 }
 /*----HEADER----*/
 
