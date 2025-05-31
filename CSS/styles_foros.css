@@ -227,32 +227,33 @@ body{
 
 /* MENU LATERAL */
 .cont-menu2 {
-    background-color: #e6ebbf;
-    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
-    border-right: 5px solid #dfe2c3;
-    width: 220px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: all 0.5s ease;
-    transform: translateX(-100%);
-    z-index: 9;
+    background-color: #e6ebbf; /*color del fondo*/
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66); /*sombra del menu*/
+    border-right: 5px solid #dfe2c3; /*borde derecho*/
+    width: 220px; /*ancho*/
+    height: 100vh; /*largo*/
+    position: fixed; /*posicion flotante*/
+    top: 0; /*menu hasta arriba*/
+    left: 0; /*menu hasta la izquierda*/
+    transition: all 0.5s ease; /*animacion de dezlice*/
+    transform: translateX(-100%); /*cordenada de ubicacion*/
+    z-index: 9; /*capa*/
 }
 
 .active2 {
-    transform: translateX(0);
+    transform: translateX(0); /*al activarse se re-ubica*/
 }
 
 /* MENU LISTA */
+/*modificacion a la lista*/
 .cont-menu2 ul {
-    padding: 100px 0 20px 0;
-    list-style: none;
+    padding: 100px 0 20px 0; /*margen interno*/
+    list-style: none; /*quita el estilo predeterminado*/
 }
-
+/*al pasar el maus pasa un evento*/
 .cont-menu2 ul li:hover {
-    background-color: #F0E68C;
-    color: rgb(42, 42, 42);
+    background-color: #F0E68C; /*color al pasar el maus*/
+    color: rgb(42, 42, 42); /*color de la fuente*/
 }
 
 /* CONTENIDO PRINCIPAL */
@@ -261,6 +262,7 @@ body{
     margin-left: 0;
 }
 
+/*al activarse se dezplaza el contenido*/
 .shifted {
     margin-left: 220px; /* mismo ancho que el menú */
 }
