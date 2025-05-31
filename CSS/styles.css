@@ -107,58 +107,58 @@ body{
 }
 
 .idiomas-desplegable {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Para posicionar el menú de idiomas */
+    display: inline-block; /* Para que el botón y el menú estén en línea */
 }
 
 .btn-idioma {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: white;
-    font-size: 16px;
+    background: none; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente */
+    gap: 5px; /* Espacio entre el icono y el texto */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
 .menu-idiomas {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 100;
-    right: 0;
-    border-radius: 8px;
-    padding: 0;
-    margin: 0;
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posiciona el menú relativo al botón */
+    background-color: #f9f9f9; /* Fondo del menú */
+    min-width: 120px; /* Ancho mínimo del menú */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menú */
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    right: 0; /* Alinea el menú a la derecha del botón */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 0; /* Sin padding interno */
+    margin: 0; /* Sin margen externo */
 }
 
 .menu-idiomas li {
-    color: #333;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    list-style: none;
-    border-bottom: 1px solid #eee;
-    transition: background 0.2s;
+    color: #333; /* Color del texto de los elementos del menú */
+    padding: 10px 16px; /* Espaciado interno de los elementos del menú */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente */
+    gap: 8px; /* Espacio entre el icono y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    list-style: none; /* Elimina las viñetas de la lista */
+    border-bottom: 1px solid #eee; /* Línea divisoria entre los elementos */
+    transition: background 0.2s; /* Transición suave al cambiar el fondo */
 }
 
-.menu-idiomas li:last-child {
-    border-bottom: none;
+.menu-idiomas li:last-child { /* Elimina la línea divisoria del último elemento */
+    border-bottom: none; 
 }
 
 .menu-idiomas li:hover {
-    background-color: #BED333;
-    color: white;
+    background-color: #BED333; /* Cambia el fondo al pasar el mouse */
+    color: white;   /* Cambia el color del texto al pasar el mouse */
 }
 
-.idiomas-desplegable.abierto .menu-idiomas {
-    display: block;
+.idiomas-desplegable.abierto .menu-idiomas { 
+    display: block; /* Muestra el menú cuando está abierto */
 }
 /*----HEADER----*/
 
@@ -180,33 +180,149 @@ body{
 }
 
 /*ESTILOS FOOTER*/
-.footer {
-    display: flex;
-    flex-direction: column; /*Coloca los contenedores en columna*/
-    align-items: center; /*Centra horizontalmente los contenedores dentro del footer*/
-    padding: 20px; /*Agrega espacio interior alrededor del contenido*/
-    background-color: #000; /* Establece un fondo negro*/
-    color: white; /*Define el color del texto en blanco*/
-    gap: 10px; /*Agrega espacio vertical entre los elementos*/
-  }
-  .footer-links {
-    display: flex; /*Hace que los enlaces estén en una fila horizontal*/
-    justify-content: center; /*Centra los enlaces horizontalmente*/
-    gap: 20px; /*Agrega separación horizontal entre los enlaces*/
-  }
-  .footer-links a {
-    color: white; /*Color de los enlaces en blanco*/
-    text-decoration: none; /*Elimina el subrayado de los enlaces*/
-    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
-  }
-  .footer-links a:hover {
-    color: #4bca56; /*Cambia el color al pasar el mouse en el enlace*/
-  }
-  .footer-copy {
-    margin: 0; /*Elimina el margen por defecto del párrafo*/
-    font-size: 0.9rem; /*Tamaño de fuente ligeramente más pequeño*/
-  }
+footer {
+    background-color: #1e1e1e; /* Un fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 30px 0; /* Espacio arriba y abajo */
+    margin-top: 150px; /* Espacio arriba */
+}
   
+.footer-contenido {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las secciones */
+    align-items: flex-start; /* Alinear las secciones en la parte superior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 20px; /* Espacio a los lados */
+    flex-wrap: wrap; /* Permitir que las secciones se envuelvan en pantallas más pequeñas */
+}
+  
+.footer-info,
+.footer-links,
+.footer-social,
+.footer-boletin {
+    margin-bottom: 20px; /* Espacio entre las secciones en pantallas pequeñas */
+}
+  
+.footer-info {
+    width: 30%; /* Aproximadamente el ancho de la sección de información */
+}
+  
+.logo-info img {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+    margin-bottom: 10px; /* Espacio debajo del logo */
+    border-radius: 50%; /* Bordes redondeados para el logo */
+}
+  
+.contact-info p {
+    margin-bottom: 5px; /* Espacio entre los párrafos */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+  
+.contact-info i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    color: #ccc; /* Color de los iconos */
+}
+  
+.footer-links {
+    width: 15%; /* Ancho aproximado de la sección de enlaces */
+    display: flex;
+    flex-direction: column;
+}
+  
+.footer-links h3,
+.footer-social h3,
+.footer-boletin h3 {
+    color: #ccc; /* Color de los títulos */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 1.1em; /* Tamaño de fuente del título */
+}
+  
+.footer-links ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin espaciado interno */
+}
+  
+.footer-links li {
+    margin-bottom: 8px; /* Espacio entre los enlaces */
+}
+  
+.footer-links a {
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+  
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+  
+.footer-social {
+    width: 20%; /* Ancho aproximado de la sección de redes sociales */
+}
+  
+.social-iconos a {
+    display: inline-block; /* Muestra como bloque en línea */
+    width: 35px; /* Ancho de los iconos */
+    height: 35px; /* Alto de los iconos */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border-radius: 50%; /* Bordes redondeados */
+    text-align: center; /* Alinea el texto al centro */
+    line-height: 35px; /* Centra verticalmente el texto */
+    font-size: 1.2em; /* Tamaño de fuente */
+    margin-right: 10px; /* Espacio entre los iconos */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+  
+.social-iconos a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+  
+.footer-boletin {
+    width: 30%; /* Ancho aproximado de la sección del newsletter */
+}
+  
+.footer-boletin form {
+    display: flex; /* Flexbox para alinear los elementos */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+  
+.footer-boletin input[type="text"], 
+.footer-boletin input[type="email"] {
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio entre los inputs */
+    border: none; /* Sin borde */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+  
+.footer-boletin button[type="submit"] {
+    background-color: #BED333; /* Un color de acento */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-weight: bold; /* Letra negrita*/
+    transition: background-color 0.3s ease; /* Una transicion al cambiar de color*/
+}
+  
+.footer-boletin button[type="submit"]:hover {
+    background-color: #e09b38; /* Color de fondo al pasar el mouse */
+}
+
+.footer-copyright {
+    background-color: #333; /* Fondo de otro negro para distinguirlo*/
+    padding: 15px 0;
+    font-size: 0.8em;
+}
+
+.footer-copyright p {
+    text-align: center;
+}
+
 /*---FOOTER----*/
 
 /*IDENTIFICADORES*/

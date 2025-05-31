@@ -112,11 +112,9 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     box-sizing: border-box;
     background-color: #e6ebbf;
     margin: 20px 10% 20px 10%;
-    padding: 30px 50px 10px 50px;
-    font-size: 22px;
+    padding: 30px 50px; /*Ajuste del contenido dentro del contenedor*/
+    font-size: 22px; /*Ajustar tamaño de la fuente*/
     border-radius: 20px; /*Bordes mas suaves*/
-    padding-left: 40px;
-    padding-right: 40px;
 }
 .seccion { /*Acomodar el texto dentro de las secciones*/
     border: #dfe2c3 solid;
@@ -138,20 +136,18 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 .beneficios { /*Dar estilo a los divisores*/
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 20px 0;
     box-shadow: 0 0 10px rgba(145, 180, 196, 0.5); /*Crea una sombra*/
     border-radius: 20px; /*Bordes mas suaves*/
     display: flex; /*Declara el flexbox*/
     flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
     justify-content: space-evenly; /*Para que cada contenedor-hijo cubre el contenedor-padre con el mismo espacio entre ellos*/
-    gap: 10px; /*Espacio entre lo elementos*/
+    gap: 30px; /*Espacio entre lo elementos*/
     flex-wrap: wrap; /*Ajustar el contenedor si ya no tiene mas espacio*/
 }
 .beneficios-txt { /*Acomodar el texto dentro de los divisores*/
     box-sizing: border-box;
     width: 60%;
-    padding-top: 5%;
-    padding-bottom: 5%;
     text-align: justify;
 }
 .beneficios-img{ /*Declarar dimensiones de la imagen*/
@@ -164,14 +160,6 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 }
 /*----FIN BENEFICIOS----*/
 
-.proyectos-secc{ /*Estilo para los contenedores de proyectos*/
-    padding-bottom: 20px;
-    padding-right: 20px;
-    width: 90%;
-}
-.proyectos-secc p{
-    font-size: 25px;
-}
 .toTop {
     display: none; /* Inicialmente oculto, se mostrará con JavaScript */
     position: fixed; /* Se mantiene en la misma posición mientras el usuario hace scroll */
