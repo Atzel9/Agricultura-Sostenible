@@ -1,206 +1,757 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrísomora</title>
-    <!--Logo de la página-->
-    <link rel="icon" href="img/logo.png"> 
-    <!--Fuente Google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <!--Estlio CSS-->
-    <link rel="stylesheet" href="CSS/styles_index.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <!--Enlace a iconos de Bostrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-</head>
-<body>
-    <header class="header"> 
-        <div class="cont-header" style="gap: 10px;">
-            <a href="index.html"><img src="img/logo.png" alt=""></a>
-            <h1 data-trad="titulo">Agrisomora</h1>
-        </div>
-        <div class="search-container">
-           <button id="search-button" title="Buscar">
-                <i class="bi bi-search"></i>
-           </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar" data-trad="Buscar">
-        </div>
-        <nav class="cont-header">
-            <ul class="menu">
-                <li><a href="html/contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
-                <li><a href="html/registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
-                <li class="idiomas-desplegable">
-                   <button id="btn-idioma" class="btn-idioma">
-                        <img src="../img/usa.png" alt="" id="bandera-idioma">
-                        <span id="etiqueta-idioma">EN</span>
-                        <i class="bi bi-caret-down-fill"></i>
-                   </button>
-                   <ul class="menu-idiomas" id="menu-idiomas">
-                        <li data-idioma="es"><img src="../img/mexico.png" alt="Español" style="width:20px;"> Español</li>
-                        <li data-idioma="en"><img src="../img/usa.png" alt="English" style="width:20px;"> English</li>
-                    </ul>
-                </li>
+<html lang="es">
+  <!-- 🔧 MEJORA: Especificamos idioma para mejor SEO -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 🚀 MEJORA: Título optimizado para SEO (descriptivo + palabras clave) -->
+    <title>Agrisomora - Agricultura Sostenible e Innovadora</title>
+    <!-- 🚀 MEJORA: Meta description para mejor indexación en Google -->
+    <meta
+      name="description"
+      content="Implementa la agricultura del futuro con tecnología sostenible. Descubre proyectos innovadores, recursos prácticos y únete a nuestra comunidad global."
+    />
+
+    <!-- 🚀 MEJORA: Preconnect establece conexión temprana con servidores externos -->
+    <!-- Esto reduce el tiempo de carga porque la conexión ya está establecida -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <!-- 🚀 MEJORA: Preload carga recursos críticos de alta prioridad -->
+    <!-- El navegador descarga estos archivos INMEDIATAMENTE, no espera a encontrarlos -->
+    <link rel="preload" href="img/logo.png" as="image" type="image/png" />
+    <link rel="preload" href="CSS/styles.css" as="style" />
+    <link rel="preload" href="CSS/styles_index.css" as="style" />
+
+    <!-- Favicon optimizado -->
+    <link rel="icon" href="img/logo.png" type="image/png" />
+
+    <!-- 🚀 MEJORA: CSS CRÍTICO INLINE - ¡SÚPER IMPORTANTE! -->
+    <!-- En lugar de esperar a descargar archivos CSS externos, -->
+    <!-- los estilos más importantes están AQUÍ MISMO en el HTML -->
+    <!-- Esto significa que la página se ve bien INMEDIATAMENTE -->
+    <style>
+      /* 🔧 Reset básico para consistencia entre navegadores */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 🔧 Fuente con fallbacks para carga inmediata */
+      body {
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+
+      /* 🔧 Header sticky optimizado - se ve inmediatamente */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      /* 🔧 Flexbox para alineación perfecta */
+      .cont-header {
+        display: flex;
+        align-items: center;
+      }
+      .cont-header img {
+        height: 50px;
+        width: auto;
+      }
+
+      /* 🔧 Hero section optimizado - altura relativa para rendimiento */
+      .hero {
+        position: relative;
+        height: 70vh; /* viewport height = más eficiente que px fijos */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 🔧 Transiciones suaves para el carrusel */
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out; /* Transición optimizada */
+      }
+      .slide.active {
+        opacity: 1;
+      }
+
+      /* 🔧 Imágenes responsivas con object-fit */
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantiene proporción sin distorsión */
+      }
+
+      /* 🔧 Texto superpuesto optimizado */
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+      }
+      .text h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      /* 🔧 Contenedor responsivo centrado */
+      .contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* 🚀 ANIMACIONES DE CARGA PROGRESIVA */
+      /* Los elementos aparecen gradualmente cuando entran en pantalla */
+      .loading {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+      .loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- 🚀 MEJORA: CARGA ASÍNCRONA DE CSS NO CRÍTICO -->
+    <!-- Estos CSS se cargan SIN BLOQUEAR la renderización de la página -->
+    <!-- media="print" es un truco: el navegador descarga el CSS pero no lo aplica -->
+    <!-- onload cambia media="all" para aplicar los estilos cuando termina la descarga -->
+    <link
+      rel="stylesheet"
+      href="CSS/styles.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <link
+      rel="stylesheet"
+      href="CSS/styles_index.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+
+    <!-- 🚀 MEJORA: Fuentes optimizadas con display=swap -->
+    <!-- display=swap evita el "flash" de texto invisible -->
+    <!-- También se cargan de forma asíncrona -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+
+    <!-- 🚀 MEJORA: Bootstrap Icons también asíncrono -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+
+    <!-- 🚀 MEJORA: Fallback para navegadores antiguos -->
+    <!-- Si JavaScript está deshabilitado, los estilos se cargan normalmente -->
+    <noscript>
+      <link rel="stylesheet" href="CSS/styles.css" />
+      <link rel="stylesheet" href="CSS/styles_index.css" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      />
+    </noscript>
+  </head>
+  <body>
+    <header class="header">
+      <div class="cont-header" style="gap: 10px">
+        <!-- 🚀 MEJORA: aria-label para accesibilidad -->
+        <a href="index.html" aria-label="Ir al inicio">
+          <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
+          <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
+          <img
+            src="img/logo.png"
+            alt="Logo Agrisomora"
+            width="50"
+            height="50"
+          />
+        </a>
+        <h1 data-trad="titulo">Agrisomora</h1>
+      </div>
+      <div class="search-container">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+        <button id="search-button" title="Buscar" aria-label="Buscar">
+          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar..."
+          aria-label="Campo de búsqueda"
+          data-trad="Buscar"
+        />
+      </div>
+      <nav class="cont-header">
+        <ul class="menu">
+          <li>
+            <a href="html/contactos.html" title="Contacto" data-trad="Contacto"
+              >Contactos</a
+            >
+          </li>
+          <li>
+            <a
+              href="html/registrarse.html"
+              title="Registrarse"
+              data-trad="Registrarse"
+              >Registrarse</a
+            >
+          </li>
+          <li class="idiomas-desplegable">
+            <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
+            <button
+              id="btn-idioma"
+              class="btn-idioma"
+              aria-label="Seleccionar idioma"
+            >
+              <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
+              <img
+                src="../img/usa.png"
+                alt="Bandera Estados Unidos"
+                id="bandera-idioma"
+                width="20"
+                height="15"
+              />
+              <span id="etiqueta-idioma">EN</span>
+              <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
+            </button>
+            <ul class="menu-idiomas" id="menu-idiomas">
+              <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
+              <li data-idioma="es">
+                <img
+                  src="../img/mexico.png"
+                  alt="Bandera México"
+                  width="20"
+                  height="15"
+                />
+                Español
+              </li>
+              <li data-idioma="en">
+                <img
+                  src="../img/usa.png"
+                  alt="Bandera Estados Unidos"
+                  width="20"
+                  height="15"
+                />
+                English
+              </li>
             </ul>
-            <!--menu hamburguesa-->
-            <div id="icono-menu" class="icon">
-                <i class="bi bi-list" style="font-size: 40px;"></i>
-            </div>
-        </nav>
-    </header>
-    <!-- Menú oculto -->
-    <div class="cont-menu" id="menu">
-        <ul>
-            <li><a href="index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="html/proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="html/recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="html/historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="html/foros.html" data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="html/inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+          </li>
         </ul>
-    </div>
-    <div class="hero"><!--Seccion para el hero-->
+        <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
+        <div id="icono-menu" class="icon" aria-label="Menú">
+          <i class="bi bi-list" style="font-size: 40px" aria-hidden="true"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 🚀 MEJORA: Cambié div por nav para semántica correcta -->
+    <!-- aria-label ayuda a los lectores de pantalla -->
+    <nav class="cont-menu" id="menu" aria-label="Menú principal">
+      <ul>
+        <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+        <li>
+          <a href="index.html" data-trad="Inicio"
+            ><i class="bi bi-house-fill" aria-hidden="true"></i>Inicio</a
+          >
+        </li>
+        <li>
+          <a href="html/proyectos.html" data-trad="Proyectos"
+            ><i class="bi bi-flower2" aria-hidden="true"></i>Proyectos de
+            innovación</a
+          >
+        </li>
+        <li>
+          <a href="html/recursos.html" data-trad="Recursos"
+            ><i class="bi bi-tree-fill" aria-hidden="true"></i>Recursos para
+            agricultores</a
+          >
+        </li>
+        <li>
+          <a href="html/historias.html" data-trad="Historias"
+            ><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de
+            éxito</a
+          >
+        </li>
+        <li>
+          <a href="html/foros.html" data-trad="Foro"
+            ><i class="bi bi-people-fill" aria-hidden="true"></i>Foro de
+            Innovación</a
+          >
+        </li>
+        <li>
+          <a href="html/inicio_sesion.html" data-trad="Sesion"
+            ><i class="bi bi-person-fill" aria-hidden="true"></i>Iniciar
+            sesión</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 🚀 MEJORA: Agregué elemento main para estructura semántica -->
+    <main>
+      <!-- 🚀 MEJORA: aria-label descriptivo para el carrusel -->
+      <section class="hero" aria-label="Carrusel de imágenes principales">
         <!-- Primera diapositiva activa -->
         <div class="slide active">
-            <img src="img/Diapositiva1.webp" alt="Imagen 1"> <!-- Imagen de fondo -->
-            <div class="text">
-                <h1 data-trad="Implementa">Implementa la agricultura del futuro en tu campo</h1>
-            </div>
+          <!-- 🚀 MEJORA: PICTURE ELEMENT para imágenes responsivas -->
+          <!-- Diferentes imágenes para diferentes tamaños de pantalla -->
+          <!-- WebP es 25-50% más ligero que JPG/PNG -->
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="img/Diapositiva1-mobile.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="img/Diapositiva1.webp"
+              type="image/webp"
+            />
+            <!-- 🚀 MEJORA: loading="eager" para la primera imagen (crítica) -->
+            <!-- Dimensiones explícitas para evitar layout shift -->
+            <img
+              src="img/Diapositiva1.webp"
+              alt="Campo agrícola con tecnología moderna"
+              loading="eager"
+              width="1200"
+              height="600"
+            />
+          </picture>
+          <div class="text">
+            <!-- 🚀 MEJORA: Cambié h1 por h2 (semántica correcta - solo un h1 por página) -->
+            <h2 data-trad="Implementa">
+              Implementa la agricultura del futuro en tu campo
+            </h2>
+          </div>
         </div>
 
         <!-- Segunda diapositiva -->
         <div class="slide">
-            <img src="img/Diapositiva2.webp" alt="Imagen 2">
-            <div class="text">
-                <h1 data-trad="Cultiva">Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad</h1>
-            </div>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="img/Diapositiva2-mobile.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="img/Diapositiva2.webp"
+              type="image/webp"
+            />
+            <!-- 🚀 MEJORA: loading="lazy" para imágenes no críticas -->
+            <!-- Solo se cargan cuando el usuario las va a ver -->
+            <img
+              src="img/Diapositiva2.webp"
+              alt="Agricultura sostenible"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
+          </picture>
+          <div class="text">
+            <h2 data-trad="Cultiva">
+              Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad
+            </h2>
+          </div>
         </div>
 
         <!-- Tercera diapositiva -->
         <div class="slide">
-            <img src="img/Diapositiva3.webp" alt="Imagen 3">
-            <div class="text">
-                <h1 data-trad="Transforma">Transforma tu tierra con tecnología inteligente y prácticas responsables</h1>
-            </div>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="img/Diapositiva3-mobile.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="img/Diapositiva3.webp"
+              type="image/webp"
+            />
+            <!-- 🚀 MEJORA: loading="lazy" + alt descriptivo -->
+            <img
+              src="img/Diapositiva3.webp"
+              alt="Tecnología inteligente en agricultura"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
+          </picture>
+          <div class="text">
+            <h2 data-trad="Transforma">
+              Transforma tu tierra con tecnología inteligente y prácticas
+              responsables
+            </h2>
+          </div>
         </div>
-    </div>
-    <!--Inicio de la pagina principal-->
-    <!--Sección Beneficios-->
-    <section id="beneficios" class="contenedor">
-        <div class="beneficios">
-            <div class="beneficios-txt">
-                <h3 data-trad="Menos">Menos pesticidas</h3> <br>
-                <p data-trad="Menos-descripcion">Reducir el uso de productos químicos para controlar plagas y enfermedades, priorizando métodos más naturales y menos dañinos para el medio ambiente.<br>Control biologico el cual es el uso de insectos que combaten plagas o cultivos resistentes para resistir las plagas y enfermedades.</p>
-            </div>
-            <div style="background-image: url(img/fertilizante.webp);" class="beneficios-img" alt="Persona con pesticida"></div>
-        </div>
-        <div class="beneficios">
-            <div class="beneficios-txt">
-                <h3 data-trad="Menos2">Menos agua</h3> <br>
-                <p data-trad="Menos2-descripcion">Utilizar tecnologías prácticas que optimicen el uso del agua como el riego por goteo o la recuperación de agua pluviales para prevenir el desperdicio y mantener la eficiencia y asegurando la disponibilidad de recursos hídricos a largo plazo.</p>
-            </div>
-            <div style="background-image: url(img/Agua.jpg);" class="beneficios-img" alt="Sistemas de riego"></div>
-        </div>
-        <div class="beneficios">
-            <div class="beneficios-txt">
-                <h3 data-trad="rendimiento">Mejor rendimiento</h3> <br>
-                <P data-trad="rendimiento-descripcion">Maximizar la producción de cultivos utilizando prácicas que no dañen y protegan el medio ambiente, con el uso de fertilizantes orgánicos y la rotación de cultivos, para aumentar la calidad y cantidad en la cosecha</P>
-            </div>
-            <div style="background-image: url(img/Cultivo.webp);" class="beneficios-img" alt="Cultivos"></div>
-        </div>
-    </section>
-    <!--Seccion Proyectos-->
-    <section class="contenedor seccion">
-        <h3 data-trad="Cultivando-el-Futuro">&quot;Cultivando el Futuro: Innovación al Servicio del Planeta&quot;</h3> <br>
-        <p data-trad="Culti-descripcion1">En la era de la tecnología, la agricultura está evolucionando como nunca antes. Los avances en inteligencia artificial, drones, sensores inteligentes y técnicas de precisión están revolucionando la forma en que cultivamos nuestros alimentos.<br><br>
-            Descubre cómo estas innovaciones no solo aumentan la eficiencia y productividad, sino que también protegen nuestro medio ambiente, reducen el desperdicio de recursos y promueven prácticas agrícolas sostenibles para las generaciones futuras.<br><br>
-            Explora nuestros Proyectos de Innovación y únete a la transformación del campo hacia un futuro más limpio, inteligente y resiliente.</p> <br>
-        <a href="html/proyectos.html" title="Proyectos de Innovación" data-trad="Culti-btn"><p>Proyectos de Innovación</p></a>
-    </section>
-        <!--Seccion Recursos-->
-    <section class="contenedor seccion">
-        <h3 data-trad="Empodera-tu-campo">&quot;Empodera tu Campo: Recursos Prácticos para una Agricultura Sostenible y Exitosa&quot;</h3> <br>
-        <p data-trad="Empo-descripcion1">¿Quieres mejorar tus cultivos, ahorrar agua y aumentar tu productividad sin comprometer el medio ambiente?
-            En esta sección, encontrarás guías prácticas, consejos expertos y materiales diseñados específicamente para ayudarte a implementar técnicas innovadoras y sostenibles en tu día a día. <br><br>
-            
-            🌱 Optimiza tus recursos : Aprende a usar el agua, la tierra y la energía de manera eficiente. <br>
-            💡 Innovación al alcance : Descubre herramientas modernas que harán tu trabajo más fácil y rentable. <br>
-            🌍 Cuida el planeta : Aplica prácticas que protegen el medio ambiente mientras impulsas tu negocio.</p> <br>
-        <a href="html/foros.html" title="Recursos para agricultores" data-trad="Empo-btn">Recursos para agricultores</a>
-    </section>
-    <!--Seccion Exitos-->
-    <section class="contenedor seccion">
-        <h3 data-trad="Historias-que-inspiran">&quot;Historias que Inspiran: Agricultores Transformando su Futuro con Innovación&quot;</h3> <br>
-        <P data-trad="Histo-descripcion1">Descubre cómo agricultores como tú están revolucionando su trabajo mediante técnicas innovadoras y prácticas sostenibles. Estas historias reales te mostrarán cómo la tecnología, el conocimiento y la creatividad pueden transformar desafíos en oportunidades. <br><br>
+      </section>
 
-            🌾 De la tradición al futuro : Conoce a quienes han adoptado nuevas tecnologías para aumentar su productividad sin perder su conexión con la tierra.<br>
-            💧 Soluciones inteligentes : Historias de agricultores que optimizaron el uso del agua y redujeron costos mientras protegían el medio ambiente.<br>
-            🌍 Impacto positivo : Casos de éxito donde la sostenibilidad no solo benefició los cultivos, sino también las comunidades y ecosistemas locales.</P> <br>
-        <a href="html/historias.html" title="Historias de éxito" data-trad="Histo-btn">Historias de éxito</a>
-    </section>
-    <!--Seccion Foros-->
-    <section class="contenedor seccion">
-        <h3 data-trad="ForosSeccion">&quot;Conecta, Comparte, Crece: Únete a Nuestra Comunidad Global de Agricultores&quot;</h3> <br>
-        <p data-trad="ForosSeccion-descripcion">¿Quieres ser parte de una conversación que está transformando el futuro de la agricultura? En nuestros foros, agricultores de todo el mundo se reúnen para compartir experiencias, resolver desafíos y explorar las últimas innovaciones en el campo.<br><br>
+      <!-- Sección Beneficios -->
+      <section
+        id="beneficios"
+        class="contenedor loading"
+        aria-labelledby="beneficios-title"
+      >
+        <h2 id="beneficios-title" class="sr-only">
+          Beneficios de la agricultura sostenible
+        </h2>
+        <div class="beneficios">
+          <div class="beneficios-txt">
+            <h3 data-trad="Menos">Menos pesticidas</h3>
+            <p data-trad="Menos-descripcion">
+              Reducir el uso de productos químicos para controlar plagas y
+              enfermedades, priorizando métodos más naturales y menos dañinos
+              para el medio ambiente. Control biológico el cual es el uso de
+              insectos que combaten plagas o cultivos resistentes para resistir
+              las plagas y enfermedades.
+            </p>
+          </div>
+          <div
+            class="beneficios-img"
+            style="background-image: url(img/fertilizante.webp)"
+            role="img"
+            aria-label="Persona aplicando tratamiento natural a cultivos"
+          ></div>
+        </div>
+        <div class="beneficios">
+          <div class="beneficios-txt">
+            <h3 data-trad="Menos2">Menos agua</h3>
+            <p data-trad="Menos2-descripcion">
+              Utilizar tecnologías prácticas que optimicen el uso del agua como
+              el riego por goteo o la recuperación de agua pluviales para
+              prevenir el desperdicio y mantener la eficiencia y asegurando la
+              disponibilidad de recursos hídricos a largo plazo.
+            </p>
+          </div>
+          <div
+            class="beneficios-img"
+            style="background-image: url(img/agua.webp)"
+            role="img"
+            aria-label="Sistema de riego eficiente"
+          ></div>
+        </div>
+        <div class="beneficios">
+          <div class="beneficios-txt">
+            <h3 data-trad="rendimiento">Mejor rendimiento</h3>
+            <p data-trad="rendimiento-descripcion">
+              Maximizar la producción de cultivos utilizando prácticas que no
+              dañen y protejan el medio ambiente, con el uso de fertilizantes
+              orgánicos y la rotación de cultivos, para aumentar la calidad y
+              cantidad en la cosecha
+            </p>
+          </div>
+          <div
+            class="beneficios-img"
+            style="background-image: url(img/Cultivo.webp)"
+            role="img"
+            aria-label="Cultivos saludables y productivos"
+          ></div>
+        </div>
+      </section>
 
-            👥 Construye conexiones globales : Conoce a agricultores de diferentes regiones y culturas que enfrentan desafíos similares a los tuyos.<br>
-            💡 Aprende de expertos y pares : Participa en discusiones con especialistas y otros agricultores que están aplicando soluciones innovadoras.<br>
-            🌱 Inspírate con nuevas ideas : Descubre tendencias, técnicas y herramientas que están revolucionando la agricultura sostenible.</p> <br>
-        <a href="html/foros.html" title="Foros" data-trad="ForosSeccion-btn">Explorar foros</a>
-    </section>
+      <!-- Sección Proyectos -->
+      <section class="contenedor seccion loading">
+        <h2 data-trad="Cultivando-el-Futuro">
+          Cultivando el Futuro: Innovación al Servicio del Planeta
+        </h2>
+        <p data-trad="Culti-descripcion1">
+          En la era de la tecnología, la agricultura está evolucionando como
+          nunca antes. Los avances en inteligencia artificial, drones, sensores
+          inteligentes y técnicas de precisión están revolucionando la forma en
+          que cultivamos nuestros alimentos.<br /><br />
+          Descubre cómo estas innovaciones no solo aumentan la eficiencia y
+          productividad, sino que también protegen nuestro medio ambiente,
+          reducen el desperdicio de recursos y promueven prácticas agrícolas
+          sostenibles para las generaciones futuras.<br /><br />
+          Explora nuestros Proyectos de Innovación y únete a la transformación
+          del campo hacia un futuro más limpio, inteligente y resiliente.
+        </p>
+        <a
+          href="html/proyectos.html"
+          class="btn-cta"
+          title="Ver Proyectos de Innovación"
+          data-trad="Culti-btn"
+          >Proyectos de Innovación</a
+        >
+      </section>
+
+      <!-- Sección Recursos -->
+      <section class="contenedor seccion loading">
+        <h2 data-trad="Empodera-tu-campo">
+          Empodera tu Campo: Recursos Prácticos para una Agricultura Sostenible
+          y Exitosa
+        </h2>
+        <p data-trad="Empo-descripcion1">
+          ¿Quieres mejorar tus cultivos, ahorrar agua y aumentar tu
+          productividad sin comprometer el medio ambiente? En esta sección,
+          encontrarás guías prácticas, consejos expertos y materiales diseñados
+          específicamente para ayudarte a implementar técnicas innovadoras y
+          sostenibles en tu día a día. <br /><br />
+
+          🌱 Optimiza tus recursos: Aprende a usar el agua, la tierra y la
+          energía de manera eficiente. <br />
+          💡 Innovación al alcance: Descubre herramientas modernas que harán tu
+          trabajo más fácil y rentable. <br />
+          🌍 Cuida el planeta: Aplica prácticas que protegen el medio ambiente
+          mientras impulsas tu negocio.
+        </p>
+        <a
+          href="html/recursos.html"
+          class="btn-cta"
+          title="Ver Recursos para agricultores"
+          data-trad="Empo-btn"
+          >Recursos para agricultores</a
+        >
+      </section>
+
+      <!-- Sección Historias de Éxito -->
+      <section class="contenedor seccion loading">
+        <h2 data-trad="Historias-que-inspiran">
+          Historias que Inspiran: Agricultores Transformando su Futuro con
+          Innovación
+        </h2>
+        <p data-trad="Histo-descripcion1">
+          Descubre cómo agricultores como tú están revolucionando su trabajo
+          mediante técnicas innovadoras y prácticas sostenibles. Estas historias
+          reales te mostrarán cómo la tecnología, el conocimiento y la
+          creatividad pueden transformar desafíos en oportunidades. <br /><br />
+
+          🌾 De la tradición al futuro: Conoce a quienes han adoptado nuevas
+          tecnologías para aumentar su productividad sin perder su conexión con
+          la tierra.<br />
+          💧 Soluciones inteligentes: Historias de agricultores que optimizaron
+          el uso del agua y redujeron costos mientras protegían el medio
+          ambiente.<br />
+          🌍 Impacto positivo: Casos de éxito donde la sostenibilidad no solo
+          benefició los cultivos, sino también las comunidades y ecosistemas
+          locales.
+        </p>
+        <a
+          href="html/historias.html"
+          class="btn-cta"
+          title="Ver Historias de éxito"
+          data-trad="Histo-btn"
+          >Historias de éxito</a
+        >
+      </section>
+
+      <!-- Sección Foros -->
+      <section class="contenedor seccion loading">
+        <h2 data-trad="ForosSeccion">
+          Conecta, Comparte, Crece: Únete a Nuestra Comunidad Global de
+          Agricultores
+        </h2>
+        <p data-trad="ForosSeccion-descripcion">
+          ¿Quieres ser parte de una conversación que está transformando el
+          futuro de la agricultura? En nuestros foros, agricultores de todo el
+          mundo se reúnen para compartir experiencias, resolver desafíos y
+          explorar las últimas innovaciones en el campo.<br /><br />
+
+          👥 Construye conexiones globales: Conoce a agricultores de diferentes
+          regiones y culturas que enfrentan desafíos similares a los tuyos.<br />
+          💡 Aprende de expertos y pares: Participa en discusiones con
+          especialistas y otros agricultores que están aplicando soluciones
+          innovadoras.<br />
+          🌱 Inspírate con nuevas ideas: Descubre tendencias, técnicas y
+          herramientas que están revolucionando la agricultura sostenible.
+        </p>
+        <a
+          href="html/foros.html"
+          class="btn-cta"
+          title="Explorar Foros"
+          data-trad="ForosSeccion-btn"
+          >Explorar foros</a
+        >
+      </section>
+    </main>
 
     <!-- Botón para regresar arriba -->
-    <button class="toTop" title="Ir arriba"><i class="bi bi-chevron-up"></i></button>
-    
-    <!--Inicio del footer-->
+    <button
+      class="toTop"
+      title="Ir arriba"
+      aria-label="Volver al inicio de la página"
+    >
+      <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-contenido">
-            <div class="footer-info">
-                <div class="logo-info">
-                    <img src="img/logo.png" alt="">
-                    <p data-trad="Lema">Cosechando futuro, cultivando vida</p><!--Lema del sitio, pueden cambiarlo a gusto-->
-                </div>
-                <div class="contacto-info">
-                    <p><i class="bi-telephone-fill"></i>351 176 5744</p><!--Mi numero de referencia, cambian a otro a gusto -->
-                    <p><i class="bi-envelope-fill"></i> Agrisomora</p>
-                    <p><i class="bi-geo-alt-fill"></i> 2025, CBTiS 52</p>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h3 data-trad="enlaces">ENLACES</h3>
-                <ul>
-                    <li><a href="html/nosotros.html" data-trad="Nosotros">Sobre nosotros</a></li>
-                    <li><a href="html/politica.html" data-trad="Politica">Política de privacidad</a></li>
-                    <li><a href="html/contactos.html" data-trad="Contactanos">Contáctanos</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3 data-trad="Redes">REDES SOCIALES</h3>
-                <div class="social-iconos">
-                    <a href="#" target="_blank"><i class="bi-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="bi-twitter-x"></i></a>
-                    <a href="#" target="_blank"><i class="bi-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-boletin">
-                <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
-                <form>
-                    <input type="text" placeholder="Nombre" required data-trad="Nom">
-                    <input type="email" placeholder="Correo electrónico" required data-trad="Correo">
-                    <button type="submit" data-trad="Suscribirse">Suscribirse</button>
-                </form>
-            </div>
+      <div class="footer-contenido">
+        <div class="footer-info">
+          <div class="logo-info">
+            <img
+              src="img/logo.png"
+              alt="Logo Agrisomora"
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+            <p data-trad="Lema">Cosechando futuro, cultivando vida</p>
+          </div>
+          <div class="contacto-info">
+            <p>
+              <i class="bi-telephone-fill" aria-hidden="true"></i>
+              <a href="tel:+523511765744">351 176 5744</a>
+            </p>
+            <p>
+              <i class="bi-envelope-fill" aria-hidden="true"></i>
+              <a href="mailto:info@agrisomora.com">Agrisomora</a>
+            </p>
+            <p>
+              <i class="bi-geo-alt-fill" aria-hidden="true"></i> 2025, CBTiS 52
+            </p>
+          </div>
         </div>
-        <div class="footer-copyright">
-            <p data-trad="copy">&copy;2025 Agrisomora. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <h3 data-trad="enlaces">ENLACES</h3>
+          <ul>
+            <li>
+              <a href="html/nosotros.html" data-trad="Nosotros"
+                >Sobre nosotros</a
+              >
+            </li>
+            <li>
+              <a href="html/politica.html" data-trad="Politica"
+                >Política de privacidad</a
+              >
+            </li>
+            <li>
+              <a href="html/contactos.html" data-trad="Contactanos"
+                >Contáctanos</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="footer-social">
+          <h3 data-trad="Redes">REDES SOCIALES</h3>
+          <div class="social-iconos">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              ><i class="bi-facebook"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              ><i class="bi-twitter-x"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><i class="bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-boletin">
+          <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
+          <form>
+            <input
+              type="text"
+              placeholder="Nombre"
+              required
+              data-trad="Nom"
+              aria-label="Nombre"
+            />
+            <input
+              type="email"
+              placeholder="Correo electrónico"
+              required
+              data-trad="Correo"
+              aria-label="Correo electrónico"
+            />
+            <button type="submit" data-trad="Suscribirse">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p data-trad="copy">
+          &copy; 2025 Agrisomora. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
-    <!--codigo de javaScript-->
-    <script src="js/app.js"></script>
-    <script src="traducciones/traducciones.js"></script>
-    <script src="js/buscador.js"></script>
-    
-</body>
+
+    <!-- Scripts optimizados con defer y async -->
+    <script>
+      // Script crítico inline para funcionalidad inmediata
+      document.addEventListener("DOMContentLoaded", function () {
+        // Lazy loading de elementos
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("loaded");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observar elementos con clase loading
+        document.querySelectorAll(".loading").forEach((el) => {
+          observer.observe(el);
+        });
+
+        // Carrusel simple y eficiente
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function nextSlide() {
+          slides[currentSlide].classList.remove("active");
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add("active");
+        }
+
+        setInterval(nextSlide, 5000);
+      });
+    </script>
+
+    <!-- Scripts no críticos cargados con defer -->
+    <script defer src="js/app.js"></script>
+    <script defer src="traducciones/traducciones.js"></script>
+    <script defer src="js/buscador.js"></script>
+  </body>
 </html>
