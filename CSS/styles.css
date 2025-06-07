@@ -36,12 +36,17 @@ body{
     border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Contenedor del buscador */
 .search-container {
     display: flex;
     align-items: center;
     position: relative;
-    width: 40px; /* Ancho inicial (solo la lupa) */
+    width: 250px; /* Ancho inicial (solo la lupa) */
     transition: width 0.3s ease; /* Transición suave al expandir */
     overflow: hidden; /* Oculta el contenido fuera del contenedor */
     border: 1px solid #ccc;
@@ -64,7 +69,6 @@ body{
 
 /* Input de búsqueda (oculto inicialmente) */
 .search-container input {
-    display: none; /* Oculta completamente el input */
     border: none;
     outline: none;
     padding: 5px 10px;
@@ -74,10 +78,6 @@ body{
     color: black;
 }
 
-/* Efecto al hacer hover sobre el contenedor */
-.search-container:hover {
-    width: 150px; /* Ancho expandido */
-}
 
 /* Resaltado de búsqueda */
 .search-highlight {
@@ -87,6 +87,34 @@ body{
 
 .search-container:hover input {
     display: block; /* Muestra el input */
+}
+
+#results {
+  max-width: 600px;
+  /* Limita el ancho máximo para mantener coherencia con el buscador */
+  margin: 0 auto;
+  /* Centra horizontalmente el contenedor de resultados */
+}
+
+.result-item {
+  border-bottom: 1px solid #ccc;
+  /* Línea separadora gris claro debajo de cada resultado para delimitar visualmente */
+  padding: 12px 0;
+  /* Espacio vertical interno para separar cada resultado */
+}
+
+.result-title {
+  font-weight: bold;
+  /* Texto en negrita para destacar el título de cada resultado */
+  margin-bottom: 6px;
+  /* Espacio inferior para separar título del texto de preview */
+  color: #222;
+  /* Color de texto oscuro, casi negro, para legibilidad */
+}
+
+.result-preview {
+  color: #555;
+  /* Color gris medio para el texto de preview, para que no compita visualmente con el título */
 }
 
 .header nav li {
