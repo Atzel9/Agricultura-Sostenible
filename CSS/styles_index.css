@@ -110,7 +110,7 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 /*-----Hero Diapositivas----*/
 .contenedor { /*Definir estilos de los contenedores*/
     box-sizing: border-box;
-    background-color: #e6ebbf;
+    background-color: #e4e6d7;
     margin: 20px 10% 20px 10%;
     padding: 30px 50px; /*Ajuste del contenido dentro del contenedor*/
     font-size: 22px; /*Ajustar tamaño de la fuente*/
