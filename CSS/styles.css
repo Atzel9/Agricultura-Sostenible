@@ -44,14 +44,22 @@ body{
 /* Contenedor del buscador */
 .search-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     position: relative;
-    width: 250px; /* Ancho inicial (solo la lupa) */
-    transition: width 0.3s ease; /* Transición suave al expandir */
-    overflow: hidden; /* Oculta el contenido fuera del contenedor */
-    border: 1px solid #ccc;
+    width: 350px; /* Ancho inicial (solo la lupa) */
     border-radius: 25px;
     margin-left: auto;
+    margin-bottom: 3px;
+    gap: 5px; /* Espacio entre el botón y el input */
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: relative; /*que no se mueva en absoluto */
+    z-index: 10; /* Asegura que esté por encima de .results */
 }
 
 /* Botón de la lupa */
@@ -76,6 +84,7 @@ body{
     font-size: 14px; /* Tamaño de fuente */
     background-color: white;
     color: black;
+    border-radius: 10px;
 }
 
 
@@ -85,15 +94,14 @@ body{
     font-weight: bold;
 }
 
-.search-container:hover input {
-    display: block; /* Muestra el input */
-}
-
 #results {
-  max-width: 600px;
+    width: 100%;
+  max-width: none;
   /* Limita el ancho máximo para mantener coherencia con el buscador */
-  margin: 0 auto;
+  margin: 0;
   /* Centra horizontalmente el contenedor de resultados */
+  background-color: #f9f9f9;
+  position: absolute;
 }
 
 .result-item {

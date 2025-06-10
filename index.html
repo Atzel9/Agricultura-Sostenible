@@ -200,6 +200,7 @@
         <h1 data-trad="titulo">Agrisomora</h1>
       </div>
       <div class="search-container">
+        <div class="search-bar">
         <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
         <button id="search-button" title="Buscar" aria-label="Buscar">
           <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
@@ -209,12 +210,13 @@
         <input
           type="text"
           id="search-input"
-          placeholder="Buscar..."
+          placeholder="Buscar..." 
           aria-label="Campo de búsqueda"
           data-trad="Buscar"
         />
+        </div>
+        <div id="results"></div>
       </div>
-      <div id="results"></div>
       <nav class="cont-header">
         <ul class="menu">
           <li>
