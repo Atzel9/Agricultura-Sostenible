@@ -19,7 +19,7 @@
 .info { /*Estilo para el contenedor en donde se encuentra la info*/
     margin: 5vh 40vh 5vh 10vh;
     padding: 10px 10px 10px 30px;
-    background-color: #e6ebbf;
+    background-color: #e4e6d7;
     border: #dfe2c3 solid; /*Margen*/
     border-radius: 15px; /*Bordes redondos*/
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /*Sombra para un mjeor estilo*/

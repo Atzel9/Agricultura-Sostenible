@@ -14,7 +14,7 @@
 }
 .Estilo-cont { /*Estilos al contenedor donde se presenta la información*/
     position: relative; /*Para que el contenedor se pueda posicionar correctamente en el hero*/
-    background-color: #e6ebbf;
+    background-color: #e4e6d7;
     border: 2px #dfe2c3 solid; /*Margen*/
     padding: 20px 50px 20px 50px;
     margin: 150px 70px 10px 70px;
@@ -46,7 +46,7 @@
     position: relative; /*Para permitir un posicionamiento correcto*/
     display: flex; /*Para organizar los elementos dentro*/
     flex-direction: column; /*Para que los elementos se acomoden como columna*/
-    background-color: #e6ebbf; /*Color del fondo*/
+    background-color: #e4e6d7; /*Color del fondo*/
     border: 2px #dfe2c3 solid; /*Margen*/
     padding: 20px 50px 20px 50px;
     margin: 10px 70px 10px 70px;
