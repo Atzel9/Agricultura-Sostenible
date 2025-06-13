@@ -57,8 +57,23 @@
     font-size: 1.5em; /* Tamaño adecuado para mejorar la legibilidad */
 }
 
+#sec-rec{ /*Estilo de la seccion para recursos de agricultores*/
+    display: flex; /* Para dividir los divs en columnas */
+    flex-direction: row; /*Para que las columnas se acomoden en fila*/
+    flex-wrap: wrap; /*Si no hay suficiente espacio los contenedores se acomodan en manera vertical*/
+    justify-content: space-around; /*Para que el contenido se distribuya con el mismo espacio*/
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 40px; /* Espacio interno general del contenedor */
+    margin: 0 auto; /*Centrar los contenedores*/
+    box-sizing: border-box; /*Evitar que el padding empuje*/
+    border-radius: 20px;
+    background-color: #e6e9d1;
+    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
+}
+
 .recurso{ /*Estilo para las tarjetas de información*/
-    height: 300px; /*Altura*/
+    height: 350px; /*Altura*/
+    max-width: 500px; /*Ancho*/
     background-color: #f0f0f0; /*Color de fondo*/
     padding: 20px; /*Espaciado dentro*/
     display: flex; /*Para organizar los elementos*/
@@ -81,7 +96,7 @@
 }
 .recurso-cont p a,
 .recurso-cont p a:visited{/*Estilo para que el parrafo no cambie de color*/
-    font-size: 1.2rem;     /*Aumentar el tamaño*/
+    font-size: 1rem;     /*Aumentar el tamaño*/
     text-decoration: none; /*Quitar subrayado*/
     color: black;        /*Cambiar color*/
 }
@@ -92,17 +107,4 @@
     border-radius: 8px;          /*Bordes mas suaves*/
     background-size: cover;      /*Cubrir todo el contenedor*/
     background-position: center; /*Centrar la imagen*/
-}
-
-/*IDENTIFICADORES*/
-#sec-rec{ /*Estilo de la seccion para recursos de agricultores*/
-    display: grid; /* Para dividir los divs en columnas */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de tamaño igual */
-    gap: 20px; /* Espacio entre los elementos */
-    padding: 40px; /* Espacio interno general del contenedor */
-    margin: 0 auto; /*Centrar los contenedores*/
-    box-sizing: border-box; /*Evitar que el padding empuje*/
-    border-radius: 20px;
-    background-color: #e6e9d1;
-    box-shadow: 0 0 15px rgba(145, 180, 196, 0.5);
 }
