@@ -21,6 +21,24 @@
             <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
             <h1>Sobre nosotros</h1>
         </div>
+        <div class="search-container">
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+        <button id="search-button" title="Buscar" aria-label="Buscar">
+          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar..." 
+          aria-label="Campo de búsqueda"
+          data-trad="Buscar"
+        />
+        </div>
+        <div id="results"></div>
+      </div>
         <nav class="cont-header">
             <ul>
                 <li><a href="#" title="Contacto">Contactos</a></li>
@@ -54,7 +72,7 @@
             <li><a href="html/inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
         </ul>
     </div>
-
+    <div id="content">
     <!--Inicio de la pagina-->
     <div class="img"></div>
     <section id="nosotros">
@@ -66,6 +84,7 @@
         <p></p>
         <a href="../bitacora.html"><p>bitacora</p></a>
     </section>
+    </div>
 
     <!--Inicio de footer-->
     <footer>
@@ -114,7 +133,7 @@
     <!--codigo de javaScript-->
     <script src="../js/app.js"></script>
     <script src="../traducciones/traducciones.js"></script>
-    <script src="../js/buscador.js"></script>
+    <script src="../js/buscador2.js"></script>
     
 </body>
 </html>
