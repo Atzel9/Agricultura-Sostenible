@@ -18,12 +18,24 @@
             <a href="../index.html"><img src="../img/logo.png" alt=""></a>
             <h1 data-trad="Sesion1">Iniciar sesión</h1>
         </div>
-        <div class="search-container">
-           <button id="search-button" title="Buscar">
-                <i class="bi bi-search"></i>
-           </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar" data-trad="Buscar">
+       <div class="search-container">
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+        <button id="search-button" title="Buscar" aria-label="Buscar">
+          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar..." 
+          aria-label="Campo de búsqueda"
+          data-trad="Buscar"
+        />
         </div>
+        <div id="results"></div>
+      </div>
         <nav class="cont-header">
             <ul>
                 <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
@@ -58,7 +70,7 @@
         </ul>
     </div>
 
-    <div class="inicio-container">
+    <div id="inicio-container">
     <h1 data-trad="Sesion">Inicia sesión</h1>
     <!--Formulario de Inicio de sesión-->
     <form>

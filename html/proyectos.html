@@ -8,6 +8,107 @@
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* 🔧 Reset básico para consistencia entre navegadores */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 🔧 Fuente con fallbacks para carga inmediata */
+      body {
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+
+      /* 🔧 Header sticky optimizado - se ve inmediatamente */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      /* 🔧 Flexbox para alineación perfecta */
+      .cont-header {
+        display: flex;
+        align-items: center;
+      }
+      .cont-header img {
+        width: auto;
+      }
+
+      /* 🔧 Hero section optimizado - altura relativa para rendimiento */
+      .hero {
+        position: relative;
+        height: 70vh; /* viewport height = más eficiente que px fijos */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 🔧 Transiciones suaves para el carrusel */
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out; /* Transición optimizada */
+      }
+      .slide.active {
+        opacity: 1;
+      }
+
+      /* 🔧 Imágenes responsivas con object-fit */
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantiene proporción sin distorsión */
+      }
+
+      /* 🔧 Texto superpuesto optimizado */
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 2;
+        padding: 2rem;
+        border-radius: 10px;
+      }
+      .text h1 {
+        font-size: 8rem;
+        font-weight: 700;
+      }
+
+      /* 🔧 Contenedor responsivo centrado */
+      .contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* 🚀 ANIMACIONES DE CARGA PROGRESIVA */
+      /* Los elementos aparecen gradualmente cuando entran en pantalla */
+      .loading {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+      .loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap"
       rel="stylesheet"
@@ -32,16 +133,22 @@
         </h1>
       </div>
       <div class="search-container">
-        <button id="search-button" title="Buscar">
-          <i class="bi bi-search"></i>
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+        <button id="search-button" title="Buscar" aria-label="Buscar">
+          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+          <i class="bi bi-search" aria-hidden="true"></i>
         </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
         <input
           type="text"
           id="search-input"
-          placeholder="Buscar..."
-          aria-label="Buscar"
+          placeholder="Buscar..." 
+          aria-label="Campo de búsqueda"
           data-trad="Buscar"
         />
+        </div>
+        <div id="results"></div>
       </div>
       <nav class="cont-header">
         <ul>
@@ -121,6 +228,7 @@
         </li>
       </ul>
     </div>
+    <div id="content">
     <!--Inicio de la pagina-->
     <div class="hero">
       <div id="img-pro"></div>
@@ -238,6 +346,7 @@
     <button class="toTop" title="Ir arriba">
       <i class="bi bi-chevron-up"></i>
     </button>
+    </div>
 
     <!--Inicio de footer-->
     <footer>
@@ -304,8 +413,7 @@
 
     <!--codigo de javaScript-->
     <script src="../js/app.js"></script>
-    <script src="../js/buscador.js"></script>
-    <script src="../buscador.js"></script>
+    <script src="../js/buscador2.js"></script>
     <script src="../traducciones/traducciones.js"></script>
   </body>
 </html>
