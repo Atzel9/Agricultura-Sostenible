@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +47,6 @@
       /* 🔧 Hero section optimizado - altura relativa para rendimiento */
       .hero {
         position: relative;
-        height: 70vh; /* viewport height = más eficiente que px fijos */
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -123,14 +122,21 @@
     />
   </head>
   <body>
+    <!--Inicio Header-->
     <header class="header">
       <div class="cont-header" style="gap: 10px">
-        <a href="../index.html"><img src="../img/logo.png" alt="" /></a>
-        <h1 data-trad="Innovacion-bienvenida">
-          Proyectos de
-          <hr />
-          innovacion
-        </h1>
+        <!-- 🚀 MEJORA: aria-label para accesibilidad -->
+        <a href="index.html" aria-label="Ir al inicio">
+          <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
+          <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
+          <img
+            src="../img/logo.png"
+            alt="Logo Agrisomora"
+            width="50"
+            height="50"
+          />
+        </a>
+        <h1 data-trad="titulo">Agrisomora</h1>
       </div>
       <div class="search-container">
         <div class="search-bar">
@@ -140,100 +146,81 @@
           <i class="bi bi-search" aria-hidden="true"></i>
         </button>
         <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Buscar..." 
-          aria-label="Campo de búsqueda"
-          data-trad="Buscar"
-        />
+        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar"/>
         </div>
         <div id="results"></div>
       </div>
       <nav class="cont-header">
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="contactos.html" title="Contacto" data-trad="Contacto"
-              >Contactos</a
-            >
+            <a href="contactos.html" title="Contacto" data-trad="Contacto">Contacto</a>
           </li>
           <li>
-            <a
-              href="registrarse.html"
-              title="Registrarse"
-              data-trad="Registrarse"
-              >Registrarse</a
-            >
+            <a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a>
           </li>
+          <!--Inicio lista para traducir página-->
           <li class="idiomas-desplegable">
-            <button id="btn-idioma" class="btn-idioma">
-              <img src="../img/usa.png" alt="" id="bandera-idioma" />
+            <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
+            <button id="btn-idioma" class="btn-idioma" aria-label="Seleccionar idioma">
+              <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
+              <img src="../img/usa.png" alt="Bandera Estados Unidos" id="bandera-idioma" width="20" height="15"/>
               <span id="etiqueta-idioma">EN</span>
-              <i class="bi bi-caret-down-fill"></i>
+              <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
             </button>
             <ul class="menu-idiomas" id="menu-idiomas">
+              <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
               <li data-idioma="es">
-                <img
-                  src="../img/mexico.png"
-                  alt="Español"
-                  style="width: 20px"
-                />
+                <img src="../img/mexico.png" alt="Bandera México" width="20" height="20"/>
                 Español
               </li>
               <li data-idioma="en">
-                <img src="../img/usa.png" alt="English" style="width: 20px" />
+                <img src="../img/usa.png" alt="Bandera Estados Unidos" width="20" height="20"/>
                 English
               </li>
             </ul>
           </li>
+          <!--Fin lista para traducir página-->
         </ul>
-        <!--menu hamburguesa-->
-        <div id="icono-menu" class="icon">
-          <i class="bi bi-list" style="font-size: 40px"></i>
+        <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
+        <div id="icono-menu" class="icon" aria-label="Menú">
+          <i class="bi bi-list" style="font-size: 40px" aria-hidden="true"></i>
         </div>
       </nav>
     </header>
-    <!-- Menú oculto -->
-    <div class="cont-menu" id="menu">
+
+    <!--Inicio menu hamburguesa-->
+    <!-- 🚀 MEJORA: Cambié div por nav para semántica correcta -->
+    <!-- aria-label ayuda a los lectores de pantalla -->
+    <nav class="cont-menu" id="menu" aria-label="Menú principal">
       <ul>
+        <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
         <li>
-          <a href="../index.html" data-trad="Inicio"
-            ><i class="bi bi-house-fill"></i>Inicio</a
+          <a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill" aria-hidden="true"></i>Inicio</a>
+        </li>
+        <li>
+          <a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2" aria-hidden="true"></i>Proyectos de innovación</a>
+        </li>
+        <li>
+          <a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill" aria-hidden="true"></i>Recursos para agricultores</a>
+        </li>
+        <li>
+          <a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de éxito</a
           >
         </li>
         <li>
-          <a href="proyectos.html" data-trad="Proyectos"
-            ><i class="bi bi-flower2"></i>Proyectos de innovacion</a
-          >
+          <a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill" aria-hidden="true"></i>Foro de Innovación</a>
         </li>
         <li>
-          <a href="recursos.html" data-trad="Recursos"
-            ><i class="bi bi-tree-fill"></i>Recursos para agricultores</a
-          >
-        </li>
-        <li>
-          <a href="historias.html" data-trad="Historias"
-            ><i class="bi bi-book-fill"></i>Historias de exito</a
-          >
-        </li>
-        <li>
-          <a href="foros.html" data-trad="Foro"
-            ><i class="bi bi-people-fill"></i>Foro de Innovacion</a
-          >
-        </li>
-        <li>
-          <a href="inicio_sesion.html" data-trad="Sesion"
-            ><i class="bi bi-person-fill"></i>Iniciar sesión</a
-          >
+          <a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill" aria-hidden="true"></i>Iniciar sesión</a>
         </li>
       </ul>
-    </div>
-    <div id="content">
+    </nav>
+    <!--FIN HEADER-->
     <!--Inicio de la pagina-->
     <div class="hero">
       <div id="img-pro"></div>
       <div class="Estilo-cont">
-        <h2 data-trad="Innovacion-bienvenida">Proyectos de Innovacion</h2>
+        <h2 data-trad="Innovacion-bienvenida">Proyectos de innovación</h2>
         <p data-trad="Innovacion-descripcion">
           La agricultura está viviendo una revolución impulsada por la
           tecnología y la sostenibilidad. En esta sección descubrirás proyectos
@@ -258,57 +245,47 @@
       <div class="proyectos-secc">
         <br />
         <h3 data-trad="Innovacion-riego">Riego inteligente</h3>
-        <a href="proyectos/riego.html" data-trad="Innovacion-riego-descripcion"
-          >El riego inteligente permite optimizar el uso del agua mediante
+        <a href="proyectos/riego.html" data-trad="Innovacion-riego-descripcion"> 
+          El riego inteligente permite optimizar el uso del agua mediante
           sensores, temporizadores y análisis de datos. Estos sistemas detectan
           la humedad del suelo y las condiciones climáticas para suministrar
           solo la cantidad necesaria de agua, reduciendo el desperdicio y
-          mejorando el rendimiento de los cultivos.</a
-        >
+          mejorando el rendimiento de los cultivos.</a>
         <br />
       </div>
       <hr />
       <div class="proyectos-secc">
         <br />
         <h3 data-trad="innovacion-fertilizantes">Fertilizantes ecológicos</h3>
-        <a
-          href="proyectos/fertilizantes.html"
-          data-trad="innovacion-fertilizantes-descripcion"
-          >Los fertilizantes ecológicos, elaborados a partir de materiales
+        <a href="proyectos/fertilizantes.html" data-trad="innovacion-fertilizantes-descripcion">
+          Los fertilizantes ecológicos, elaborados a partir de materiales
           orgánicos y naturales, ofrecen una alternativa sostenible a los
           productos químicos. Contribuyen a la salud del suelo, promueven el
           crecimiento saludable de las plantas y reducen el impacto
-          ambiental.</a
-        >
+          ambiental.</a>
         <br />
       </div>
       <hr />
       <div class="proyectos-secc">
         <br />
         <h3 data-trad="Innovacion-rotacion">Rotación de cultivos</h3>
-        <a
-          href="proyectos/rotacion.html"
-          data-trad="Innovacion-rotacion-descripcion"
-          >La rotación de cultivos es una práctica agrícola que consiste en
+        <a href="proyectos/rotacion.html" data-trad="Innovacion-rotacion-descripcion">
+          La rotación de cultivos es una práctica agrícola que consiste en
           cambiar el tipo de cultivo en una misma parcela durante diferentes
           temporadas. Esto ayuda a mejorar la fertilidad del suelo, controlar
-          plagas y enfermedades, y evitar la degradación de los nutrientes.</a
-        >
+          plagas y enfermedades, y evitar la degradación de los nutrientes.</a>
         <br />
       </div>
       <hr />
       <div class="proyectos-secc">
         <br />
         <h3 data-trad="Innovacion-vertical">Agricultura vertical</h3>
-        <a
-          href="proyectos/agri_vertical.html"
-          data-trad="Innovacion-vertical-descripcion"
-          >La agricultura vertical se basa en cultivar en estructuras apiladas o
+        <a href="proyectos/agri_vertical.html" data-trad="Innovacion-vertical-descripcion">
+          La agricultura vertical se basa en cultivar en estructuras apiladas o
           en espacios urbanos cerrados, utilizando tecnología como luz LED y
           sistemas hidropónicos. Esta técnica permite aprovechar al máximo el
           espacio, reducir el uso de agua y producir alimentos más cerca de los
-          centros de consumo.</a
-        >
+          centros de consumo.</a>
         <br />
       </div>
       <hr />
@@ -316,29 +293,23 @@
         <h3 data-trad="Innovacion-Bioinsumos">
           Bioinsumos para control de plaga
         </h3>
-        <a
-          href="proyectos/control_plaga.html"
-          data-trad="Innovacion-Bioinsumos-descripcion"
-          >Los bioinsumos utilizan organismos vivos, extractos vegetales o
+        <a href="proyectos/control_plaga.html" data-trad="Innovacion-Bioinsumos-descripcion">
+          Los bioinsumos utilizan organismos vivos, extractos vegetales o
           minerales para controlar plagas y enfermedades. Son una alternativa
           natural a los pesticidas, ayudando a proteger los cultivos sin dañar
-          el ecosistema ni afectar la salud humana.</a
-        >
+          el ecosistema ni afectar la salud humana.</a>
       </div>
       <hr />
       <div class="proyectos-secc">
         <h3 data-trad="Innovacion-Cultivos">
           Cultivos resistentes al cambio climatico
         </h3>
-        <a
-          href="proyectos/cultivo_resistentes.html"
-          data-trad="Innovacion-Cultivos-descripcion"
-          >Gracias a la biotecnología y la investigación genética, se
+        <a href="proyectos/cultivo_resistentes.html" data-trad="Innovacion-Cultivos-descripcion">
+          Gracias a la biotecnología y la investigación genética, se
           desarrollan cultivos capaces de resistir condiciones extremas como
           sequías, altas temperaturas o suelos salinos. Esto asegura una
           producción más estable y adaptada a los efectos del cambio
-          climático.</a
-        >
+          climático.</a>
       </div>
     </section>
 
