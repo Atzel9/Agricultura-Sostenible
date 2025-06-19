@@ -41,30 +41,7 @@
 
       /* 🔧 Fuente con fallbacks para carga inmediata */
       body {
-        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-      }
-
-      /* 🔧 Header sticky optimizado - se ve inmediatamente */
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      /* 🔧 Flexbox para alineación perfecta */
-      .cont-header {
-        display: flex;
-        align-items: center;
-      }
-      .cont-header img {
-        width: auto;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
 
       /* 🔧 Hero section optimizado - altura relativa para rendimiento */
@@ -184,6 +161,7 @@
     </noscript>
   </head>
   <body>
+    <!--Inicio Header-->
     <header class="header">
       <div class="cont-header" style="gap: 10px">
         <!-- 🚀 MEJORA: aria-label para accesibilidad -->
@@ -207,71 +185,40 @@
           <i class="bi bi-search" aria-hidden="true"></i>
         </button>
         <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Buscar..." 
-          aria-label="Campo de búsqueda"
-          data-trad="Buscar"
-        />
+        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar"/>
         </div>
         <div id="results"></div>
       </div>
       <nav class="cont-header">
         <ul class="menu">
           <li>
-            <a href="html/contactos.html" title="Contacto" data-trad="Contacto"
-              >Contactos</a
-            >
+            <a href="html/contactos.html" title="Contacto" data-trad="Contacto">Contacto</a>
           </li>
           <li>
-            <a
-              href="html/registrarse.html"
-              title="Registrarse"
-              data-trad="Registrarse"
-              >Registrarse</a
-            >
+            <a href="html/registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a>
           </li>
+          <!--Inicio lista para traducir página-->
           <li class="idiomas-desplegable">
             <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
-            <button
-              id="btn-idioma"
-              class="btn-idioma"
-              aria-label="Seleccionar idioma"
-            >
+            <button id="btn-idioma" class="btn-idioma" aria-label="Seleccionar idioma">
               <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
-              <img
-                src="../img/usa.png"
-                alt="Bandera Estados Unidos"
-                id="bandera-idioma"
-                width="20"
-                height="15"
-              />
+              <img src="../img/usa.png" alt="Bandera Estados Unidos" id="bandera-idioma" width="20" height="15"/>
               <span id="etiqueta-idioma">EN</span>
               <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
             </button>
             <ul class="menu-idiomas" id="menu-idiomas">
               <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
               <li data-idioma="es">
-                <img
-                  src="../img/mexico.png"
-                  alt="Bandera México"
-                  width="20"
-                  height="15"
-                />
+                <img src="../img/mexico.png" alt="Bandera México" width="20" height="20"/>
                 Español
               </li>
               <li data-idioma="en">
-                <img
-                  src="../img/usa.png"
-                  alt="Bandera Estados Unidos"
-                  width="20"
-                  height="15"
-                />
+                <img src="../img/usa.png" alt="Bandera Estados Unidos" width="20" height="20"/>
                 English
               </li>
             </ul>
           </li>
+          <!--Fin lista para traducir página-->
         </ul>
         <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
         <div id="icono-menu" class="icon" aria-label="Menú">
@@ -279,6 +226,35 @@
         </div>
       </nav>
     </header>
+
+    <!--Inicio menu hamburguesa-->
+    <!-- 🚀 MEJORA: Cambié div por nav para semántica correcta -->
+    <!-- aria-label ayuda a los lectores de pantalla -->
+    <nav class="cont-menu" id="menu" aria-label="Menú principal">
+      <ul>
+        <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+        <li>
+          <a href="index.html" data-trad="Inicio"><i class="bi bi-house-fill" aria-hidden="true"></i>Inicio</a>
+        </li>
+        <li>
+          <a href="html/proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2" aria-hidden="true"></i>Proyectos de innovación</a>
+        </li>
+        <li>
+          <a href="html/recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill" aria-hidden="true"></i>Recursos para agricultores</a>
+        </li>
+        <li>
+          <a href="html/historias.html" data-trad="Historias"><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de éxito</a
+          >
+        </li>
+        <li>
+          <a href="html/foros.html" data-trad="Foro"><i class="bi bi-people-fill" aria-hidden="true"></i>Foro de Innovación</a>
+        </li>
+        <li>
+          <a href="html/inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill" aria-hidden="true"></i>Iniciar sesión</a>
+        </li>
+      </ul>
+    </nav>
+    <!--FIN HEADER-->
 
     <!-- 🚀 MEJORA: Cambié div por nav para semántica correcta -->
     <!-- aria-label ayuda a los lectores de pantalla -->
@@ -334,25 +310,11 @@
           <!-- Diferentes imágenes para diferentes tamaños de pantalla -->
           <!-- WebP es 25-50% más ligero que JPG/PNG -->
           <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/Diapositiva1-mobile.webp"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/Diapositiva1.webp"
-              type="image/webp"
-            />
+            <source media="(max-width: 768px)" srcset="img/Diapositiva1-mobile.webp" type="image/webp"/>
+            <source media="(min-width: 769px)" srcset="img/Diapositiva1.webp" type="image/webp"/>
             <!-- 🚀 MEJORA: loading="eager" para la primera imagen (crítica) -->
             <!-- Dimensiones explícitas para evitar layout shift -->
-            <img
-              src="img/Diapositiva1.webp"
-              alt="Campo agrícola con tecnología moderna"
-              loading="eager"
-              width="1200"
-              height="600"
-            />
+            <img src="img/Diapositiva1.webp" alt="Campo agrícola con tecnología moderna" loading="eager" width="1200" height="600"/>
           </picture>
           <div class="text">
             <!-- 🚀 MEJORA: Cambié h1 por h2 (semántica correcta - solo un h1 por página) -->
