@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../CSS/styles_foros.css">
     <!--Enlace a iconos de Bostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+
 </head>
 <body>
     <header class="header"> 
@@ -83,20 +85,48 @@
     </div>
 
          <div id="icono-menu2">
-    <div class="iconodes botonMenu"  id="botonMenu"  >
+    <div class="iconodes"  id="botonMenu"  >
  <i class="bi bi-list" style="font-size: 30px;"></i>
     </div>
     </div>
     <!-- Contenido desplazable -->
     <div class="main-content" id="main-content" id="icono-menu2" class="icon2">
-        <p style="padding: 20px;">Aquí va el contenido de la página que se moverá a la derecha cuando el menú se abra.</p>
+        
+        <main>
+            <section class="panelPrin">
+             
+                <div class="panelCua">
+                    
+                   
+                   
+                </div>
+                <section class="panelSec">
+                    <div class="panelTer" id="chatContainer" style="position: relative;">
+                        <button class="enviarBton" ><i class="bi bi-images"></i></button>
+                        <button class="enviarBton" id="btnEmoji"><i class="bi bi-emoji-smile"></i></button>
+                        <!-- Emoji picker (inicialmente oculto) -->
+                        <emoji-picker id="emojiPicker" style="display: none; position: absolute;"></emoji-picker>
+                       <textarea name="SMS" placeholder="Escribe un mensaje..." id="miTextarea" maxlength="5000" >
+                       </textarea>
+                       <button class="enviarBton" id="enviarBtn"><i class="bi bi-arrow-up"></i></button> 
+                    </div>
+                    
+                </section>
+                
+            </section>
+        </main>
     </div>
+ 
+   
 
 <!-- Botón para regresar arriba -->
 <button class="toTop" title="Ir arriba"><i class="bi bi-caret-up"></i></button>
 
+    
+
         <!--codigo de javaScript-->
         <script src="../foros.js"></script>
-    
+    <!--emojis para el boton de emojis-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 </body>
 </html>
