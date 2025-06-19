@@ -75,19 +75,17 @@
 
       /* 🔧 Texto superpuesto optimizado */
       .text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        z-index: 2;
-        padding: 2rem;
-        border-radius: 10px;
+        position: absolute; /* Se posiciona sobre la imagen */
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Centra completamente */
+        color: white; /* Texto en color blanco */
+        text-align: center; /* Texto alineado al centro */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre la imagen */
       }
-      .text h1 {
-        font-size: 8rem;
-        font-weight: 700;
+      .text h2 {
+        font-size: 4em; /* Tamaño grande para destacar */
+        margin-bottom: 0.5em; /* Espacio entre el título y el párrafo */
       }
 
       /* 🔧 Contenedor responsivo centrado */
@@ -410,6 +408,7 @@
             style="background-image: url(img/fertilizante.webp)"
             role="img"
             aria-label="Persona aplicando tratamiento natural a cultivos"
+            loading="lazy"
           ></div>
         </div>
         <div class="beneficios">
@@ -427,6 +426,7 @@
             style="background-image: url(img/agua.webp)"
             role="img"
             aria-label="Sistema de riego eficiente"
+            loading="lazy"
           ></div>
         </div>
         <div class="beneficios">
@@ -444,6 +444,7 @@
             style="background-image: url(img/Cultivo.webp)"
             role="img"
             aria-label="Cultivos saludables y productivos"
+            loading="lazy"
           ></div>
         </div>
       </section>
