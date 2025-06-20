@@ -293,10 +293,11 @@ footer {
     color: #fff; /* Color de los enlaces */
     text-decoration: none; /* Sin subrayado */
     font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    transition: color 0.3s ease; /*Hace la animación del hover mas lenta*/
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Subrayar al pasar el mouse */
+    color: #4bca56; /* Cambia el color al pasar el mouse */
 }
 
 .footer-social {
@@ -314,11 +315,11 @@ footer {
     line-height: 35px; /* Centra verticalmente el texto */
     font-size: 1.2em; /* Tamaño de fuente */
     margin-right: 10px; /* Espacio entre los iconos */
-    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+    transition: color 0.3s ease; /* Transición suave para el fondo */
 }
 
 .social-iconos a:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse */
+    color: #B3D333; /* Cambia el color al pasar el mouse */
 }
 
 .footer-boletin {
