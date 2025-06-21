@@ -132,7 +132,6 @@
         width: 80%; /* Ancho de las tarjetas en pantallas pequeñas */
     }
 }
-
 @media (max-width: 720px) {
     .img img {
         max-width: 100%;

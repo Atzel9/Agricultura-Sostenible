@@ -76,7 +76,7 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 .contenedor { /*Definir estilos de los contenedores*/
     box-sizing: border-box;
     background-color: #e4e6d7;
-    margin: 20px 10% 20px 10%;
+    margin: 20px 10%; /*Margen de los contenedores*/
     padding: 30px 50px; /*Ajuste del contenido dentro del contenedor*/
     font-size: 22px; /*Ajustar tamaño de la fuente*/
     border-radius: 20px; /*Bordes mas suaves*/
@@ -84,9 +84,6 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 .seccion { /*Acomodar el texto dentro de las secciones*/
     border: #dfe2c3 solid;
     padding-left: 5%;
-}
-.seccion, p { /*Acomodar el texto dentro de las secciones*/
-    text-align: justify;
 }
 
 /*ESTILOS BENEFICIOS*/
@@ -99,13 +96,14 @@ section a:hover { /*Animacion del <a> al hacer clic*/
     border: #dfe2c3 solid; /*Añade margen*/
 }
 .beneficios { /*Dar estilo a los divisores*/
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     padding: 20px 0;
     box-shadow: 0 0 10px rgba(145, 180, 196, 0.5); /*Crea una sombra*/
     border-radius: 20px; /*Bordes mas suaves*/
     display: flex; /*Declara el flexbox*/
     flex-direction: row; /*Acomoda el texto y las imagenes en fila*/
+    align-items: center; /*Alinear contenido de manera vertical*/
     justify-content: space-evenly; /*Para que cada contenedor-hijo cubre el contenedor-padre con el mismo espacio entre ellos*/
     gap: 30px; /*Espacio entre lo elementos*/
     flex-wrap: wrap; /*Ajustar el contenedor si ya no tiene mas espacio*/
@@ -113,7 +111,6 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 .beneficios-txt { /*Acomodar el texto dentro de los divisores*/
     box-sizing: border-box;
     width: 60%;
-    text-align: justify;
 }
 .beneficios-img{ /*Declarar dimensiones de la imagen*/
     background-size: cover; 
@@ -234,3 +231,25 @@ section a:hover { /*Animacion del <a> al hacer clic*/
 }
 
 /*Fin del menu hamburguesa*/
+
+@media (max-width: 1180px) {
+    .contenedor {
+        margin: 20px 5%; /* Reduce el margen en pantallas pequeñas */
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 18px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+    #beneficios {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .beneficios-txt {
+        width: 90%; /* Cambia el ancho al 100% en pantallas pequeñas */
+    }
+}
+@media (max-width: 425px) {
+    .contenedor {
+        margin: 20px 0; /* Reduce el margen en pantallas muy pequeñas */
+        border-radius: 0; /* Elimina los bordes redondeados en pantallas muy pequeñas */
+        border-left: none; /* Elimina el borde izquierdo en pantallas muy pequeñas */
+        border-right: none; /* Elimina el borde derecho en pantallas muy pequeñas */
+    }
+}
