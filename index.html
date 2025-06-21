@@ -301,97 +301,36 @@
     <!-- 🚀 MEJORA: Agregué elemento main para estructura semántica -->
     <main>
       <!-- 🚀 MEJORA: aria-label descriptivo para el carrusel -->
-      <section class="hero" aria-label="Carrusel de imágenes principales">
+      <div class="hero"><!--Seccion para el hero-->
         <!-- Primera diapositiva activa -->
         <div class="slide active">
-          <!-- 🚀 MEJORA: PICTURE ELEMENT para imágenes responsivas -->
-          <!-- Diferentes imágenes para diferentes tamaños de pantalla -->
-          <!-- WebP es 25-50% más ligero que JPG/PNG -->
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/Diapositiva1-mobile.webp" type="image/webp"/>
-            <source media="(min-width: 769px)" srcset="img/Diapositiva1.webp" type="image/webp"/>
-            <!-- 🚀 MEJORA: loading="eager" para la primera imagen (crítica) -->
-            <!-- Dimensiones explícitas para evitar layout shift -->
-            <img src="img/Diapositiva1.webp" alt="Campo agrícola con tecnología moderna" loading="eager" width="1200" height="600"/>
-          </picture>
-          <div class="text">
-            <!-- 🚀 MEJORA: Cambié h1 por h2 (semántica correcta - solo un h1 por página) -->
-            <h2 data-trad="Implementa">
-              Implementa la agricultura del futuro en tu campo
-            </h2>
-          </div>
+            <img src="../img/Diapositiva1.webp" alt="Imagen 1" loading="lazy"> <!-- Imagen de fondo -->
+            <div class="text">
+                <h1 data-trad="Implementa">Implementa la agricultura del futuro en tu campo</h1>
+            </div>
         </div>
 
         <!-- Segunda diapositiva -->
         <div class="slide">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/Diapositiva2-mobile.webp"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/Diapositiva2.webp"
-              type="image/webp"
-            />
-            <!-- 🚀 MEJORA: loading="lazy" para imágenes no críticas -->
-            <!-- Solo se cargan cuando el usuario las va a ver -->
-            <img
-              src="img/Diapositiva2.webp"
-              alt="Agricultura sostenible"
-              loading="lazy"
-              width="1200"
-              height="600"
-            />
-          </picture>
-          <div class="text">
-            <h2 data-trad="Cultiva">
-              Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad
-            </h2>
-          </div>
+            <img src="../img/Diapositiva2.webp" alt="Imagen 2" loading="lazy">
+            <div class="text">
+                <h1 data-trad="Cultiva">Cultiva hoy, sustenta mañana</h1>
+            </div>
         </div>
 
         <!-- Tercera diapositiva -->
         <div class="slide">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/Diapositiva3-mobile.webp"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/Diapositiva3.webp"
-              type="image/webp"
-            />
-            <!-- 🚀 MEJORA: loading="lazy" + alt descriptivo -->
-            <img
-              src="img/Diapositiva3.webp"
-              alt="Tecnología inteligente en agricultura"
-              loading="lazy"
-              width="1200"
-              height="600"
-            />
-          </picture>
-          <div class="text">
-            <h2 data-trad="Transforma">
-              Transforma tu tierra con tecnología inteligente y prácticas
-              responsables
-            </h2>
-          </div>
+            <img src="../img/Diapositiva3.webp" alt="Imagen 3" loading="lazy">
+            <div class="text">
+                <h1 data-trad="Transforma">Transforma tu tierra con tecnología inteligente y prácticas responsables</h1>
+            </div>
         </div>
-      </section>
+    </div>
 
       <!-- Sección Beneficios -->
-      <section
-        id="beneficios"
-        class="contenedor loading"
-        aria-labelledby="beneficios-title"
-      >
-        <h2 id="beneficios-title" class="sr-only">
-          Beneficios de la agricultura sostenible
-        </h2>
+      <section id="beneficios" class="contenedor loading" aria-labelledby="beneficios-title">
+        <h2 id="beneficios-title" class="sr-only">Beneficios de la agricultura sostenible</h2>
+
         <div class="beneficios">
           <div class="beneficios-txt">
             <h3 data-trad="Menos">Menos pesticidas</h3>
