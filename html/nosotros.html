@@ -8,7 +8,7 @@
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!--Estlio CSS-->
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/styles_nosotros.css">
@@ -25,31 +25,31 @@
         <div class="search-bar">
         <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
         <button id="search-button" title="Buscar" aria-label="Buscar">
-          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
-          <i class="bi bi-search" aria-hidden="true"></i>
+            <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+            <i class="bi bi-search" aria-hidden="true"></i>
         </button>
         <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
         <input
-          type="text"
-          id="search-input"
-          placeholder="Buscar..." 
-          aria-label="Campo de búsqueda"
-          data-trad="Buscar"
+            type="text"
+            id="search-input"
+            placeholder="Buscar..." 
+            aria-label="Campo de búsqueda"
+            data-trad="Buscar"
         />
         </div>
         <div id="results"></div>
-      </div>
+        </div>
         <nav class="cont-header">
             <ul>
                 <li><a href="#" title="Contacto">Contactos</a></li>
                 <li><a href="registrarse.html" title="Registrarse">Registrarse</a></li>
                 <li class="idiomas-desplegable">
-                   <button id="btn-idioma" class="btn-idioma">
+                    <button id="btn-idioma" class="btn-idioma">
                         <img src="../img/usa.png" alt="" id="bandera-idioma">
                         <span id="etiqueta-idioma">EN</span>
                         <i class="bi bi-caret-down-fill"></i>
-                   </button>
-                   <ul class="menu-idiomas" id="menu-idiomas">
+                    </button>
+                    <ul class="menu-idiomas" id="menu-idiomas">
                         <li data-idioma="es"><img src="../img/mexico.png" alt="Español" style="width:20px;"> Español</li>
                         <li data-idioma="en"><img src="../img/usa.png" alt="English" style="width:20px;"> English</li>
                     </ul>
@@ -64,28 +64,69 @@
     <!-- Menú oculto -->
     <div class="cont-menu" id="menu">
         <ul>
-            <li><a href="index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="html/proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="html/recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="html/historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="html/foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="html/inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+            <li><a href="../index.html"><i class="bi bi-house-fill"></i>Inicio</a></li>
+            <li><a href="proyectos.html"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
+            <li><a href="recursos.html"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
+            <li><a href="historias.html"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
+            <li><a href="foros.html"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
+            <li><a href="inicio_sesion.html"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
         </ul>
     </div>
-    <div id="content">
-    <!--Inicio de la pagina-->
-    <div class="img"></div>
-    <section id="nosotros">
-        <p class="tit">Sobre nosotros</p>
-        <br>
-        <p>En Agrisomora, creemos en el poder de la innovación para transformar la agricultura. Nuesttro objetivo es proporcionar recursos útilesy accesibles para agricultores que buscan mejorar sus prácticas mediante técnicas sostenibles y modernas.</p>
-        <br>
-        <p class="sub">¿Qué hacemos?</p>
-        <p></p>
-        <a href="../bitacora.html"><p>bitacora</p></a>
-        <a href="../prueba.html">p</a>
-    </section>
+        <!--INICIO HERO-->
+    <div class="hero">
+        <div class="texto">
+            <h2>Sobre nosotros</h2>
+            <p>Nuestra misión es clara: hacer la agrícultura más sostenible, accesible y humana.</p>
+        </div>
+        <div class="img"> 
+            <img src="../img/fresas.webp" alt="fresas" class="img" loading="lazy">
+        </div>
     </div>
+        <!--FIN HERO-->
+    <main id="nosotros">
+        <div class="info">
+            <div class="info-img">
+                <img src="../img/brote.webp" alt="brote" class="img" loading="lazy">
+            </div>
+            <div class="info-tex">
+                <p>Somos un equipo comprometido con el futuro del campo. Creemos en una agrícultura más inteligente, más humana y más sostenible.</p>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="info">
+            <div class="info-tex">
+                <h3>NUESTRA VISIÓN</h3>
+                <p>Imaginamos un campo donde la tradición y la innovación convivan. Donde las nuevas generaciones encunetren oportunidades reales. Donde cuidar la tierra sea también una forma de prosperar.</p>
+            </div>
+            <div class="info-img">
+                <img src="../img/campo.webp" alt="brote" class="img" loading="lazy">
+            </div>
+        </div>
+        <hr class="hr">
+        <h3 style="text-align: center; font-size: 2em;">QUIENES SOMOS:</h3>
+        <div class="miembros">
+            <div class="cards">
+                <div class="avatar">
+                    <img src="../img/user.svg" alt="Miembro 1">
+                </div>
+                <h4>Axel Pérez</h4>
+            </div>
+            <div class="cards">
+                <div class="avatar">
+                    <img src="../img/user.svg" alt="Miembro 2">
+                </div>
+                <h4>Christopher Dueñas</h4>
+            </div>
+            <div class="cards">
+                <div class="avatar">
+                    <img src="../img/user.svg" alt="Miembro 3">
+                </div>
+                <h4>Everardo Yoguez</h4>
+            </div>
+        </div>
+        <a class="bitacora" href="../bitacora.html"><p>Bitácora de cambios</p></a>
+        <a href="../prueba.html">p</a>
+    </main>
 
     <!--Inicio de footer-->
     <footer>
