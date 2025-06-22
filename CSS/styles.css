@@ -129,6 +129,29 @@ body{
   /* Color gris medio para el texto de preview, para que no compita visualmente con el título */
 }
 
+#overlay {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Oscurece el fondo */
+  z-index: 1000;
+}
+
+#search-input.expanded {
+  width: 100%;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    position: relative;
+    z-index: 2000;
+  }
+}
+
 .header nav li {
     display: inline-block; /*Para que los elementos se pongan de manera horizontal*/
     padding: 0 20px;

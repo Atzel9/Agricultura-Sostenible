@@ -141,4 +141,17 @@
     searchContent(e.target.value);
   });
 
+  input.addEventListener("click", function () {
+    if (window.innerWidth <= 768) {
+      document.getElementById("overlay").style.display = "block";
+      this.classList.add("expanded");
+    }
+  });
+
+  document.getElementById("overlay").addEventListener("click", function () {
+    this.style.display = "none";
+    input.classList.remove("expanded"); // Restaurar tamaño original
+  });
+
+
 })();
