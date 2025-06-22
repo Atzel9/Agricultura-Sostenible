@@ -75,19 +75,17 @@
 
       /* 🔧 Texto superpuesto optimizado */
       .text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        z-index: 2;
-        padding: 2rem;
-        border-radius: 10px;
+        position: absolute; /* Se posiciona sobre la imagen */
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Centra completamente */
+        color: white; /* Texto en color blanco */
+        text-align: center; /* Texto alineado al centro */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre la imagen */
       }
-      .text h1 {
-        font-size: 8rem;
-        font-weight: 700;
+      .text h2 {
+        font-size: 4em; /* Tamaño grande para destacar */
+        margin-bottom: 0.5em; /* Espacio entre el título y el párrafo */
       }
 
       /* 🔧 Contenedor responsivo centrado */
@@ -304,97 +302,36 @@
     <!-- 🚀 MEJORA: Agregué elemento main para estructura semántica -->
     <main>
       <!-- 🚀 MEJORA: aria-label descriptivo para el carrusel -->
-      <section class="hero" aria-label="Carrusel de imágenes principales">
+      <div class="hero"><!--Seccion para el hero-->
         <!-- Primera diapositiva activa -->
         <div class="slide active">
-          <!-- 🚀 MEJORA: PICTURE ELEMENT para imágenes responsivas -->
-          <!-- Diferentes imágenes para diferentes tamaños de pantalla -->
-          <!-- WebP es 25-50% más ligero que JPG/PNG -->
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/Diapositiva1-mobile.webp" type="image/webp"/>
-            <source media="(min-width: 769px)" srcset="img/Diapositiva1.webp" type="image/webp"/>
-            <!-- 🚀 MEJORA: loading="eager" para la primera imagen (crítica) -->
-            <!-- Dimensiones explícitas para evitar layout shift -->
-            <img src="img/Diapositiva1.webp" alt="Campo agrícola con tecnología moderna" loading="eager" width="1200" height="600"/>
-          </picture>
-          <div class="text">
-            <!-- 🚀 MEJORA: Cambié h1 por h2 (semántica correcta - solo un h1 por página) -->
-            <h2 data-trad="Implementa">
-              Implementa la agricultura del futuro en tu campo
-            </h2>
-          </div>
+            <img src="../img/Diapositiva1.webp" alt="Imagen 1" loading="lazy"> <!-- Imagen de fondo -->
+            <div class="text">
+                <h1 data-trad="Implementa">Implementa la agricultura del futuro en tu campo</h1>
+            </div>
         </div>
 
         <!-- Segunda diapositiva -->
         <div class="slide">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/Diapositiva2-mobile.webp"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/Diapositiva2.webp"
-              type="image/webp"
-            />
-            <!-- 🚀 MEJORA: loading="lazy" para imágenes no críticas -->
-            <!-- Solo se cargan cuando el usuario las va a ver -->
-            <img
-              src="img/Diapositiva2.webp"
-              alt="Agricultura sostenible"
-              loading="lazy"
-              width="1200"
-              height="600"
-            />
-          </picture>
-          <div class="text">
-            <h2 data-trad="Cultiva">
-              Cultiva hoy, sustenta mañana: La clave está en la sostenibilidad
-            </h2>
-          </div>
+            <img src="../img/Diapositiva2.webp" alt="Imagen 2" loading="lazy">
+            <div class="text">
+                <h1 data-trad="Cultiva">Cultiva hoy, sustenta mañana</h1>
+            </div>
         </div>
 
         <!-- Tercera diapositiva -->
         <div class="slide">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/Diapositiva3-mobile.webp"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/Diapositiva3.webp"
-              type="image/webp"
-            />
-            <!-- 🚀 MEJORA: loading="lazy" + alt descriptivo -->
-            <img
-              src="img/Diapositiva3.webp"
-              alt="Tecnología inteligente en agricultura"
-              loading="lazy"
-              width="1200"
-              height="600"
-            />
-          </picture>
-          <div class="text">
-            <h2 data-trad="Transforma">
-              Transforma tu tierra con tecnología inteligente y prácticas
-              responsables
-            </h2>
-          </div>
+            <img src="../img/Diapositiva3.webp" alt="Imagen 3" loading="lazy">
+            <div class="text">
+                <h1 data-trad="Transforma">Transforma tu tierra con tecnología inteligente y prácticas responsables</h1>
+            </div>
         </div>
-      </section>
+    </div>
 
       <!-- Sección Beneficios -->
-      <section
-        id="beneficios"
-        class="contenedor loading"
-        aria-labelledby="beneficios-title"
-      >
-        <h2 id="beneficios-title" class="sr-only">
-          Beneficios de la agricultura sostenible
-        </h2>
+      <section id="beneficios" class="contenedor loading" aria-labelledby="beneficios-title">
+        <h2 id="beneficios-title" class="sr-only">Beneficios de la agricultura sostenible</h2>
+
         <div class="beneficios">
           <div class="beneficios-txt">
             <h3 data-trad="Menos">Menos pesticidas</h3>
@@ -411,6 +348,7 @@
             style="background-image: url(img/fertilizante.webp)"
             role="img"
             aria-label="Persona aplicando tratamiento natural a cultivos"
+            loading="lazy"
           ></div>
         </div>
         <div class="beneficios">
@@ -428,6 +366,7 @@
             style="background-image: url(img/agua.webp)"
             role="img"
             aria-label="Sistema de riego eficiente"
+            loading="lazy"
           ></div>
         </div>
         <div class="beneficios">
@@ -445,6 +384,7 @@
             style="background-image: url(img/Cultivo.webp)"
             role="img"
             aria-label="Cultivos saludables y productivos"
+            loading="lazy"
           ></div>
         </div>
       </section>
@@ -576,104 +516,46 @@
 
     <!-- Footer -->
     <footer>
-      <div class="footer-contenido">
-        <div class="footer-info">
-          <div class="logo-info">
-            <img
-              src="img/logo.png"
-              alt="Logo Agrisomora"
-              width="60"
-              height="60"
-              loading="lazy"
-            />
-            <p data-trad="Lema">Cosechando futuro, cultivando vida</p>
-          </div>
-          <div class="contacto-info">
-            <p>
-              <i class="bi-telephone-fill" aria-hidden="true"></i>
-              <a href="tel:+523511765744">351 176 5744</a>
-            </p>
-            <p>
-              <i class="bi-envelope-fill" aria-hidden="true"></i>
-              <a href="mailto:info@agrisomora.com">Agrisomora</a>
-            </p>
-            <p>
-              <i class="bi-geo-alt-fill" aria-hidden="true"></i> 2025, CBTiS 52
-            </p>
-          </div>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <div class="logo-info">
+                    <img src="../img/logo.png" alt="">
+                    <p data-trad="Lema">Cosechando futuro, cultivando vida</p>
+                </div>
+                <div class="contacto-info">
+                    <p><i class="bi-telephone-fill"></i>351 176 5744</p>
+                    <p><i class="bi-envelope-fill"></i> Agrisomora</p>
+                    <p><i class="bi-geo-alt-fill"></i> 2025, CBTiS 52</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3 data-trad="enlaces">ENLACES</h3>
+                <ul>
+                    <li><a href="html/nosotros.html" data-trad="Nosotros">Sobre nosotros</a></li>
+                    <li><a href="html/politica.html" data-trad="Politica">Política de privacidad</a></li>
+                    <li><a href="html/contactos.html" data-trad="Contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3 data-trad="Redes">REDES SOCIALES</h3>
+                <div class="social-iconos">
+                    <a href="#" target="_blank"><i class="bi-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="bi-twitter-x"></i></a>
+                    <a href="#" target="_blank"><i class="bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-boletin">
+                <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
+                <form>
+                    <input type="text" placeholder="Nombre" required data-trad="Nom">
+                    <input type="email" placeholder="Correo electrónico" required data-trad="Correo">
+                    <button type="submit" data-trad="Suscribirse">Suscribirse</button>
+                </form>
+            </div>
         </div>
-        <div class="footer-links">
-          <h3 data-trad="enlaces">ENLACES</h3>
-          <ul>
-            <li>
-              <a href="html/nosotros.html" data-trad="Nosotros"
-                >Sobre nosotros</a
-              >
-            </li>
-            <li>
-              <a href="html/politica.html" data-trad="Politica"
-                >Política de privacidad</a
-              >
-            </li>
-            <li>
-              <a href="html/contactos.html" data-trad="Contactanos"
-                >Contáctanos</a
-              >
-            </li>
-          </ul>
+        <div class="footer-copyright">
+            <p data-trad="copy">&copy;2025 Agrisomora. Todos los derechos reservados.</p>
         </div>
-        <div class="footer-social">
-          <h3 data-trad="Redes">REDES SOCIALES</h3>
-          <div class="social-iconos">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              ><i class="bi-facebook"></i
-            ></a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="bi-twitter-x"></i
-            ></a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              ><i class="bi-instagram"></i
-            ></a>
-          </div>
-        </div>
-        <div class="footer-boletin">
-          <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
-          <form>
-            <input
-              type="text"
-              placeholder="Nombre"
-              required
-              data-trad="Nom"
-              aria-label="Nombre"
-            />
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              required
-              data-trad="Correo"
-              aria-label="Correo electrónico"
-            />
-            <button type="submit" data-trad="Suscribirse">Suscribirse</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p data-trad="copy">
-          &copy; 2025 Agrisomora. Todos los derechos reservados.
-        </p>
-      </div>
     </footer>
     </div>
 

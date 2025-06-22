@@ -6,7 +6,7 @@
 }
 body{
     background-color: #e6eea8;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 /*CLASES*/ 
@@ -227,33 +227,32 @@ body{
 
 /* MENU LATERAL */
 .cont-menu2 {
-    background-color: #e6ebbf; /*color del fondo*/
-    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66); /*sombra del menu*/
-    border-right: 5px solid #dfe2c3; /*borde derecho*/
-    width: 220px; /*ancho*/
-    height: 100vh; /*largo*/
-    position: fixed; /*posicion flotante*/
-    top: 0; /*menu hasta arriba*/
-    left: 0; /*menu hasta la izquierda*/
-    transition: all 0.5s ease; /*animacion de dezlice*/
-    transform: translateX(-100%); /*cordenada de ubicacion*/
-    z-index: 9; /*capa*/
+    background-color: #e6ebbf;
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+    border-right: 5px solid #dfe2c3;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    transform: translateX(-100%);
+    z-index: 9;
 }
 
 .active2 {
-    transform: translateX(0); /*al activarse se re-ubica*/
+    transform: translateX(0);
 }
 
 /* MENU LISTA */
-/*modificacion a la lista*/
 .cont-menu2 ul {
-    padding: 100px 0 20px 0; /*margen interno*/
-    list-style: none; /*quita el estilo predeterminado*/
+    padding: 100px 0 20px 0;
+    list-style: none;
 }
-/*al pasar el maus pasa un evento*/
+ 
 .cont-menu2 ul li:hover {
-    background-color: #F0E68C; /*color al pasar el maus*/
-    color: rgb(42, 42, 42); /*color de la fuente*/
+    background-color: #F0E68C;
+    color: rgb(42, 42, 42);
 }
 
 /* CONTENIDO PRINCIPAL */
@@ -262,7 +261,6 @@ body{
     margin-left: 0;
 }
 
-/*al activarse se dezplaza el contenido*/
 .shifted {
     margin-left: 220px; /* mismo ancho que el menú */
 }
@@ -327,7 +325,7 @@ body{
     border-radius: 50px;
     transition: all 0.5s ease;
     transform: translateX(-50%);
-    z-index: 9;
+    z-index: 9999;
 }
 
 
@@ -340,3 +338,90 @@ body{
     transition: margin-left 0.5s ease;
     margin-left: 0;
 }
+
+/*panel principal para el chat de los foros*/
+.panelPrin{
+   position: relative;
+    background-color: #e6ebbf;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /*Agrega sombras*/
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    border: 3px rgb(77, 69, 69) solid;
+    height: 550px;
+}
+
+
+/*contenido del chat del recuadro principal*/
+
+.panelSec{
+    background-color: #BED333;
+    padding: 0px 0px 0px 15px;
+    margin: 10px 0px 0px 0px;
+    border-radius: 18px;
+    border: 3px rgb(77, 69, 69) solid;
+    height: 50px;
+}
+
+.panelTer{
+    display: flex; /* pone textarea y botón en línea horizontal */
+    align-items: center; /* alinea verticalmente */
+    gap: 8px; /* espacio entre textarea y botón */
+    background-color:#BED333;
+    border-radius: 12px;
+}
+
+textarea{
+    /*quita los ajustes predeterminados*/
+  border: none;
+  outline: none;
+  resize: none;
+  /*quita los ajustes predeterminados*/
+  /*estilos*/
+  background-color:#BED333;
+  
+  /*estilos*/
+  /*tamaños*/
+  padding: 14px 0px 1px 0px; /*padding del chat*/
+   height: 44px;
+   width: 87%;
+  /*tamaños*/
+}
+
+/*boton de enviar del textarea*/
+.enviarBton{
+   all: unset;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 3px solid #000;
+    height: 30px;
+    width: 30px;
+    z-index: 8;
+    /*centra el ícono en el botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*sirve para acomodar el icono de bostrap dentro del boton de enviar*/
+.enviarBton i {
+    pointer-events: none; /* Para que el clic funcione sobre el botón, no sobre el ícono */
+}
+
+.enviarBton:hover{
+    background-color: #6d8e3c;
+    color: #000;
+}
+
+/*panel donde se veran los mensajes*/
+.panelCua{
+    background-color: white;
+    border: 3px solid rgba(77, 69, 69);
+    border-radius: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 450px;
+    width: 100%;
+}   

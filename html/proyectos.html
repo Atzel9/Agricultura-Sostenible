@@ -51,49 +51,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-
-      /* 🔧 Transiciones suaves para el carrusel */
-      .slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out; /* Transición optimizada */
-      }
-      .slide.active {
-        opacity: 1;
-      }
-
-      /* 🔧 Imágenes responsivas con object-fit */
-      .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Mantiene proporción sin distorsión */
-      }
-
-      /* 🔧 Texto superpuesto optimizado */
-      .text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        z-index: 2;
-        padding: 2rem;
-        border-radius: 10px;
-      }
-      .text h1 {
-        font-size: 8rem;
-        font-weight: 700;
-      }
-
-      /* 🔧 Contenedor responsivo centrado */
-      .contenedor {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
+        height: 100vh;
       }
 
       /* 🚀 ANIMACIONES DE CARGA PROGRESIVA */
@@ -126,7 +84,7 @@
     <header class="header">
       <div class="cont-header" style="gap: 10px">
         <!-- 🚀 MEJORA: aria-label para accesibilidad -->
-        <a href="index.html" aria-label="Ir al inicio">
+        <a href="../index.html" aria-label="Ir al inicio">
           <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
           <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
           <img
@@ -136,7 +94,7 @@
             height="50"
           />
         </a>
-        <h1 data-trad="titulo">Agrisomora</h1>
+        <h1 data-trad="titulo">Proyectos de innovación</h1>
       </div>
       <div class="search-container">
         <div class="search-bar">
@@ -204,8 +162,7 @@
           <a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill" aria-hidden="true"></i>Recursos para agricultores</a>
         </li>
         <li>
-          <a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de éxito</a
-          >
+          <a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de éxito</a>
         </li>
         <li>
           <a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill" aria-hidden="true"></i>Foro de Innovación</a>
@@ -217,29 +174,9 @@
     </nav>
     <!--FIN HEADER-->
     <!--Inicio de la pagina-->
-    <div class="hero">
-      <div id="img-pro"></div>
-      <div class="Estilo-cont">
-        <h2 data-trad="Innovacion-bienvenida">Proyectos de innovación</h2>
-        <p data-trad="Innovacion-descripcion">
-          La agricultura está viviendo una revolución impulsada por la
-          tecnología y la sostenibilidad. En esta sección descubrirás proyectos
-          que aplican inteligencia artificial, sensores inteligentes, sistemas
-          de riego de precisión, energías limpias y nuevas prácticas agrícolas
-          diseñadas para hacer más eficientes y ecológicos los cultivos.
-          <br /><br />
-          Cada proyecto que presentamos busca no solo aumentar la productividad,
-          sino también cuidar nuestros suelos, el agua y el medio ambiente. Aquí
-          podrás explorar soluciones modernas que ya están cambiando la forma de
-          trabajar la tierra y que podrían inspirar el siguiente gran paso en tu
-          propio campo.
-          <br /><br />
-          Acompáñanos en este recorrido de innovación y sostenibilidad, y conoce
-          cómo la tecnología y el compromiso por un mundo mejor se unen en cada
-          uno de estos proyectos.
-        </p>
-      </div>
-    </div>
+    <section class="hero">
+      
+    </section>
     <!--Inicio contenedor para mostrar los diferentes proyectos-->
     <section id="proyectos-secc">
       <div class="proyectos-secc">
@@ -383,8 +320,10 @@
     </footer>
 
     <!--codigo de javaScript-->
-    <script src="../js/app.js"></script>
-    <script src="../js/buscador2.js"></script>
-    <script src="../traducciones/traducciones.js"></script>
+    <script src="node_modules/colorthief/dist/color-thief.umd.js"></script> <!--Obtener galería 'Color Thief'-->
+    <script src="../js/app.js"></script> <!--JS para menu hamburguesa y header-->
+    <script src="../js/buscador2.js"></script> <!--JS para buscador-->
+    <script src="../js/proyectos.js"></script> <!--JS para carrusel de proyectos-->
+    <script src="../traducciones/traducciones.js"></script> <!--JS para traducciones-->
   </body>
 </html>

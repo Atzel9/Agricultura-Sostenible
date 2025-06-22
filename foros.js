@@ -93,3 +93,76 @@ iconoMenu2.addEventListener('click', () => {
     }
     abierto = !abierto; // Alternar estado
   });
+
+  //esto sirve para que el textarea inicie a escribir desde el inicio de este
+  const textarea = document.getElementById("miTextarea");
+
+// Limpia espacios y saltos al cargar la página (opcional si el textarea inicia vacío)
+textarea.value = textarea.value.trim();
+
+textarea.addEventListener("click", function () {
+  // Limpia espacios y saltos de línea invisibles al hacer clic
+  this.value = this.value.trim();
+
+  // Mueve el cursor al inicio solo si está vacío después de limpiar
+  if (this.value.length === 0) {
+    this.setSelectionRange(0, 0);
+  }
+
+  // Resetea scroll horizontal (por si acaso)
+  this.scrollLeft = 0;
+});
+
+// lo que hace esta parte es que al momento de presionar el boton de enviar, manda el mensaje :v
+const btn = document.getElementById("enviarBtn");
+
+  btn.addEventListener("click", () => {
+    const mensaje = textarea.value.trim();
+    if (mensaje === "") {
+      alert("Por favor, escribe un mensaje antes de enviar.");
+      return;
+    }
+
+    console.log("Mensaje enviado:", mensaje);
+    alert("Mensaje enviado: " + mensaje);
+    textarea.value = "";
+  });
+
+  //emojis para el boton de emojis 
+  // Referencias a los elementos
+const btnEmoji = document.getElementById('btnEmoji');
+const emojiPicker = document.getElementById('emojiPicker');
+const miTextarea = document.getElementById('miTextarea');
+const chatContainer = document.getElementById('chatContainer');
+
+// Al hacer clic en el botón de emoji
+btnEmoji.addEventListener('click', () => {
+  if (emojiPicker.style.display === 'none' || emojiPicker.style.display === '') {
+    // Posiciona el emoji picker justo debajo del botón, dentro del contenedor
+    const btnRect = btnEmoji.getBoundingClientRect();
+    const containerRect = chatContainer.getBoundingClientRect();
+
+    // Coordenadas relativas al contenedor
+    const top = btnEmoji.offsetTop + btnEmoji.offsetHeight -450;
+    const left = btnEmoji.offsetLeft -50;
+
+    emojiPicker.style.top = top + 'px';
+    emojiPicker.style.left = left + 'px';
+    emojiPicker.style.display = 'block';
+  } else {
+    emojiPicker.style.display = 'none';
+  }
+});
+
+// Insertar emoji en el textarea
+emojiPicker.addEventListener('emoji-click', (event) => {
+  miTextarea.value += event.detail.unicode;
+  emojiPicker.style.display = 'none'; // Opcional: cerrar después de insertar
+});
+
+// Ocultar emoji picker al hacer clic fuera
+document.addEventListener('click', (e) => {
+  if (!emojiPicker.contains(e.target) && e.target !== btnEmoji) {
+    emojiPicker.style.display = 'none';
+  }
+});
