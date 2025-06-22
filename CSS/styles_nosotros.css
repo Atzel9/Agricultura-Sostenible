@@ -1,3 +1,6 @@
+*{
+    font-family: "Montserrat", serif; /*Cambia la fuente de toda la pagina*/
+}
 .hero {
     display: flex;
     flex-wrap: wrap;
