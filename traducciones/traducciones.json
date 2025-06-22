@@ -41,8 +41,7 @@
         , "Suscribirse":" Subscribe"
         , "copy":" 2025 Agrisomora. All rights reserved."
 
-        ,"Innovacion-bienvenida":" Innovation projects"
-        ,"Innovacion-descripcion":" Agriculture is undergoing a revolution driven by technology and sustainability. In this section, you will discover projects that apply artificial intelligence, smart sensors, precision irrigation systems, clean energy, and new agricultural practices designed to make crops more efficient and eco-friendly.<br><br>Each project we present aims not only to increase productivity but also to care for our soils, water, and the environment. Here you can explore modern solutions that are already changing the way we work the land and that could inspire the next big step in your own field.<br><br>Join us on this journey of innovation and sustainability, and see how technology and commitment to a better world come together in each of these projects."
+        ,"error-filtro":" You can only select up to 3 filters"
         ,"Innovacion-riego":" Smart irrigation"
         ,"Innovacion-riego-descripcion":" Smart irrigation allows optimizing water use through sensors, timers, and data analysis. These systems detect soil moisture and weather conditions to supply only the necessary amount of water, reducing waste and improving crop yield."
         ,"innovacion-fertilizantes":"Ecological fertilizers"
@@ -55,10 +54,7 @@
         ,"Innovacion-Bioinsumos-descripcion":"Bioinputs use living organisms, plant extracts, or minerals to control pests and diseases. They are a natural alternative to pesticides, helping to protect crops without harming the ecosystem or affecting human health."
         ,"Innovacion-Cultivos":"Crops resistant to climate change"
         ,"Innovacion-Cultivos-descripcion":"Thanks to biotechnology and genetic research, crops are being developed that can withstand extreme conditions such as droughts, high temperatures, or saline soils. This ensures a more stable production adapted to the effects of climate change."
-        ,"innovacion-energia":"Integrated solar energy in farms"
-        ,"innovacion-energia-descripcion":"The use of solar panels on farms allows harnessing the sun's energy to power irrigation systems, machinery, or storage. This renewable source reduces energy costs and makes agricultural production more self-sufficient."
-        ,"innovacion-sistemas":"Intelligent Rainwater Harvesting Systems"
-        ,"innovacion-sistemas-descripcion":"These systems collect, filter, and store rainwater for later use in irrigation or cleaning. With sensors and automation, it can be managed efficiently, reducing dependence on traditional water sources."
+        ,"categorias-error":" <i class=\"ph ph-smiley-x-eyes\"></i>There are no articles matching the selected categories.<i class=\"ph ph-smiley-x-eyes\"></i>"
 
         ,"Recursos1":" Resources for <hr> farmers"
         ,"Recursos-descubre":"Discover techniques"
@@ -188,8 +184,7 @@
         , "Suscribirse":" Suscribirse"
         , "copy":" 2025 Agrisomora. Todos los derechos reservados."
 
-        ,"Innovacion-bienvenida":" Proyectos de innovación"
-        ,"Innovacion-descripcion":" La agricultura está viviendo una revolución impulsada por la tecnología y la sostenibilidad. En esta sección descubrirás proyectos que aplican inteligencia artificial, sensores inteligentes, sistemas de riego de precisión, energías limpias y nuevas prácticas agrícolas diseñadas para hacer más eficientes y ecológicos los cultivos.<br><br>Cada proyecto que presentamos busca no solo aumentar la productividad, sino también cuidar nuestros suelos, el agua y el medio ambiente. Aquí podrás explorar soluciones modernas que ya están cambiando la forma de trabajar la tierra y que podrían inspirar el siguiente gran paso en tu propio campo.<br><br>Acompáñanos en este recorrido de innovación y sostenibilidad, y conoce cómo la tecnología y el compromiso por un mundo mejor se unen en cada uno de estos proyectos."
+        ,"error-filtro":" Solo se puede un maximo de 3 filtros"
         ,"Innovacion-riego":" Riego inteligente"
         ,"Innovacion-riego-descripcion":" El riego inteligente permite optimizar el uso del agua mediante sensores, temporizadores y análisis de datos. Estos sistemas detectan la humedad del suelo y las condiciones climáticas para suministrar solo la cantidad necesaria de agua, reduciendo el desperdicio y mejorando el rendimiento de los cultivos."
         ,"innovacion-fertilizantes":"Fertilizantes ecológicos"
@@ -202,10 +197,7 @@
         ,"Innovacion-Bioinsumos-descripcion": "Los bioinsumos utilizan organismos vivos, extractos vegetales o minerales para controlar plagas y enfermedades. Son una alternativa natural a los pesticidas, ayudando a proteger los cultivos sin dañar el ecosistema ni afectar la salud humana."
         ,"Innovacion-Cultivos":"Cultivos resistentes al cambio climatico"
         ,"Innovacion-Cultivos-descripcion":"Gracias a la biotecnología y la investigación genética, se desarrollan cultivos capaces de resistir condiciones extremas como sequías, altas temperaturas o suelos salinos. Esto asegura una producción más estable y adaptada a los efectos del cambio climático."
-        ,"innovacion-energia":"Energía solar integrada en granjas"
-        ,"innovacion-energia-descripcion":"El uso de paneles solares en granjas permite aprovechar la energía del sol para alimentar sistemas de riego, maquinaria o almacenamiento. Esta fuente renovable reduce los costos energéticos y hace que la producción agrícola sea más autosuficiente."
-        ,"innovacion-sistemas":"Sistemas de Recuperación de Agua de Lluvia Inteligentes"
-        ,"innovacion-sistemas-descripcion":"Estos sistemas recolectan, filtran y almacenan agua de lluvia para su uso posterior en el riego o limpieza. Con sensores y automatización, se puede gestionar de forma eficiente, reduciendo la dependencia de fuentes de agua tradicionales."
+        ,"categorias-error":" <i class=\"ph ph-smiley-x-eyes\"></i>No hay artículos que cumplan con las categorías.<i class=\"ph ph-smiley-x-eyes\"></i>"
 
         ,"Recursos1":" Recursos para agricultores"
         ,"Recursos-descubre":"Descubré técnicas"

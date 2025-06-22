@@ -1,31 +1,209 @@
-.proyectos-secc{ /*Estilo para los contenedores de proyectos*/
-    padding-bottom: 20px;
-    padding-right: 20px;
-    width: 90%;
+/*INICIO ESTILOS HERO*/
+.hero {
+    min-height: 70vh; /*Altura del hero*/
+    align-items: center; /*Para alinear los elementos al centro*/
+    display: flex; /*Para organizar los elementos dentro*/
+    justify-content: space-around; /*Para alinear los elementos al final*/
+    gap: 20px; /*Espacio entre los elementos*/
+    background-image: url('../img/Proyectos/fertilizante.webp');
+    background-position: center; /*Para centrar la imagen de fondo*/
+    background-size: cover; /*Para que la imagen de fondo cubra todo el contenedor*/
+    background-repeat: no-repeat; /*Para que la imagen de fondo no se repita*/
+    background-color: #e0e2cf; /*Color de fondo*/
+    border-bottom: #d3d4c3 solid; /*Borde inferior*/
 }
-.proyectos-secc p,
-.proyectos-secc a{ /*Ajustar fuente*/
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    line-height: 1.5;
+.null {
+    height: 30vh; /*Altura del contenedor de texto*/
+    width: 30%; /*Ancho del contenedor de texto*/
 }
+.text {
+    width: 45%; /*Ancho del contenedor de texto*/
+    padding: 30px 55px; /*Espacio interno del contenedor de texto*/
+    background-color: #e4e6d7; /*Color de fondo del contenedor de texto*/
+    border: 2px #adada9 solid; /*Borde del contenedor de texto*/
+    border-radius: 20px; /*Borde redondeado del contenedor de texto*/
+}
+.text h2 {
+    font-size: 2em; /*Tamaño de fuente del título*/
+}
+.text p {
+    font-size: 1.5em; /*Tamaño de fuente del párrafo*/
+    line-height: 1.5; /*Altura de línea del párrafo*/
+}
+/*FIN ESTILOS HERO*/
 
 #proyectos-secc{ /*Id para contenedor de los proyectos*/
-    position: relative;
     display: flex; /*Para organizar los elementos dentro*/
     flex-direction: column; /*Para que los elementos se acomoden como columna*/
+    align-items: center; /*Para alinear los elementos al centro*/
     background-color: #e4e6d7; /*Color del fondo*/
     border: 2px #dfe2c3 solid; /*Margen*/
-    padding: 20px 50px 20px 50px;
-    margin: 10px 70px 10px 70px;
-    font-size: 30px;
+    margin: 10px 70px;
     border-radius: 20px;
-    z-index: 10;
 }
-#proyectos-secc h2 { /*Estilos a los titulos*/
-    font-size: 25px;
-    align-content: end;
-    justify-content: end;
-    padding-top: 20px;
+
+/*INICIO ESTILOS PROYECTOS DE INNOVACIÓN*/
+.proy {
+    display: flex; /*Para organizar los elementos dentro*/
+    flex-direction: column; /*Para que los elementos se acomoden como columna*/
+    margin: 25px 0; /*Margen del contenedor de proyectos*/
+    width: 90%; /*Ancho del contenedor de proyectos*/
+    align-items: center; /*Para alinear los elementos al centro*/
 }
+.cat {
+    margin: 0 auto; /*Margen del contenedor de categorías*/
+    display: flex; /*Para organizar los elementos dentro*/
+    flex-direction: row; /*Para que los elementos se acomoden como fila*/
+    width: 95%; /*Ancho del contenedor de categorías*/
+    flex-wrap: wrap; /*Para que los elementos se acomoden en varias líneas si es necesario*/
+    gap: 10px; /*Espacio entre los elementos*/
+    justify-content: space-around; /*Para alinear los elementos*/
+}
+.cir {
+    width: 55px; /*Ancho del círculo*/
+    height: 55px; /*Altura del círculo*/
+    border-radius: 50%; /*Para hacer el círculo redondo*/
+    border: none; /*Sin borde*/
+    font-size: 20px; /*Tamaño de fuente del texto dentro del círculo*/
+    cursor: pointer; /*Para cambiar el cursor al pasar por encima*/
+    transition: color 0.3s ease; /*Para suavizar el cambio de color al pasar por encima*/
+    transition: font-size 0.3s ease; /*Para suavizar el cambio de tamaño de fuente al pasar por encima*/
+}
+.cir:hover {
+    font-size: 15px; /*Tamaño de fuente del texto dentro del círculo al pasar por encima*/
+    background-color: #b3d333; /*Color de fondo al pasar el cursor por encima*/
+    color: #fff; /*Color del texto al pasar el cursor por encima*/
+}.cir:active {
+    background-color: #e9e640;
+    color: #000;
+}
+.activo {
+    background-color: #b3d333; /*Color de fondo al pasar el cursor por encima*/
+    color: #fff; /*Color del texto al pasar el cursor por encima*/
+}
+.error {
+    color: #911; /*Color del texto*/
+    margin-top: 10px; /*Margen arriba*/
+    font-weight: 500; /*Grosor del texto*/
+    font-family: 'Asap', sans-serif; /*Tipo de fuente*/
+    text-align: center; /*Parrafo centrado*/
+}
+
+/*Ocultar mensajes*/
+.oculto {display: none; /*Para que no se muestre*/}
+
+
+.info {
+    display: flex; /*Para organizar los elementos dentro*/
+    flex-direction: row; /*Para que los elementos se acomoden en filas*/
+    align-items: center; /*Para alinear los elementos al centro*/
+    margin: 25px auto; /*Margen del contenedor de información*/
+    padding: 10px 20px; /*Espacio interno del contenedor de información*/
+    width:100%;
+    background-color: #f1f1eb; /*Color de fondo del contenedor de información*/
+    border: #b3d333 solid 2px; /*Borde del contenedor de información*/
+    border-radius: 15px; /*Borde redondeado del contenedor de información*/
+}
+.texto h3 {
+    margin-bottom: 0.3em;
+    font-size: 1.5em;
+}
+.tipo {
+    display: flex; /*Para organizar los elementos dentro*/
+    flex-direction: column; /*Para que los elementos se acomoden como columna*/
+    gap: 10px; /*Espacio entre los elementos*/
+}
+.tipo button {
+    width: 40px; /*Ancho del círculo*/
+    height: 40px; /*Altura del círculo*/
+    border-radius: 50%; /*Para hacer el círculo redondo*/
+    font-size: 20px; /*Tamaño de fuente del texto dentro del círculo*/
+}
+/*ESTILOS A BOTÓN POR CATEGORÍA*/
+.sos {color: #3e8544; /*Color del texto del botón de categoría*/border: #3e8544 solid 2px; /*Borde del botón de categoría*/}
+.agua{color: #528eaa; /*Color del texto del botón de categoría*/border: #528eaa solid 2px; /*Borde del botón de categoría*/}
+.tie {color: #a86b3c; /*Color del texto del botón de categoría*/border: #a86b3c solid 2px; /*Borde del botón de categoría*/}
+.tec {color: #7c806d; /*Color del texto del botón de categoría*/border: #7c806d solid 2px; /*Borde del botón de categoría*/}
+.cul {color: #d33333; /*Color del texto del botón de categoría*/border: #d33333 solid 2px; /*Borde del botón de categoría*/}
+.rot {color: #b3d333; /*Color del texto del botón de categoría*/border: #b3d333 solid 2px; /*Borde del botón de categoría*/}
+.org {color: #5e2366; /*Color del texto del botón de categoría*/border: #5e2366 solid 2px; /*Borde del botón de categoría*/}
+.efi {color: #d39332; /*Color del texto del botón de categoría*/border: #d39332 solid 2px; /*Borde del botón de categoría*/}
+.pra {color: #777777; /*Color del texto del botón de categoría*/border: #777777 solid 2px; /*Borde del botón de categoría*/}
+.inn {color: #ffd900; /*Color del texto del botón de categoría*/border: #ffd900 solid 2px; /*Borde del botón de categoría*/}
+/*FIN ESTILOS A BOTÓN POR CATEGORÍA*/
+#mensaje-vacio {
+    font-size: 2em; /*Tamaño de la fuente*/
+    font-weight: bolder; /*Grosor de la fuente*/
+    color: #8a6021; /*Color de la fuente*/
+    margin-top: 3rem; /*Margin de arriba*/
+    text-align: center; /*Se alinea el texto al centro*/
+}
+
+/*FIN ESTILOS PROYECTOS DE INNOVACIÓN*/
+
+
+/*INICIO ESTILOS RESPONSIVOS*/
+@media (max-width: 945px) { /*Estilos responsivos*/
+    .text {
+        padding: 20px 30px; /*Espacio interno del contenedor de texto en pantallas pequeñas*/
+    }
+    .text h2 {
+        font-size: 1.5em; /*Tamaño de fuente del título en pantallas pequeñas*/
+        
+    }
+    .text p {
+        font-size: 1.2em; /*Tamaño de fuente del párrafo en pantallas pequeñas*/
+    }
+}
+@media (max-width: 700px) {
+    .hero {
+        align-items: center; /*Para alinear los elementos al centro*/
+        justify-content: center; /*Para alinear los elementos al centro*/
+    }
+    .null {
+        height: 0;
+        width: 0;
+    }
+    .text {
+        width: 60%; /*Ancho del contenedor de texto en pantallas pequeñas*/
+    }
+    #proyectos-secc {
+        margin: 10px 40px;
+    }
+}
+@media (max-width: 500px) {
+    .info {
+        flex-direction: column; /*Los objetos se acomodan en columnas*/
+    }
+    .tipo {
+        flex-direction: row; /*Pára que los elementos se acomoden en filas*/
+    }
+}
+@media (max-width: 425px) {
+    .text {
+        width: 100%; /*Ancho del contenedor de texto en pantallas muy pequeñas*/
+        margin: 15px 0; /*Margen del contenedor de texto en pantallas muy pequeñas*/
+    }
+    .text h2 {
+        font-size: 1.2em; /*Tamaño de fuente del título en pantallas muy pequeñas*/
+    }
+    .text p {
+        font-size: 1em; /*Tamaño de fuente del párrafo en pantallas muy pequeñas*/
+    }
+    .null {
+        height: 0;
+        width: 0;
+    }
+    #proyectos-secc {
+        margin: 20px 0; /*Margen del contenedor de proyectos en pantallas muy pequeñas*/
+        padding: 20px; /*Espacio interno del contenedor de proyectos en pantallas muy pequeñas*/
+        width: 100%; /*Ancho del contenedor de proyectos en pantallas muy pequeñas*/
+        border-radius: 0; /*Borde redondeado del contenedor de proyectos en pantallas muy pequeñas*/
+    }
+    #proyectos-secc h2 {
+        font-size: 1em; /*Tamaño de fuente del título en pantallas muy pequeñas*/
+        padding-top: 10px; /*Espacio superior del título en pantallas muy pequeñas*/
+    }
+    #proyectos-secc  p {font-size: 1em; /*Tamaño de fuente del párrafo en pantallas muy pequeñas*/}
+}
+/*FIN ESTILOS RESPONSIVOS*/

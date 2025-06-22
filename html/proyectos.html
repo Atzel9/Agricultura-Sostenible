@@ -8,6 +8,7 @@
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
       /* 🔧 Reset básico para consistencia entre navegadores */
       * {
@@ -44,16 +45,6 @@
         width: auto;
       }
 
-      /* 🔧 Hero section optimizado - altura relativa para rendimiento */
-      .hero {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-
       /* 🚀 ANIMACIONES DE CARGA PROGRESIVA */
       /* Los elementos aparecen gradualmente cuando entran en pantalla */
       .loading {
@@ -66,17 +57,21 @@
         transform: translateY(0);
       }
     </style>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap"
-      rel="stylesheet"
-    />
     <!--Estlio CSS-->
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/styles_proyectos.css" />
     <!--Enlace a iconos de Bostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+    <!--Enlace a iconos de Phosphor--> 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
   </head>
   <body>
@@ -94,7 +89,7 @@
             height="50"
           />
         </a>
-        <h1 data-trad="titulo">Proyectos de innovación</h1>
+        <h1 data-trad="titulo">Agrisomora</h1>
       </div>
       <div class="search-container">
         <div class="search-bar">
@@ -175,78 +170,106 @@
     <!--FIN HEADER-->
     <!--Inicio de la pagina-->
     <section class="hero">
-      
+      <div class="null"></div>
+      <div class="text">
+        <h2>Proyectos de Innovación</h2>
+        <p>Explora las iniciativas que están tranformando el campo con soluciones sostenibles e inteligentes.</p>
+      </div>
     </section>
     <!--Inicio contenedor para mostrar los diferentes proyectos-->
     <section id="proyectos-secc">
-      <div class="proyectos-secc">
-        <br />
-        <h3 data-trad="Innovacion-riego">Riego inteligente</h3>
-        <a href="proyectos/riego.html" data-trad="Innovacion-riego-descripcion"> 
-          El riego inteligente permite optimizar el uso del agua mediante
-          sensores, temporizadores y análisis de datos. Estos sistemas detectan
-          la humedad del suelo y las condiciones climáticas para suministrar
-          solo la cantidad necesaria de agua, reduciendo el desperdicio y
-          mejorando el rendimiento de los cultivos.</a>
-        <br />
-      </div>
-      <hr />
-      <div class="proyectos-secc">
-        <br />
-        <h3 data-trad="innovacion-fertilizantes">Fertilizantes ecológicos</h3>
-        <a href="proyectos/fertilizantes.html" data-trad="innovacion-fertilizantes-descripcion">
-          Los fertilizantes ecológicos, elaborados a partir de materiales
-          orgánicos y naturales, ofrecen una alternativa sostenible a los
-          productos químicos. Contribuyen a la salud del suelo, promueven el
-          crecimiento saludable de las plantas y reducen el impacto
-          ambiental.</a>
-        <br />
-      </div>
-      <hr />
-      <div class="proyectos-secc">
-        <br />
-        <h3 data-trad="Innovacion-rotacion">Rotación de cultivos</h3>
-        <a href="proyectos/rotacion.html" data-trad="Innovacion-rotacion-descripcion">
-          La rotación de cultivos es una práctica agrícola que consiste en
-          cambiar el tipo de cultivo en una misma parcela durante diferentes
-          temporadas. Esto ayuda a mejorar la fertilidad del suelo, controlar
-          plagas y enfermedades, y evitar la degradación de los nutrientes.</a>
-        <br />
-      </div>
-      <hr />
-      <div class="proyectos-secc">
-        <br />
-        <h3 data-trad="Innovacion-vertical">Agricultura vertical</h3>
-        <a href="proyectos/agri_vertical.html" data-trad="Innovacion-vertical-descripcion">
-          La agricultura vertical se basa en cultivar en estructuras apiladas o
-          en espacios urbanos cerrados, utilizando tecnología como luz LED y
-          sistemas hidropónicos. Esta técnica permite aprovechar al máximo el
-          espacio, reducir el uso de agua y producir alimentos más cerca de los
-          centros de consumo.</a>
-        <br />
-      </div>
-      <hr />
-      <div class="proyectos-secc">
-        <h3 data-trad="Innovacion-Bioinsumos">
-          Bioinsumos para control de plaga
-        </h3>
-        <a href="proyectos/control_plaga.html" data-trad="Innovacion-Bioinsumos-descripcion">
-          Los bioinsumos utilizan organismos vivos, extractos vegetales o
-          minerales para controlar plagas y enfermedades. Son una alternativa
-          natural a los pesticidas, ayudando a proteger los cultivos sin dañar
-          el ecosistema ni afectar la salud humana.</a>
-      </div>
-      <hr />
-      <div class="proyectos-secc">
-        <h3 data-trad="Innovacion-Cultivos">
-          Cultivos resistentes al cambio climatico
-        </h3>
-        <a href="proyectos/cultivo_resistentes.html" data-trad="Innovacion-Cultivos-descripcion">
-          Gracias a la biotecnología y la investigación genética, se
-          desarrollan cultivos capaces de resistir condiciones extremas como
-          sequías, altas temperaturas o suelos salinos. Esto asegura una
-          producción más estable y adaptada a los efectos del cambio
-          climático.</a>
+      <h2>Explora nuestros proyectos de innovación:</h2>
+      <div class="proy">
+        <div class="cat">
+          <button class="cir" data-filtro="sostenibilidad" title="Sostenibilidad"><i class="bi bi-leaf-fill"></i></button> <!--SOSTENIBILIDAD-->
+          <button class="cir" data-filtro="agua" title="Agua"><i class="bi bi-droplet-fill"></i></button> <!--GOTA-->
+          <button class="cir" data-filtro="tierra" title="Tierra/Suelo"><i class="ph ph-plant"></i></button> <!--TIERRA-->
+          <button class="cir" data-filtro="tecnologia" title="Tecnología"><i class="bi bi-robot"></i></button> <!--ROBOT-->
+          <button class="cir" data-filtro="cultivo" title="Cultivo"><i class="ph ph-grains"></i></button> <!--CULTIVO-->
+          <button class="cir" data-filtro="alternancia" title="Alternancia"><i class="ph ph-arrows-clockwise"></i></button> <!--ALTERNANCIA-->
+          <button class="cir" data-filtro="organico" title="Orgánico"><i class="bi bi-bug-fill"></i></button> <!--ORGÁNICO-->
+          <button class="cir" data-filtro="eficiencia" title="Eficiencia"><i class="bi bi-graph-up"></i></button> <!--EFICIENCIA-->
+          <button class="cir" data-filtro="practicas" title="Prácticas Agrícolas"><i class="bi bi-tools"></i></button> <!--PRACTICAS-->
+          <button class="cir" data-filtro="innovacion" title="Innovación"><i class="bi bi-stars"></i></button> <!--INNOVACIÓN-->
+        </div>
+        <p id="mensaje-error" class="error oculto" data-trad="error-filtro"></p>
+        <!--Inicio contenedor articulos-->
+        <div class="art">
+          <!--PROYECTO 1-->
+          <a href="proyectos/riego.html" style="text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="agua tecnologia eficiencia">
+              <div class="texto">
+                <h3 data-trad="Innovacion-riego">Riego inteligente</h3>
+                <p data-trad="Innovacion-riego-descripcion">El riego inteligente permite optimizar el uso del agua mediante sensores, temporizadores y análisis de datos. Estos sistemas detectan la humedad del suelo y las condiciones climáticas para suministrar solo la cantidad necesaria de agua, reduciendo el desperdicio y mejorando el rendimiento de los cultivos.</p>
+              </div>
+              <div class="tipo">
+                <button class="agua" title="agua"><i class="bi bi-droplet-fill"></i></button><button class="tec"><i class="bi bi-robot"></i></button><button class="efi"><i class="bi bi-graph-up"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--PROYECTO 2-->
+          <a href="proyectos/fertilizantes.html" style="text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="organico sostenibilidad tierra">
+              <div class="texto">
+                <h3 data-trad="innovacion-fertilizantes">Fertilizantes ecológicos</h3>
+                <p data-trad="innovacion-fertilizantes-descripcion">Los fertilizantes ecológicos, elaborados a partir de materiales orgánicos y naturales, ofrecen una alternativa sostenible a los productos químicos. Contribuyen a la salud del suelo, promueven el crecimiento saludable de las plantas y reducen el impacto ambiental.</p>
+              </div>
+              <div class="tipo">
+                <button class="org" title="Orgánico"><i class="bi bi-bug-fill"></i></button><button class="sos" title="Sostenibilidad"><i class="bi bi-leaf-fill"></i></button><button class="tie" title="Tierra"><i class="ph ph-plant"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--PROYECTO 3-->
+          <a href="proyectos/rotacion.html" style="text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="alternancia practicas cultivo">
+              <div class="texto">
+                <h3 data-trad="Innovacion-rotacion">Rotación de cultivos</h3>
+                <p data-trad="Innovacion-rotacion-descripcion">La rotación de cultivos es una práctica agrícola que consiste en cambiar el tipo de cultivo en una misma parcela durante diferentes temporadas. Esto ayuda a mejorar la fertilidad del suelo, controlar plagas y enfermedades, y evitar la degradación de los nutrientes.</p>
+              </div>
+              <div class="tipo">
+                <button class="rot" title="Alternancia"><i class="ph ph-arrows-clockwise"></i></button><button class="pra" title="Prácticas Agrícolas"><i class="bi bi-tools"></i></button><button class="cul" title="Cultivo"><i class="ph ph-grains"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--PROYECTO 4-->
+          <a href="proyectos/agri_vertical.html" style="text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="tecnologia innovacion sostenibilidad">
+              <div class="texto">
+                <h3 data-trad="Innovacion-vertical">Agricultura vertical</h3>
+                <p data-trad="Innovacion-vertical-descripcion">La agricultura vertical se basa en cultivar en estructuras apiladas o en espacios urbanos cerrados, utilizando tecnología como luz LED y sistemas hidropónicos. Esta técnica permite aprovechar al máximo el espacio, reducir el uso de agua y producir alimentos más cerca de los centros de consumo.</p>
+              </div>
+              <div class="tipo">
+                <button class="tec" title="Tecnología"><i class="bi bi-robot"></i></button><button class="inn" title="Innovación"><i class="bi bi-stars"></i></button><button class="sos" title="Sostenibilidad"><i class="bi bi-leaf-fill"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--PROYECTO 5-->
+          <a href="#" style=" text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="organico practicas sostenibilidad">
+              <div class="texto">
+                <h3 data-trad="Innovacion-Bioinsumos">Bioinsumos para control de plaga</h3>
+                <p data-trad="Innovacion-Bioinsumos-descripcion">Los bioinsumos utilizan organismos vivos, extractos vegetales o minerales para controlar plagas y enfermedades. Son una alternativa natural a los pesticidas, ayudando a proteger los cultivos sin dañar el ecosistema ni afectar la salud humana.</p>
+              </div>
+              <div class="tipo">
+                <button class="org" title="Orgánico"><i class="bi bi-bug-fill"></i></button><button class="pra" title="Prácticas Agrícolas"><i class="bi bi-tools"></i></button><button class="sos" title="Sostenibilidad"><i class="bi bi-leaf-fill"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--PROYECTO 6-->
+          <a href="proyectos/cultivo_resistentes.html" style=" text-decoration: none; color: inherit;">
+            <div class="info" data-categoria="innovacion cultivo eficiencia">
+              <div class="texto">
+                <h3 data-trad="Innovacion-Cultivos">Cultivos resistentes al cambio climático</h3>
+                <p data-trad="Innovacion-Cultivos-descripcion">Gracias a la biotecnología y la investigación genética, se desarrollan cultivos capaces de resistir condiciones extremas como sequías, altas temperaturas o suelos salinos. Esto asegura una producción más estable y adaptada a los efectos del cambio climático.</p>
+              </div>
+              <div class="tipo">
+                <button class="inn" title="Innovación"><i class="bi bi-stars"></i></button><button class="cul" title="Cultivo"><i class="ph ph-grains"></i></button><button class="efi" title="Eficiencia"><i class="bi bi-graph-up"></i></button>
+              </div>
+            </div>
+          </a>
+          <!--Mensaje por si no hay articulos que cumplan con los filtros-->
+          <p id="mensaje-vacio" class="oculto" data-trad="categorias-error"></p>
+        </div>
       </div>
     </section>
 
