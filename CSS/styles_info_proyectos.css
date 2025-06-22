@@ -52,3 +52,73 @@ body {
 .bold {
     font-weight: bold;
 }
+/*INICIO ESTILOS BOTONES DE CATEGORIAS*/
+.categorias {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.categorias button {
+    height: 50px; /*Altura del círculo*/
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    font-size: 20px; /*Tamaño de fuente del texto dentro del círculo*/
+    border-radius: 24px; /*Para hacer el círculo redondo*/
+}
+.categorias p {
+    margin-bottom: 0;
+}
+.sos {color: #3e8544; /*Color del texto del botón de categoría*/border: #3e8544 solid 2px; /*Borde del botón de categoría*/}
+.agua{color: #528eaa; /*Color del texto del botón de categoría*/border: #528eaa solid 2px; /*Borde del botón de categoría*/}
+.tie {color: #a86b3c; /*Color del texto del botón de categoría*/border: #a86b3c solid 2px; /*Borde del botón de categoría*/}
+.tec {color: #7c806d; /*Color del texto del botón de categoría*/border: #7c806d solid 2px; /*Borde del botón de categoría*/}
+.cul {color: #d33333; /*Color del texto del botón de categoría*/border: #d33333 solid 2px; /*Borde del botón de categoría*/}
+.rot {color: #b3d333; /*Color del texto del botón de categoría*/border: #b3d333 solid 2px; /*Borde del botón de categoría*/}
+.org {color: #5e2366; /*Color del texto del botón de categoría*/border: #5e2366 solid 2px; /*Borde del botón de categoría*/}
+.efi {color: #d39332; /*Color del texto del botón de categoría*/border: #d39332 solid 2px; /*Borde del botón de categoría*/}
+.pra {color: #777777; /*Color del texto del botón de categoría*/border: #777777 solid 2px; /*Borde del botón de categoría*/}
+.inn {color: #ffd900; /*Color del texto del botón de categoría*/border: #ffd900 solid 2px; /*Borde del botón de categoría*/}
+/*FIN ESTILOS BOTONES DE CATEGORIA*/
+
+.paginas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pag {
+    display: flex; /*Para acomodar los elementos*/
+    justify-content: space-around; /*Para que se centre horizontalmente*/
+}
+.paginas p {
+    font-family: 'Asap', sans-serif; /*Tipo de fuente*/
+    font-weight: 600; /*Grosor del texto*/
+    font-size: 2em; /*Tamaño de la fuente*/
+}
+.bloque {
+    display: flex; /*Para que se comporten como contenedores*/
+    width: 25%;
+    margin: 10px 0;
+    min-height: 15vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #b3d333;
+    border-radius: 25px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /*Se ajusta la velocidad en que se va a hacer la animacion*/
+}
+.bloque:hover {
+    transform: scale(0.95); /*Hace el boton mas pequeño*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hace una sombra al ponerse el mouse en el 'boton'*/
+}
+.bloque p{
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 0;
+}

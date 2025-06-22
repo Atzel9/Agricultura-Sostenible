@@ -7,36 +7,89 @@
     <!--Icono de la página-->
     <link rel="icon" href="../../img/logo.png" type="image/png">
     <!--Fuente Google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!--Estlio CSS-->
     <link rel="stylesheet" href="../../CSS/styles.css">
     <link rel="stylesheet" href="../../CSS/styles_info_proyectos.css">
     <!--Enlace a iconos de Bostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <!--Enlace a iconos de Phosphor--> 
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 </head>
 <body>
-    <header class="header"> 
-        <div class="cont-header" style="gap: 10px;">
-            <a href="../../index.html"><img src="../../img/logo.png" alt=""></a>
-            <h1>Proyectos de innovación</h1>
+    <header class="header">
+        <div class="cont-header" style="gap: 10px">
+        <!-- 🚀 MEJORA: aria-label para accesibilidad -->
+        <a href="../../index.html" aria-label="Ir al inicio">
+            <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
+            <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
+        <img
+            src="../../img/logo.png"
+            alt="Logo Agrisomora"
+            width="50"
+            height="50"
+        />
+        </a>
+        <h1 data-trad="titulo">Agrisomora</h1>
         </div>
         <div class="search-container">
-           <button id="search-button" title="Buscar">
-                <i class="bi bi-search"></i>
-           </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+            <button id="search-button" title="Buscar" aria-label="Buscar">
+            <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+            <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar"/>
+        </div>
+        <div id="results"></div>
         </div>
         <nav class="cont-header">
-            <ul>
-                <li><a href="../contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="../registro.html" title="Registrarse">Registrarse</a></li>
+        <ul class="menu">
+            <li>
+            <a href="../contactos.html" title="Contacto" data-trad="Contacto">Contacto</a>
+            </li>
+            <li>
+            <a href="../registro.html" title="Registrarse" data-trad="Registrarse">Registrarse</a>
+            </li>
+            <!--Inicio lista para traducir página-->
+            <li class="idiomas-desplegable">
+            <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
+            <button id="btn-idioma" class="btn-idioma" aria-label="Seleccionar idioma">
+                <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
+                <img src="../../img/usa.png" alt="Bandera Estados Unidos" id="bandera-idioma" width="20" height="15"/>
+                <span id="etiqueta-idioma">EN</span>
+                <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
+            </button>
+            <ul class="menu-idiomas" id="menu-idiomas">
+                <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
+                <li data-idioma="es">
+                <img src="../../img/mexico.png" alt="Bandera México" width="20" height="20"/>
+                Español
+                </li>
+                <li data-idioma="en">
+                <img src="../../img/usa.png" alt="Bandera Estados Unidos" width="20" height="20"/>
+                English
+                </li>
             </ul>
-            <!--menu hamburguesa-->
-            <div id="icono-menu" class="icon">
-                <i class="bi bi-list" style="font-size: 40px;"></i>
-            </div>
+            </li>
+            <!--Fin lista para traducir página-->
+        </ul>
+        <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
+        <div id="icono-menu" class="icon" aria-label="Menú">
+            <i class="bi bi-list" style="font-size: 40px" aria-hidden="true"></i>
+        </div>
         </nav>
     </header>
     <!-- Menú oculto -->
@@ -60,6 +113,11 @@
                 <h1>Riego inteligente</h1>
                 <p>&quot;Optimización del Uso del Agua en la agrícultura moderna&quot;</p>
                 <p>8 DE JUNIO DE 2025</p>
+            </div>
+            <div class="categorias">
+                <button class="agua"><i class="bi bi-droplet-fill"></i><p>Agua</p></button>
+                <button class="tec"><i class="bi bi-robot"></i><p>Tecnología</p></button>
+                <button class="efi"><i class="bi bi-graph-up"></i><p>Eficiencia</p></button>
             </div>
         </div>
         <img src="../../img/Proyectos/Riego.webp" alt="Imagen" class="img-info">
@@ -98,6 +156,15 @@
             <p><span class="bold">ClanRanks Teams SEO.</span> (2024, 5 enero). <i>¿Qué es la tecnología de riego inteligente y cómo cuida el futuro de la agricultura?</i> proain. <a href="https://proain.com/blogs/notas-tecnicas/que-es-la-tecnologia-de-riego-inteligente-y-como-cuida-el-futuro-de-la-agricultura?srsltid=AfmBOorQXRqZJx2RhDAysDEHWvOd8-BP0DDWrAxom6jMP5UtDVCVmLM2" target="_blank">https://proain.com/blogs/notas-tecnicas/que-es-la-tecnologia-de-riego-inteligente-y-como-cuida-el-futuro-de-la-agricultura?srsltid=AfmBOorQXRqZJx2RhDAysDEHWvOd8-BP0DDWrAxom6jMP5UtDVCVmLM2</a></p>
         </section>
     </article>
+
+    <div class="info paginas">
+        <p>Conoce otras secciones de nuestra página:</p>
+        <div class="pag">
+        <a href="../recursos.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-tree-fill"></i>Recursos para agricultores</p></a>
+        <a href="../historias.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-book-fill"></i>Historias de éxito</p></a>
+        <a href="../foros.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-people-fill"></i>Foros</p></a>
+        </div>
+    </div>
 
         <!-- Botón para regresar arriba -->
         <button class="toTop" title="Ir arriba"><i class="bi bi-chevron-up"></i></button>
