@@ -1,54 +1,54 @@
   document.addEventListener("DOMContentLoaded", () => {
     
-    function createFakeMessage() {
-  const mensajeFalso = document.createElement("div");
-  mensajeFalso.classList.add("mensaje");
+    function createFakeMessage() { //creamos una acción 
+  const mensajeFalso = document.createElement("div"); //crea un elemento de html pero se muestra hasta que se ponga .appendChild()
+  mensajeFalso.classList.add("mensaje"); //añadimos de la lista de clases
 
-  const avatar = document.createElement("div");
-  avatar.classList.add("avatar", "avatar-falso");
+  const avatar = document.createElement("div"); //crea un elemento en html
+  avatar.classList.add("avatar", "avatar-falso"); //añade esas dos clases
 
-  const content = document.createElement("div");
-  content.classList.add("content");
+  const content = document.createElement("div"); //crea una variable, que hace un div en html
+  content.classList.add("content"); // añadimos la clase content
 
-  const username = document.createElement("div");
-  username.classList.add("username");
-  username.textContent = "Benito Camelo Cano";
+  const username = document.createElement("div"); //creamos otro div en html
+  username.classList.add("username"); //añadimos username
+  username.textContent = "Benito Camelo Cano"; //Nombre del usuario fake
 
-  const text = document.createElement("div");
-  text.classList.add("text");
-  text.textContent = "Hola a todos, ¿qué técnicas de cultivo sostenible conocen o utilizan para proteger el suelo y optimizar recursos?";
+  const text = document.createElement("div"); // crea otro div sin llamar
+  text.classList.add("text"); //añade text
+  text.textContent = "Hola a todos, ¿qué técnicas de cultivo sostenible conocen o utilizan para proteger el suelo y optimizar recursos?"; //texto del bot
 
-  content.appendChild(username);
-  content.appendChild(text);
+  content.appendChild(username); //muestra el nombre de usuario
+  content.appendChild(text); //muestra su mensaje
 
-  mensajeFalso.appendChild(avatar);
-  mensajeFalso.appendChild(content);
+  mensajeFalso.appendChild(avatar); //muestra el perejil
+  mensajeFalso.appendChild(content); //muestra contenido
 
-  const mensajesContainer = document.getElementById("mensajes");
-  mensajesContainer.appendChild(mensajeFalso);
+  const mensajesContainer = document.getElementById("mensajes"); //busca un ID del html
+  mensajesContainer.appendChild(mensajeFalso); //muestra el mensaje falso
 }
 
 // Llama la función justo cuando la página carga
 createFakeMessage();
 
 
-  const iconoMenu = document.querySelector('#icono-menu');
-  const menu = document.querySelector('#menu');
-  iconoMenu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    document.body.classList.toggle('opacity');
-    const icon = iconoMenu.querySelector('i');
-    if (icon.classList.contains('bi-list')) {
-      icon.classList.remove('bi-list');
-      icon.classList.add('bi-x');
-    } else {
-      icon.classList.remove('bi-x');
-      icon.classList.add('bi-list');
+  const iconoMenu = document.querySelector('#icono-menu'); //busca el id del menu
+  const menu = document.querySelector('#menu'); //busca el id menu
+  iconoMenu.addEventListener('click', () => { //hace que escuche o haga un evento al hacer click
+    menu.classList.toggle('active'); //toggle quita active, se esconde el menu
+    document.body.classList.toggle('opacity'); // hace que se quite la opacidad al abrir el menu
+    const icon = iconoMenu.querySelector('i'); // selecciona un icono
+    if (icon.classList.contains('bi-list')) { // si esta bi list
+      icon.classList.remove('bi-list'); //entonces se quita bi list
+      icon.classList.add('bi-x'); //y se pone bi x 
+    } else { //sino
+      icon.classList.remove('bi-x'); // entonces se quita bix
+      icon.classList.add('bi-list'); //y se pone bi list
     }
   });
 
-  const toTopButtons = document.querySelectorAll('.toTop');
-  window.addEventListener('scroll', function () {
+  const toTopButtons = document.querySelectorAll('.toTop'); //selecciona todos los elementos que tengan totop
+  window.addEventListener('scroll', function () { //
     toTopButtons.forEach(button => {
       if (window.pageYOffset > window.innerHeight) {
         button.style.display = 'block';
@@ -100,7 +100,7 @@ createFakeMessage();
     this.scrollLeft = 0;
   });
 
-  // ✅ Aquí agregamos el código del envío de mensaje correctamente
+  // envio del mensajee
   const btn = document.getElementById("enviarBtn");
   const mensajesContainer = document.getElementById("mensajes");
 
@@ -123,8 +123,7 @@ createFakeMessage();
 
   const username = document.createElement("div");
   username.classList.add("username");
-  username.textContent = "Tú"; // Cambia este texto si quieres poner un nombre dinámico
-
+  username.textContent = "Tú"; 
   const text = document.createElement("div");
   text.classList.add("text");
   text.textContent = mensaje;
@@ -148,8 +147,9 @@ createFakeMessage();
       e.preventDefault();
       enviarMensaje();
     }
-  });
+  }); //se cierra el envio de mensajes
 
+  //codigo del boton de emojis
   const btnEmoji = document.getElementById('btnEmoji');
   const emojiPicker = document.getElementById('emojiPicker');
   const chatContainer = document.getElementById('chatContainer');
