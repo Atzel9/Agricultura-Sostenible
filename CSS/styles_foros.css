@@ -417,11 +417,82 @@ textarea{
 
 /*panel donde se veran los mensajes*/
 .panelCua{
-    background-color: white;
+    background-color: white;                           
     border: 3px solid rgba(77, 69, 69);
     border-radius: 20px;
     overflow-y: auto;
     overflow-x: hidden;
     height: 450px;
     width: 100%;
+    display: flex;
+flex-direction: column;
 }   
+
+
+/* Contenedor individual de mensaje estilo Discord */
+.mensaje {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #a7b453;
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 60%;
+    font-size: 14px;
+    word-wrap: break-word;
+    font-family: "Montserrat", sans-serif;
+    align-self: flex-start; /* Mensajes a la izquierda */
+}
+
+/* Icono o avatar */
+.mensaje .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+/* Contenedor de texto (nombre + mensaje) */
+.mensaje .content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nombre del usuario */
+.mensaje .username {
+    font-weight: 700;
+    font-size: 13px;
+    color: #4b7300;
+    margin-bottom: 3px;
+}
+
+/* Texto del mensaje */
+.mensaje .text {
+    white-space: pre-wrap;
+}
+
+/* Para alinear los mensajes propios (del usuario) a la derecha */
+.mensaje.propio {
+    align-self: flex-end; /* ya tienes */
+  margin-left: auto; /* nuevo: empuja el mensaje a la derecha */
+  background-color: #F0E68C;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.mensaje.propio .content {
+    align-items: flex-end; /* Alinea el texto al lado derecho */
+}
+
+.avatar-falso {
+  background-image: url('../img/gregory-hayes-QFmNQXLPbZc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.avatar-propio {
+    background-image: url('../img/WhatsApp\ Image\ 2025-06-23\ at\ 00.43.56_e620d192.jpg');
+}

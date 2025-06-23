@@ -21,7 +21,7 @@
     <header class="header"> 
         <div class="cont-header" style="gap: 10px;">
             <a href="../index.html"><img src="../img/logo.png" alt=""></a>
-            <h1 data-trad="Contactos">Contactos.</h1>
+            <h1 data-trad="Registrarte">Registrarte</h1>
         </div>
         <div class="search-container">
         <div class="search-bar">
@@ -78,12 +78,7 @@
   <!-- Contenedor principal del formulario -->
   <div class="container">
     <!-- Título principal del formulario -->
-    <h1>Formulario de Registro</h1>
-    
-    <!-- Subtítulo con información sobre las características del formulario -->
-    <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 0.9rem;">
-      ✨ <strong>Nuevo:</strong> Validación automática de correos y medidor de fortaleza de contraseña
-    </p>
+    <h1 data-trad="Registrarte">Registrate</h1>
 
     <!-- Formulario principal con validación personalizada (novalidate desactiva la validación del navegador) -->
     <form id="professionalForm" novalidate>
@@ -91,13 +86,14 @@
       <!-- CAMPO: Nombre completo -->
       <div>
         <!-- Etiqueta con clase 'required' para indicar campo obligatorio -->
-        <label for="name" class="required">Nombre completo</label>
+        <label for="name" class="required" data-trad="Nombre_completo">Nombre completo</label>
         <input
           type="text"
           id="name"
           name="user_name"
           placeholder="Escribe tu nombre completo"
           required
+          data-trad="Nombre_completo1"
         />
         <!-- Contenedor para mostrar mensajes de error específicos del campo -->
         <div class="error-message" id="error-name" aria-live="polite"></div>
@@ -105,31 +101,34 @@
 
       <!-- CAMPO: Correo electrónico con validación especial -->
       <div class="email-field-container">
-        <label for="email" class="required">Correo electrónico</label>
+        <label for="email" class="required" data-trad="Correo">Correo electrónico</label>
         <input
           type="email"
           id="email"
           name="user_email"
           placeholder="ejemplo@dominio.com"
           required
-          autocomplete="email" <!-- Habilita autocompletado del navegador -->
+          data-trad="Correo1"
+          autocomplete="email" 
         />
+          <!-- Habilita autocompletado del navegador -->
         <div class="error-message" id="error-email" aria-live="polite"></div>
         <!-- Texto informativo sobre la validación automática -->
-        <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">
+        <div style="font-size: 0.8rem; color: #666; margin-top: 4px;" data-trad="Verificacion_email">
           📧 Verificaremos automáticamente que tu email sea válido
         </div>
       </div>
 
       <!-- CAMPO: Confirmación de correo electrónico -->
       <div>
-        <label for="emailConfirm" class="required">Confirmar correo electrónico</label>
+        <label for="emailConfirm" class="required" data-trad="Confirmar1">Confirmar correo electrónico</label>
         <input
           type="email"
           id="emailConfirm"
           name="user_email_confirm"
           placeholder="Repite tu correo electrónico"
           required
+          data-trad="Confirmar2"
           autocomplete="email"
         />
         <div class="error-message" id="error-emailConfirm" aria-live="polite"></div>
@@ -137,7 +136,7 @@
 
       <!-- CAMPO: Contraseña con medidor de fortaleza -->
       <div class="password-field">
-        <label for="password" class="required">Contraseña</label>
+        <label for="password" class="required" data-trad="Contraseña">Contraseña</label>
         <!-- Contenedor especial para campo de contraseña con botón de mostrar/ocultar -->
         <div class="input-password">
           <input
@@ -146,6 +145,7 @@
             name="user_password"
             placeholder="Ingresa tu contraseña"
             required
+            data-trad="Contraseña2"
             autocomplete="new-password" <!-- Indica al navegador que es una contraseña nueva -->
           />
           <!-- Botón para alternar visibilidad de la contraseña -->
@@ -154,13 +154,13 @@
         
         <!-- Indicador visual de fortaleza de contraseña (inicialmente oculto) -->
         <div class="password-strength" id="passwordStrength" style="display: none;">
-          <span class="password-strength-label">Fortaleza de la contraseña:</span>
+          <span class="password-strength-label" data-trad="Fortaleza_contraseña">Fortaleza de la contraseña:</span>
           <!-- Contenedor de la barra de progreso -->
           <div class="password-strength-bar-container">
             <div class="password-strength-bar" id="strengthBar"></div>
           </div>
           <!-- Texto descriptivo de la fortaleza -->
-          <div class="password-strength-text" id="strengthText">Escribe tu contraseña</div>
+          <div class="password-strength-text" id="strengthText" data-trad="Escribe_contraseña">Escribe tu contraseña</div>
         </div>
         
         <div class="error-message" id="error-password" aria-live="polite"></div>
@@ -168,7 +168,7 @@
 
       <!-- CAMPO: Confirmación de contraseña -->
       <div>
-        <label for="passwordConfirm" class="required">Confirmar contraseña</label>
+        <label for="passwordConfirm" class="required" data-trad="Confirmar_contraseña">Confirmar contraseña</label>
         <div class="input-password">
           <input
             type="password"
@@ -176,6 +176,7 @@
             name="user_password_confirm"
             placeholder="Repite tu contraseña"
             required
+            data-trad="Confirmar_contraseña1"
             autocomplete="new-password"
           />
           <!-- Botón separado para mostrar/ocultar confirmación de contraseña -->
@@ -186,12 +187,13 @@
 
       <!-- CAMPO: Edad con limitación de caracteres -->
       <div>
-        <label for="age" class="required">Edad</label>
+        <label for="age" class="required" data-trad="Age">Edad</label>
         <input
           type="text"
           id="age"
           name="user_age"
           placeholder="Ejemplo: 35"
+          data-trad="Edad1"
           required
           maxlength="3" <!-- Limita a máximo 3 caracteres -->
         />
@@ -200,14 +202,14 @@
 
       <!-- CAMPO: Fecha de nacimiento usando selector de fecha nativo -->
       <div>
-        <label for="birthdate" class="required">Fecha de nacimiento</label>
+        <label for="birthdate" class="required" data-trad="Edad2">Fecha de nacimiento</label>
         <input type="date" id="birthdate" name="user_birthdate" required />
         <div class="error-message" id="error-birthdate" aria-live="polite"></div>
       </div>
 
       <!-- CAMPO: Comentarios (opcional) con contador de caracteres -->
       <div>
-        <label for="comments">Comentarios (opcional)</label>
+        <label for="comments" data-trad="Comentarios">Comentarios (opcional)</label>
         <textarea
           id="comments"
           name="user_comments"
@@ -221,19 +223,8 @@
       </div>
 
       <!-- Botón de envío del formulario -->
-      <button type="submit" id="submitBtn">Enviar información</button>
+      <button type="submit" id="submitBtn" data-trad="Enviar">Enviar información</button>
     </form>
-
-    <!-- Caja informativa sobre las características de seguridad -->
-    <div style="background: #e3f2fd; border: 1px solid #2196F3; padding: 12px; border-radius: 8px; margin-top: 20px; font-size: 0.85rem; color: #1565C0;">
-      <strong>🔍 Características de seguridad:</strong>
-      <ul style="margin: 8px 0; padding-left: 20px;">
-        <li>Verificación completa del email</li>
-        <li>Medidor de fortaleza de contraseña</li>
-        <li>Validación en tiempo real</li>
-        <li>Detección de contraseñas comunes</li>
-      </ul>
-    </div>
 
     <!-- MENSAJES DE RETROALIMENTACIÓN AL USUARIO -->
     
