@@ -42,6 +42,8 @@
         , "copy":" 2025 Agrisomora. All rights reserved."
 
         ,"error-filtro":" You can only select up to 3 filters"
+        ,"Explora_iniciativas": "Explore the initiatives that are transforming the field with sustainable and smart solutions."
+        ,"Explora_proyectos": "Explore our innovation projects:"
         ,"Innovacion-riego":" Smart irrigation"
         ,"Innovacion-riego-descripcion":" Smart irrigation allows optimizing water use through sensors, timers, and data analysis. These systems detect soil moisture and weather conditions to supply only the necessary amount of water, reducing waste and improving crop yield."
         ,"innovacion-fertilizantes":"Ecological fertilizers"
@@ -141,6 +143,23 @@
         ,"Comen":"Leave a comment"
         ,"Enviar":"Submit"
         ,"Contactos-redes":"You can also contact us through:"
+
+        ,"Nuevo": "New"
+        ,"Nombre_completo": "Full name"
+        ,"Nombre_completo1": "Enter your full name"
+        ,"Correo1": "example@domain.com"
+        ,"Verificacion_email": "We will automatically verify that your email is valid."
+        ,"Confirmar1": "Confirm your email"
+        ,"Confirmar2": "Enter your email again"
+        ,"Contraseña2": "Enter your password"
+        ,"Fortaleza_contraseña": "Password strength"
+        ,"Escribe_contraseña": "Enter a password"
+        ,"Confirmar_contraseña": "Confirm your password"
+        ,"Confirmar_contraseña1": "Re-enter your password"
+        ,"Age": "Age"
+        ,"Edad1": "Example: 35"
+        ,"Edad2": "Date of birth"
+        ,"Comentarios": "Comments"
     }
     , "es": {
         "titulo": "Agrisomora"
@@ -185,6 +204,8 @@
         , "copy":" 2025 Agrisomora. Todos los derechos reservados."
 
         ,"error-filtro":" Solo se puede un maximo de 3 filtros"
+        ,"Explora_iniciativas": "Explora las iniciativas que están tranformando el campo con soluciones sostenibles e inteligentes."
+        ,"Explora_proyectos": "Explora nuestros proyectos de innovación:"
         ,"Innovacion-riego":" Riego inteligente"
         ,"Innovacion-riego-descripcion":" El riego inteligente permite optimizar el uso del agua mediante sensores, temporizadores y análisis de datos. Estos sistemas detectan la humedad del suelo y las condiciones climáticas para suministrar solo la cantidad necesaria de agua, reduciendo el desperdicio y mejorando el rendimiento de los cultivos."
         ,"innovacion-fertilizantes":"Fertilizantes ecológicos"
@@ -284,6 +305,23 @@
         ,"Comen":"Escribe un comentario"
         ,"Enviar":"Enviar"
         ,"Contactos-redes":"También nos puedes contactar por:"
+
+        ,"Nuevo": "Nuevo"
+        ,"Nombre_completo": "Nombre completo"
+        ,"Nombre_completo1": "Escribe tu nombre completo"
+        ,"Correo1": "ejemplo@dominio.com"
+        ,"Verificacion_email": "Verificaremos automáticamente que tu email sea válido"
+        ,"Confirmar1": "Confirmar correo electrónico"
+        ,"Confirmar2": "Repite tu correo electrónico"
+        ,"Contraseña2": "Ingresa tu contraseña"
+        ,"Fortaleza_contraseña": "Fortaleza de la contraseña"
+        ,"Escribe_contraseña": "Escribe una contraseña"
+        ,"Confirmar_contraseña": "Confirma tu contraseña"
+        ,"Confirmar_contraseña1": "Repite tu contraseña"
+        ,"Age": "Edad"
+        ,"Edad1": "Ejemplo: 35"
+        ,"Edad2": "Fecha de nacimiento"
+        ,"Comentarios": "Comentarios (opcional)"
 
     }
 }
