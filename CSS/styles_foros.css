@@ -434,7 +434,7 @@ flex-direction: column;
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    background-color: #dcf8c6;
+    background-color: #a7b453;
     padding: 10px 14px;
     border-radius: 18px;
     max-width: 60%;
@@ -478,7 +478,7 @@ flex-direction: column;
 .mensaje.propio {
     align-self: flex-end; /* ya tienes */
   margin-left: auto; /* nuevo: empuja el mensaje a la derecha */
-  background-color: #a3e4d7;
+  background-color: #F0E68C;
   flex-direction: row-reverse;
   text-align: right;
 }
