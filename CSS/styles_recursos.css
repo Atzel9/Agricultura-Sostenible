@@ -53,9 +53,6 @@
 
 /* ====== Estilos del párrafo ====== */
 
-.slide p {
-    font-size: 1.5em; /* Tamaño adecuado para mejorar la legibilidad */
-}
 
 #sec-rec{ /*Estilo de la seccion para recursos de agricultores*/
     display: flex; /* Para dividir los divs en columnas */

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración de metadatos básicos del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario Profesional con Validación de Email</title>
+  
+  <!-- Importación de fuentes de Google Fonts para mejorar la tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- EmailJS SDK - Biblioteca para envío de emails sin backend -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Hoja de estilos CSS externa -->
+  <link rel="stylesheet" href="../CSS/styles.css" />
+  <link rel="stylesheet" href="../CSS/registro.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="header"> 
+        <div class="cont-header" style="gap: 10px;">
+            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+            <h1 data-trad="Registrarte">Registrarte</h1>
+        </div>
+        <div class="search-container">
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+        <button id="search-button" title="Buscar" aria-label="Buscar">
+          <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Buscar..." 
+          aria-label="Campo de búsqueda"
+          data-trad="Buscar"
+        />
+        </div>
+        <div id="results"></div>
+      </div>
+        <nav class="cont-header">
+            <ul>
+                <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
+                <li><a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
+                <li class="idiomas-desplegable">
+                   <button id="btn-idioma" class="btn-idioma">
+                        <img src="../img/usa.png" alt="" id="bandera-idioma">
+                        <span id="etiqueta-idioma">EN</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                   </button>
+                   <ul class="menu-idiomas" id="menu-idiomas">
+                        <li data-idioma="es"><img src="../img/mexico.png" alt="Español" style="width:20px;"> Español</li>
+                        <li data-idioma="en"><img src="../img/usa.png" alt="English" style="width:20px;"> English</li>
+                    </ul>
+                </li>
+            </ul>
+            <!--menu hamburguesa-->
+            <div id="icono-menu" class="icon">
+                <i class="bi bi-list" style="font-size: 40px;"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- Menú oculto -->
+    <div class="cont-menu" id="menu">
+        <ul>
+            <li><a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
+            <li><a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
+            <li><a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
+            <li><a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
+            <li><a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
+            <li><a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+        </ul>
+    </div>
+    <div class="primero">
+  <!-- Contenedor principal del formulario -->
+  <div class="container">
+    <!-- Título principal del formulario -->
+    <h1 data-trad="Registrarte">Registrate</h1>
+
+    <!-- Formulario principal con validación personalizada (novalidate desactiva la validación del navegador) -->
+    <form id="professionalForm" novalidate>
+
+      <!-- CAMPO: Nombre completo -->
+      <div>
+        <!-- Etiqueta con clase 'required' para indicar campo obligatorio -->
+        <label for="name" class="required" data-trad="Nombre_completo">Nombre completo</label>
+        <input
+          type="text"
+          id="name"
+          name="user_name"
+          placeholder="Escribe tu nombre completo"
+          required
+          data-trad="Nombre_completo1"
+        />
+        <!-- Contenedor para mostrar mensajes de error específicos del campo -->
+        <div class="error-message" id="error-name" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Correo electrónico con validación especial -->
+      <div class="email-field-container">
+        <label for="email" class="required" data-trad="Correo">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          placeholder="ejemplo@dominio.com"
+          required
+          data-trad="Correo1"
+          autocomplete="email" 
+        />
+          <!-- Habilita autocompletado del navegador -->
+        <div class="error-message" id="error-email" aria-live="polite"></div>
+        <!-- Texto informativo sobre la validación automática -->
+        <div style="font-size: 0.8rem; color: #666; margin-top: 4px;" data-trad="Verificacion_email">
+          📧 Verificaremos automáticamente que tu email sea válido
+        </div>
+      </div>
+
+      <!-- CAMPO: Confirmación de correo electrónico -->
+      <div>
+        <label for="emailConfirm" class="required" data-trad="Confirmar1">Confirmar correo electrónico</label>
+        <input
+          type="email"
+          id="emailConfirm"
+          name="user_email_confirm"
+          placeholder="Repite tu correo electrónico"
+          required
+          data-trad="Confirmar2"
+          autocomplete="email"
+        />
+        <div class="error-message" id="error-emailConfirm" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Contraseña con medidor de fortaleza -->
+      <div class="password-field">
+        <label for="password" class="required" data-trad="Contraseña">Contraseña</label>
+        <!-- Contenedor especial para campo de contraseña con botón de mostrar/ocultar -->
+        <div class="input-password">
+          <input
+            type="password"
+            id="password"
+            name="user_password"
+            placeholder="Ingresa tu contraseña"
+            required
+            data-trad="Contraseña2"
+            autocomplete="new-password" <!-- Indica al navegador que es una contraseña nueva -->
+          />
+          <!-- Botón para alternar visibilidad de la contraseña -->
+          <button type="button" id="togglePassword" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        
+        <!-- Indicador visual de fortaleza de contraseña (inicialmente oculto) -->
+        <div class="password-strength" id="passwordStrength" style="display: none;">
+          <span class="password-strength-label" data-trad="Fortaleza_contraseña">Fortaleza de la contraseña:</span>
+          <!-- Contenedor de la barra de progreso -->
+          <div class="password-strength-bar-container">
+            <div class="password-strength-bar" id="strengthBar"></div>
+          </div>
+          <!-- Texto descriptivo de la fortaleza -->
+          <div class="password-strength-text" id="strengthText" data-trad="Escribe_contraseña">Escribe tu contraseña</div>
+        </div>
+        
+        <div class="error-message" id="error-password" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Confirmación de contraseña -->
+      <div>
+        <label for="passwordConfirm" class="required" data-trad="Confirmar_contraseña">Confirmar contraseña</label>
+        <div class="input-password">
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="user_password_confirm"
+            placeholder="Repite tu contraseña"
+            required
+            data-trad="Confirmar_contraseña1"
+            autocomplete="new-password"
+          />
+          <!-- Botón separado para mostrar/ocultar confirmación de contraseña -->
+          <button type="button" id="togglePasswordConfirm" aria-label="Mostrar/ocultar contraseña">👁️</button>
+        </div>
+        <div class="error-message" id="error-passwordConfirm" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Edad con limitación de caracteres -->
+      <div>
+        <label for="age" class="required" data-trad="Age">Edad</label>
+        <input
+          type="text"
+          id="age"
+          name="user_age"
+          placeholder="Ejemplo: 35"
+          data-trad="Edad1"
+          required
+          maxlength="3" <!-- Limita a máximo 3 caracteres -->
+        />
+        <div class="error-message" id="error-age" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Fecha de nacimiento usando selector de fecha nativo -->
+      <div>
+        <label for="birthdate" class="required" data-trad="Edad2">Fecha de nacimiento</label>
+        <input type="date" id="birthdate" name="user_birthdate" required />
+        <div class="error-message" id="error-birthdate" aria-live="polite"></div>
+      </div>
+
+      <!-- CAMPO: Comentarios (opcional) con contador de caracteres -->
+      <div>
+        <label for="comments" data-trad="Comentarios">Comentarios (opcional)</label>
+        <textarea
+          id="comments"
+          name="user_comments"
+          placeholder="Escribe aquí tus comentarios"
+          rows="5"
+          maxlength="2000" <!-- Límite de 2000 caracteres -->
+        ></textarea>
+        <!-- Contador dinámico de caracteres -->
+        <div class="char-counter" id="commentsCounter">0 / 2000 caracteres</div>
+        <div class="error-message" id="error-comments" aria-live="polite"></div>
+      </div>
+
+      <!-- Botón de envío del formulario -->
+      <button type="submit" id="submitBtn" data-trad="Enviar">Enviar información</button>
+    </form>
+
+    <!-- MENSAJES DE RETROALIMENTACIÓN AL USUARIO -->
+    
+    <!-- Mensaje de éxito (inicialmente oculto) -->
+    <div class="success-message" id="successMessage" style="display:none;">
+      ¡Formulario enviado con éxito! Te contactaremos pronto.
+      <br><br>
+      <!-- Enlace a página de agradecimiento -->
+      <a href="gracias.html" style="color: #155724; text-decoration: underline; font-weight: bold;">
+        Ver página de agradecimiento completa →
+      </a>
+      <br><br>
+      <!-- Botón para recargar la página y enviar otro formulario -->
+      <button onclick="window.location.reload()" style="background: #155724; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        Enviar otro formulario
+      </button>
+    </div>
+
+    <!-- Mensaje de envío en progreso (inicialmente oculto) -->
+    <div class="sending-message" id="sendingMessage" style="display:none;">
+      Enviando... Por favor espera.
+    </div>
+
+    <!-- Mensaje de error global (inicialmente oculto) -->
+    <div class="error-message-global" id="errorMessage" style="display:none;">
+      Error al enviar el formulario. Por favor, inténtalo de nuevo.
+    </div>
+  </div>
+  </div>
+  <footer>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <div class="logo-info">
+                    <img src="../img/logo.png" alt="">
+                    <p data-trad="Lema">Cosechando futuro, cultivando vida</p>
+                </div>
+                <div class="contacto-info">
+                    <p><i class="bi-telephone-fill"></i>351 176 5744</p>
+                    <p><i class="bi-envelope-fill"></i> Agrisomora</p>
+                    <p><i class="bi-geo-alt-fill"></i> 2025, CBTiS 52</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3 data-trad="enlaces">ENLACES</h3>
+                <ul>
+                    <li><a href="../html/nosotros.html" data-trad="Nosotros">Sobre nosotros</a></li>
+                    <li><a href="../html/politica.html" data-trad="Politica">Política de privacidad</a></li>
+                    <li><a href="../html/contactos.html" data-trad="Contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3 data-trad="Redes">REDES SOCIALES</h3>
+                <div class="social-iconos">
+                    <a href="#" target="_blank"><i class="bi-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="bi-twitter-x"></i></a>
+                    <a href="#" target="_blank"><i class="bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-boletin">
+                <h3 data-trad="boletin">BOLETÍN INFORMATIVO</h3>
+                <form>
+                    <input type="text" placeholder="Nombre" required data-trad="Nom">
+                    <input type="email" placeholder="Correo electrónico" required data-trad="Correo">
+                    <button type="submit" data-trad="Suscribirse">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p data-trad="copy">&copy;2025 Agrisomora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+  <!-- Archivo JavaScript externo que contiene toda la lógica del formulario -->
+  <script defer src="../js/registro.js"></script>
+  <script defer src="../js/app.js"></script>
+  <script defer src="../traducciones/traducciones.js"></script>
+  <script defer src="../js/buscador2.js"></script>
+</body>
+</html>

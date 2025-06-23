@@ -14,28 +14,81 @@
     <link rel="stylesheet" href="../../CSS/styles_info_proyectos.css">
     <!--Enlace a iconos de Bostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!--Enlace a iconos de Phosphor--> 
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 </head>
 <body>
-    <header class="header"> 
-        <div class="cont-header" style="gap: 10px;">
-            <a href="../../index.html"><img src="../../img/logo.png" alt=""></a>
-            <h1>Proyectos de innovación</h1>
+    <header class="header">
+        <div class="cont-header" style="gap: 10px">
+        <!-- 🚀 MEJORA: aria-label para accesibilidad -->
+        <a href="../../index.html" aria-label="Ir al inicio">
+            <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
+            <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
+        <img
+            src="../../img/logo.png"
+            alt="Logo Agrisomora"
+            width="50"
+            height="50"
+        />
+        </a>
+        <h1 data-trad="titulo">Agrisomora</h1>
         </div>
         <div class="search-container">
-           <button id="search-button" title="Buscar">
-                <i class="bi bi-search"></i>
-           </button>
-           <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+        <div class="search-bar">
+        <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
+            <button id="search-button" title="Buscar" aria-label="Buscar">
+            <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+            <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
+        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar"/>
+        </div>
+        <div id="results"></div>
         </div>
         <nav class="cont-header">
-            <ul>
-                <li><a href="../contactos.html" title="Contacto">Contactos</a></li>
-                <li><a href="../registrarse.html" title="Registrarse">Registrarse</a></li>
+        <ul class="menu">
+            <li>
+            <a href="../contactos.html" title="Contacto" data-trad="Contacto">Contacto</a>
+            </li>
+            <li>
+            <a href="../registro.html" title="Registrarse" data-trad="Registrarse">Registrarse</a>
+            </li>
+            <!--Inicio lista para traducir página-->
+            <li class="idiomas-desplegable">
+            <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
+            <button id="btn-idioma" class="btn-idioma" aria-label="Seleccionar idioma">
+                <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
+                <img src="../../img/usa.png" alt="Bandera Estados Unidos" id="bandera-idioma" width="20" height="15"/>
+                <span id="etiqueta-idioma">EN</span>
+                <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
+            </button>
+            <ul class="menu-idiomas" id="menu-idiomas">
+                <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
+                <li data-idioma="es">
+                <img src="../../img/mexico.png" alt="Bandera México" width="20" height="20"/>
+                Español
+                </li>
+                <li data-idioma="en">
+                <img src="../../img/usa.png" alt="Bandera Estados Unidos" width="20" height="20"/>
+                English
+                </li>
             </ul>
-            <!--menu hamburguesa-->
-            <div id="icono-menu" class="icon">
-                <i class="bi bi-list" style="font-size: 40px;"></i>
-            </div>
+            </li>
+            <!--Fin lista para traducir página-->
+        </ul>
+        <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
+        <div id="icono-menu" class="icon" aria-label="Menú">
+            <i class="bi bi-list" style="font-size: 40px" aria-hidden="true"></i>
+        </div>
         </nav>
     </header>
     <!-- Menú oculto -->
@@ -54,7 +107,19 @@
     <!--Inicio de la pagina-->
     <div></div>
     <section class="info">
-        <div class="tit"><h1>TITULO</h1></div>
+        <div class="back">
+            <div><a href="../proyectos.html" class="iconos" title="Regresar a Proyectos de Innovación"><div><i class="bi bi-chevron-left"></i><i class="bi bi-flower2"></i>Proyectos de Innovación</div></a></div>
+            <div class="tit">
+                <h1>Fertilizantes ecológicos</h1>
+                <p>&quot;Nutriendo el suelo sin dañar el planeta&quot;</p>
+                <p>8 DE JUNIO DE 2025</p>
+            </div>
+            <div class="categorias">
+                <button class="org"><i class="bi bi-bug-fill"></i><p>Orgánico</p></button>
+                <button class="sos"><i class="bi bi-leaf-fill"></i><p>Sostenibilidad</p></button>
+                <button class="tie"><i class="ph ph-plant"></i><p>Tierra</p></button>
+            </div>
+        </div>
         <img src="https://fakeimg.pl/600x400?text=Placeholder" alt="Imagen" class="img-info">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin venenatis tellus, quis convallis dui mattis et. Etiam porttitor nibh vel augue semper volutpat. Ut sit amet diam felis. Vivamus commodo tristique lectus sit amet venenatis. Suspendisse iaculis tincidunt libero quis mattis. Nunc maximus sagittis justo et egestas. Donec in diam dolor. Vivamus vehicula, urna at maximus egestas, velit quam feugiat lacus, vitae tempor ligula dolor et quam.</p>
         <p>Vivamus non rutrum justo. Aenean urna nunc, bibendum non hendrerit sed, eleifend non metus. Proin finibus purus ante, rhoncus placerat urna maximus imperdiet. Phasellus sit amet est urna. Pellentesque nec semper dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent pretium dolor non augue viverra porttitor. Nunc feugiat nec mauris ac aliquet. Etiam nulla justo, vestibulum non venenatis in, mollis id augue. Nunc sapien leo, finibus a suscipit eget, finibus et neque.</p>
@@ -68,6 +133,15 @@
         <p>In suscipit viverra sapien non accumsan. Nunc interdum pellentesque purus, id accumsan ex semper eget. In vitae erat eu nisi tincidunt malesuada. Donec hendrerit neque purus, non sollicitudin diam ornare ut. Aenean non iaculis sapien. Nulla facilisi. Nulla vitae orci scelerisque, ornare eros accumsan, cursus leo. Suspendisse vel rhoncus arcu. Cras quis congue massa, in congue orci. Sed tempor ex quis mauris elementum feugiat. Fusce in ultrices arcu, at condimentum tortor. Praesent metus ex, malesuada eu lectus in, ultrices laoreet lectus. Nulla gravida ex vitae nibh viverra luctus et vel enim. Praesent enim arcu, viverra in neque a, congue ultrices sem. In suscipit vel tortor non bibendum.</p>
     </section>
 
+    <div class="info paginas">
+        <p>Conoce otras secciones de nuestra página:</p>
+        <div class="pag">
+        <a href="../recursos.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-tree-fill"></i>Recursos para agricultores</p></a>
+        <a href="../historias.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-book-fill"></i>Historias de éxito</p></a>
+        <a href="../foros.html" class="bloque" style="text-decoration: none; color: inherit;"><p><i class="bi bi-people-fill"></i>Foros</p></a>
+        </div>
+    </div>
+    
         <!-- Botón para regresar arriba -->
         <button class="toTop" title="Ir arriba"><i class="bi bi-chevron-up"></i></button>
 
