@@ -32,7 +32,7 @@ const EMAILJS_CONFIG = {
  */
 const EMAIL_VALIDATION_CONFIG = {
   API_KEY: "ema_live_fGq1rR5uyUOiJ3eA8gcLeFXoiV9kLcfxgqPRIlVU",  // Clave de API
-  API_URL: "https://api.emailvalidation.io/v1/info"              // Endpoint de la API
+  API_URL: "https://app.emailvalidation.io/api-keys"              // Endpoint de la API
 };
 
 /**
