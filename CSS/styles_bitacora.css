@@ -2,6 +2,44 @@ body {
     justify-content: center;
     align-items: center;
 }
+.botones {
+    position: relative; /* Para posicionar el menú de idiomas */
+    display: inline-block; /* Para que el botón y el menú estén en línea */
+}
+.btn-cambios {
+    padding: 10px; /*Margen interno*/
+    border-radius: 25px; /*Border redondeados*/
+    border: 2px #dfe2c3 solid; /*Borde al botón*/
+    cursor: pointer; /*Cambiar el mouse cuando el mouse se ponga arriba del botón*/
+}
+.btn-cambios:hover {
+    background-color: #f9f9f9;
+}
+.menu-cambios {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posiciona el menú relativo al botón */
+    background-color: #f9f9f9; /* Fondo del menú */
+    min-width: 120px; /* Ancho mínimo del menú */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menú */
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    right: 0; /* Alinea el menú a la derecha del botón */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 0; /* Sin padding interno */
+    margin: 0; /* Sin margen externo */
+}
+.menu-cambios li {
+    color: #333; /* Color del texto de los elementos del menú */
+    padding: 10px 16px; /* Espaciado interno de los elementos del menú */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente */
+    gap: 8px; /* Espacio entre el icono y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    list-style: none; /* Elimina las viñetas de la lista */
+    border-bottom: 1px solid #eee; /* Línea divisoria entre los elementos */
+    transition: background 0.2s; /* Transición suave al cambiar el fondo */
+}
+.oculto {display: none;}
 #bitacora {
     font-family: 'Roboto', sans-serif;
     margin: 5vh 10vh 5vh 10vh;

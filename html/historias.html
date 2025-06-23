@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrisomora</title>
-    <link rel="icon" href="../img/logo.png">
+    <title>Historias de Exito</title>
+    <link rel="icon" href="../img/logo.png" type="image/png">
     <!--Fuente Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <!--Estlio CSS-->
-    <link rel="stylesheet" href="../CSS/styles_historias.css ">
-    <link rel="stylesheet" href="../CSS/styles.css">
     <!--Enlace a iconos de Bostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles_historias.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+    <!--Enlace a iconos de Phosphor--> 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 </head>
 <body>
-    <header class="header"> 
-        <div class="cont-header" style="gap: 10px;">
-            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
-            <h1 data-trad="Historias1">Historias de éxito</h1>
-        </div>
-        <div class="search-container">
+    <!--Inicio Header-->
+    <header class="header">
+      <div class="cont-header" style="gap: 10px">
+        <!-- 🚀 MEJORA: aria-label para accesibilidad -->
+        <a href="../index.html" aria-label="Ir al inicio">
+          <!-- 🚀 MEJORA: Dimensiones explícitas para evitar reflow -->
+          <!-- Cuando el navegador conoce el tamaño, no reorganiza la página -->
+          <img
+            src="../img/logo.png"
+            alt="Logo Agrisomora"
+            width="50"
+            height="50"
+          />
+        </a>
+        <h1 data-trad="titulo">Agrisomora</h1>
+      </div>
+      <div class="search-container">
         <div class="search-bar">
         <!-- 🚀 MEJORA: aria-label específico para lectores de pantalla -->
         <button id="search-button" title="Buscar" aria-label="Buscar">
@@ -29,242 +52,170 @@
           <i class="bi bi-search" aria-hidden="true"></i>
         </button>
         <!-- 🚀 MEJORA: aria-label descriptivo para el campo de búsqueda -->
-        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar">
+        <input type="text" id="search-input" placeholder="Buscar..." aria-label="Campo de búsqueda" data-trad="Buscar"/>
         </div>
         <div id="results"></div>
       </div>
-        <nav class="cont-header">
-            <ul>
-                <li><a href="contactos.html" title="Contacto" data-trad="Contacto">Contactos</a></li>
-                <li><a href="registro.html" title="Registrarse" data-trad="Registrarse">Registrarse</a></li>
-                <li class="idiomas-desplegable">
-                   <button id="btn-idioma" class="btn-idioma">
-                        <img src="../img/usa.png" alt="" id="bandera-idioma">
-                        <span id="etiqueta-idioma">EN</span>
-                        <i class="bi bi-caret-down-fill"></i>
-                   </button>
-                   <ul class="menu-idiomas" id="menu-idiomas">
-                        <li data-idioma="es"><img src="../img/mexico.png" alt="Español" style="width:20px;"> Español</li>
-                        <li data-idioma="en"><img src="../img/usa.png" alt="English" style="width:20px;"> English</li>
-                    </ul>
-                </li>
+      <nav class="cont-header">
+        <ul class="menu">
+          <li>
+            <a href="contactos.html" title="Contacto" data-trad="Contacto">Contacto</a>
+          </li>
+          <li>
+            <a href="registrarse.html" title="Registrarse" data-trad="Registrarse">Registrarse</a>
+          </li>
+          <!--Inicio lista para traducir página-->
+          <li class="idiomas-desplegable">
+            <!-- 🚀 MEJORA: aria-label para botón de idiomas -->
+            <button id="btn-idioma" class="btn-idioma" aria-label="Seleccionar idioma">
+              <!-- 🚀 MEJORA: Dimensiones explícitas + alt descriptivo -->
+              <img src="../img/usa.png" alt="Bandera Estados Unidos" id="bandera-idioma" width="20" height="15"/>
+              <span id="etiqueta-idioma">EN</span>
+              <i class="bi bi-caret-down-fill" aria-hidden="true"></i>
+            </button>
+            <ul class="menu-idiomas" id="menu-idiomas">
+              <!-- 🚀 MEJORA: Dimensiones explícitas en todas las imágenes -->
+              <li data-idioma="es">
+                <img src="../img/mexico.png" alt="Bandera México" width="20" height="20"/>
+                Español
+              </li>
+              <li data-idioma="en">
+                <img src="../img/usa.png" alt="Bandera Estados Unidos" width="20" height="20"/>
+                English
+              </li>
             </ul>
-            <!--menu hamburguesa-->
-            <div id="icono-menu" class="icon">
-                <i class="bi bi-list" style="font-size: 40px;"></i>
-            </div>
-        </nav>
-    </header>
-    <!-- Menú oculto -->
-    <div class="cont-menu" id="menu">
-        <ul>
-            <li><a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill"></i>Inicio</a></li>
-            <li><a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2"></i>Proyectos de innovacion</a></li>
-            <li><a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill"></i>Recursos para agricultores</a></li>
-            <li><a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill"></i>Historias de exito</a></li>
-            <li><a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill"></i>Foro de Innovacion</a></li>
-            <li><a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill"></i>Iniciar sesión</a></li>
+          </li>
+          <!--Fin lista para traducir página-->
         </ul>
-    </div>
-    <div id="content">
-
-    <section class="externo"> <!--el fondo de mero atras-->
-
-    <section class="seccion"> <!--los cuadros de informacion-->
-        <div class="interno"> <!--contenido-->
-            <h1 data-trad="Historias">Historias de Exito</h1> <br>
-            <br>
-            <p data-trad="Historias-oportunidad">La agricultura sostenible no solo es una necesidad ambiental, sino también una oportunidad
-                 <b><h3 data-trad="Historias-oportunidad1">Proyecto "Zero Budget Natural Farming" (ZBNF)</h3></b> <br>
-                    <br>
-                 <p data-trad="Historias-oportunidad2">En India Ubicación: Andhra Pradesh, India
-                 Principio clave: Agricultura sin costos externos ni productos químicos</p> <br>
-                 <br>
-                 <p data-trad="Historias-oportunidad3">El proyecto ZBNF ha revolucionado la agricultura en India al capacitar a más de 6 millones de
-                 agricultores en técnicas naturales que eliminan el uso de fertilizantes y pesticidas químicos. 
-                 Mediante la implementación de prácticas como la fermentación natural, la rotación de cultivos 
-                 y el uso de abonos verdes, los agricultores han reducido sus costos operativos en un 80% y han 
-                 mejorado significativamente la calidad del suelo.</p> <br>
-                 <br>
-                 <p data-trad="Historias-oportunidad4">Además, se ha registrado un aumento del 30%
-                 mejorado significativamente la calidad del suelo.
-                 en los rendimientos de cultivos como el arroz y el maíz.</p> <br>
-                 
-                 <p data-trad="Historias-oportunidad5">Este modelo no solo ha fortalecido
-                 la seguridad alimentaria, sino que también ha disminuido la dependencia de préstamos
-                 externos, mejorando la estabilidad económica de las familias rurales.</p> <br>
-
-                 <p data-trad="Historias-oportunidad6">Fuente: India Together - ZBNF</p>
-            </p>
+        <!-- 🚀 MEJORA: aria-label para menú hamburguesa -->
+        <div id="icono-menu" class="icon" aria-label="Menú">
+          <i class="bi bi-list" style="font-size: 40px" aria-hidden="true"></i>
         </div>
-            <div
-             style="background-image: url(../img/India.jpg);" class="fondo-exito">
-            </div>
+      </nav>
+    </header>
 
-        
-    </section>
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-CR">Sistema Agroforestal en Costa Rica</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-CR1">Ubicación: Región de Talamanca, Costa Rica <br>
-                 Principio clave: Integración de árboles y cultivos</p> <br>
-                 <br>
-                
-                 <p data-trad="Historias-CR2">En la región de Talamanca, pequeños agricultores indígenas han adoptado sistemas agroforestales
-                 que combinan cultivos como el cacao con árboles maderables y frutales nativos. Esta práctica 
-                 ha permitido restaurar ecosistemas degradados, aumentar la biodiversidad y mejorar la capacidad
-                 del suelo para retener agua. Como resultado, los agricultores han duplicado sus ingresos 
-                 gracias a la venta de productos certificados como orgánicos y sostenibles en mercados
-                 internacionales. Este enfoque también ha contribuido a la mitigación del cambio climático 
-                 mediante la captura de carbono.</p> <br>
-
-                 <p data-trad="Historias-CR3">Fuente: World Agroforestry</p>
-            </p>
+    <!--Inicio menu hamburguesa-->
+    <!-- 🚀 MEJORA: Cambié div por nav para semántica correcta -->
+    <!-- aria-label ayuda a los lectores de pantalla -->
+    <nav class="cont-menu" id="menu" aria-label="Menú principal">
+      <ul>
+        <!-- 🚀 MEJORA: aria-hidden en iconos decorativos -->
+        <li>
+          <a href="../index.html" data-trad="Inicio"><i class="bi bi-house-fill" aria-hidden="true"></i>Inicio</a>
+        </li>
+        <li>
+          <a href="proyectos.html" data-trad="Proyectos"><i class="bi bi-flower2" aria-hidden="true"></i>Proyectos de innovación</a>
+        </li>
+        <li>
+          <a href="recursos.html" data-trad="Recursos"><i class="bi bi-tree-fill" aria-hidden="true"></i>Recursos para agricultores</a>
+        </li>
+        <li>
+          <a href="historias.html" data-trad="Historias"><i class="bi bi-book-fill" aria-hidden="true"></i>Historias de éxito</a
+          >
+        </li>
+        <li>
+          <a href="foros.html" data-trad="Foro"><i class="bi bi-people-fill" aria-hidden="true"></i>Foro de Innovación</a>
+        </li>
+        <li>
+          <a href="inicio_sesion.html" data-trad="Sesion"><i class="bi bi-person-fill" aria-hidden="true"></i>Iniciar sesión</a>
+        </li>
+      </ul>
+    </nav>
+    <!--FIN HEADER-->
+    <!--Inicio Contenido Principal-->
+    <main class="main">
+      <h2 data-trad="Historias1">HISTORIAS DE ÉXITO</h2>
+      <p data-trad="Historias-sub">&quot;Desde ahorro en insumos hasta mejora en la calidad del suelo: estos son los impactos concretos de aplicar innovación en el campo.&quot;</p>
+      <h3 class="tit" data-trad="Historias-sub2">El uso de la agicultura ha dado frutos en:</h3>
+      <div class="secc-datos">
+        <div class="datos d1">
+          <i class="bi bi-recycle"></i><p data-trad="Historias-dat1"><strong>Reducir hasta un 30% el uso de pesticidas</strong> comparado con prácticas convencionales.</p>
         </div>
-        <div
-        style="background-image: url(../img/Costa-Rica.jpg);" class="fondo-exito">
-       </div>
-    </section>
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-EU">Agricultura Regenerativa en Estados Unidos</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-EU1">Ubicación: Dakota del Norte, EE.UU. <br>
-                 Principio clave: Recuperación del suelo mediante prácticas regenerativas</p> <br>
-                 <br>
-
-                 <p data-trad="Historias-EU2">Gabe Brown, un agricultor de Dakota del Norte, ha sido pionero en la agricultura regenerativa
-                 al implementar técnicas como la cobertura vegetal permanente, la rotación diversificada de
-                 cultivos y el pastoreo controlado. Estas prácticas han restaurado la salud del suelo, 
-                 aumentando su contenido de materia orgánica en un 500% en menos de dos décadas.</p> <br>
-                 <br>
-                 
-                 <p data-trad="Historias-EU3">Además,Gabe ha logrado reducir los costos operativos en un 75% y ha incrementado la rentabilidad
-                 de su granja al diversificar sus productos y comercializarlos directamente a consumidores
-                 locales. Este caso sirve como un ejemplo claro de cómo la agricultura puede ser tanto
-                 productiva como respetuosa con el medio ambiente.</p> <br>
-
-                 <p data-trad="Historias-EU4">Fuente: USDA - Gabe Brown</p>
-            </p>
+        <div class="datos d2">
+          <i class="bi bi-droplet-fill"></i><p data-trad="Historias-dat2"><strong>Ahorrar entre un 20% y 60% de agua</strong> con sistemas de riego eficientes como el goteo.</p>
         </div>
-        <div
-             style="background-image: url(../img/USA1.webp);" class="fondo-exito">
-            </div>
-    </section>
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-SG">Cultivos Verticales en Singapur: Innovación en Espacios Urbanos</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-SG1">En Singapur una ciudad-estado densamente poblada la falta de espacio ha impulsado la adopción
-                 de cultivos verticales. Empresas como Sky Greens han desarrollado sistemas hidropónicos y
-                 aeropónicos que permiten producir alimentos frescos en espacios reducidos utilizando un
-                 noventa por ciento menos de agua que la agricultura tradicional. Estos avances no solo han
-                 reducido la dependencia de importaciones de alimentos sino que también han disminuido 
-                 significativamente la huella de carbono asociada al transporte de productos.</p> <br>
-                 <br>
-                 <p data-trad="Historias-SG2">Además la
-                 implementación de estas tecnologías ha generado empleos en áreas especializadas como la
-                 ingeniería agrícola y la gestión de sistemas sostenibles. Este caso demuestra cómo la
-                 innovación puede resolver desafíos urbanos y garantizar la seguridad alimentaria en entornos
-                 con limitaciones de recursos.</p> <br>
-
-                 <p data-trad="Historias-SG3">Fuente: Sky Greens - Technology</p>
-                 
-            </p>
+        <div class="datos d3">
+          <i class="bi bi-globe-americas-fill"></i><p data-trad="Historias-dat3"><strong>Disminuir en un 50% la erosión del suelo</strong> gracias a técnicas como la rotación de cultivos.</p>
         </div>
-        <div
-             style="background-image: url(../img/Singapur.png);" class="fondo-exito">
-            </div>
-    </section>
-
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-Cl">Café Sostenible en Colombia: Adaptándose al Cambio Climático</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-Cl1">En Colombia pequeños productores de café han formado alianzas con organizaciones
-                 internacionales para implementar prácticas agrícolas sostenibles a través del programa
-                 Café y Clima. Este proyecto ha introducido técnicas como el sombreado de cultivos el
-                 uso de biodigestores para gestionar residuos y la reforestación de áreas circundantes.</p> <br>
-                 <br>
-                 <p data-trad="Historias-Cl2">Como resultado se ha logrado una reducción del veinticinco por ciento en emisiones de
-                 gases de efecto invernadero y la certificación de más de diez mil hectáreas bajo
-                 estándares de café sostenible. Además los productores han visto una mejora significativa
-                 en los precios pagados por sus cosechas gracias a la certificación orgánica. Este
-                 ejemplo ilustra cómo la colaboración entre agricultores gobiernos y empresas puede
-                 generar soluciones climáticas efectivas mientras fortalece la economía local.</p> <br>
-
-                 <p data-trad="Historias-Cl3">Fuente: GIZ - Café y Clima</p>
-            </p>
+        <div class="datos d4">
+          <i class="bi bi-leaf-fill"></i><p data-trad="Historias-dat4"><strong>Aumentar la biodiversidad hasta 2 veces más</strong> que los monocultivos industriales.</p>
         </div>
-        <div
-             style="background-image: url(../img/Colombia.png);" class="fondo-exito">
-            </div>
-    </section>
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-BS">Agroecología en Brasil: La Cooperativa COOPFAM</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-BS1">En Minas Gerais Brasil la cooperativa COOPFAM ha liderado la transición hacia la agroecología
-                 abandonando el uso de pesticidas químicos y adoptando prácticas como la policultura la
-                 integración de ganadería y agricultura y la gestión integral de recursos naturales.
-                 Estas iniciativas han aumentado la biodiversidad local en un sesenta por ciento y han
-                 mejorado la resiliencia de las tierras ante sequías e inundaciones.</p> <br>
-                 <br>
-                 <p data-trad="Historias-BS2">Reconocida
-                 internacionalmente por su contribución a la seguridad alimentaria y la conservación
-                 del medio ambiente COOPFAM es un modelo claro de cómo la agricultura puede ser tanto
-                 productiva como respetuosa con el entorno natural promoviendo un equilibrio entre
-                 desarrollo económico y protección ambiental.</p> <br>
-
-                 <p data-trad="Historias-BS3">Fuente: IFOAM - COOPFAM</p>
-            </p>
+        <div class="datos d5">
+          <i class="bi bi-cloud-fill"></i><p data-trad="Historias-dat5"><strong>Reducir las emisiones de gases de efecto invernadero hasta en un 40%</strong> en algunos sistemas.</p>
         </div>
-        <div
-             style="background-image: url(../img/brazil.jpg);" class="fondo-exito">
-            </div>
-    </section>
-
-    <section class="seccion">
-        <div class="interno">
-            <p>
-                 <b><h3 data-trad="Historias-CA">Reduciendo el Desperdicio Alimentario: Full Harvest en California</h3></b> <br>
-                 <br>
-                 <p data-trad="Historias-CA1">En California la empresa Full Harvest ha creado un mercado digital que conecta a agricultores
-                  con compradores interesados en productos imperfectos o excedentes. Este enfoque innovador ha
-                   reducido más de diez millones de libras de desperdicio alimentario anualmente mientras
-                    proporciona ingresos adicionales a los agricultores participantes.</p> <br>
-                    <br>
-                    <p data-trad="Historias-CA2">Además ha sensibilizado
-                    a los consumidores sobre la importancia de aprovechar todos los alimentos
-                    independientemente de su apariencia. Este caso destaca cómo la tecnología puede ser una
-                    herramienta poderosa para promover la sostenibilidad en la cadena alimentaria
-                    beneficiando tanto a los productores como al medio ambiente.</p> <br>
-
-                    <p data-trad="Historias-CA3">Fuente: Full Harvest - Sitio oficial</p>
-            </p>
+        <div class="datos d6">
+          <i class="ph ph-plant"></i><p data-trad="Historias-dat6"><strong>Mejorar la fertilidad del suelo</strong> a largo plazo, reduciendo la necesidad de fertiliantes artificiales.</p>
         </div>
-        <div
-             style="background-image: url(../img/USA2.jpg);" class="fondo-exito">
-            </div>
-    </section>
-    </section>
-    </div>
+        <div class="datos d7">
+          <i class="ph ph-farm"></i><p data-trad="Historias-dat7"><strong>Fomentar economías locales</strong> y mejor los ingresos de pequeños agricultores.</p>
+        </div>
+        <div class="datos d8">
+          <i class="ph ph-bug-beetle"></i><p data-trad="Historias-dat8"><strong>Proteger a polinizadores</strong> como las abejas, clave para la seguridad alimentaria.</p>
+        </div>
+      </div>
 
+      <!--INICIO SECCIÓN TESTIMONIOS-->
+      <div class="secc-cards">
+        <h2 data-trad="Historias-sub3">Historias donde se aplicó la agricultura sostenible</h2>
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/India.jpg);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub1"><i class="bi bi-geo-alt-fill"></i>Andhra Pradesh, India</p>
+            <p data-trad="Historias-h1">El proyecto &quot;Zero Budget Natural Farming&quot; ha transformado la agricultura al enseñar a millones de agricultores prácticas naturales sin productos químicos, como fermentación y abonos verdes. Esto ha reducido costos operativos hasta en un 80% y mejorado la calidad del suelo, además de aumentar los rendimientos y la estabilidad económica rural.</p>
+          </div>
+        </div>
 
-    <!-- Botón para regresar arriba -->
-    <button class="toTop" title="Ir arriba">⬆️</button>
-    <!--Inicio de footer-->
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/Costa-Rica.jpg);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub2"><i class="bi bi-geo-alt-fill"></i>Talamanca, Costa Rica</p>
+            <p data-trad="Historias-h2">Pequeños agricultores indígenas han adoptado sistemas agroforestales que combinan cacao con árboles frutales y maderables, restaurando ecosistemas, mejorando la retención de agua y duplicando ingresos con productos orgánicos certificados, al tiempo que ayudan a mitigar el cambio climático.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/USA1.webp);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub3"><i class="bi bi-geo-alt-fill"></i>Dakota del Norte, EE.UU.</p>
+            <p data-trad="Historias-h3">Gabe Brown ha implementado agricultura regenerativa con rotación de cultivos, cobertura vegetal y pastoreo controlado, lo cual ha aumentado la materia orgánica del suelo, reducido costos en un 75% y mejorado la rentabilidad al diversificar y vender directamente a consumidores.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/Singapur.png);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub4"><i class="bi bi-geo-alt-fill"></i>Singapur</p>
+            <p data-trad="Historias-h4">Frente a la falta de espacio, se han desarrollado cultivos verticales usando sistemas hidropónicos y aeropónicos que consumen 90% menos agua. Esto ha reducido la huella de carbono, generado empleos especializados y mejorado la seguridad alimentaria en entornos urbanos.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/Colombia.png);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub5"><i class="bi bi-geo-alt-fill"></i>Colombia</p>
+            <p data-trad="Historias-h5">Productores de café han implementado prácticas sostenibles como biodigestores, reforestación y sombreado, logrando reducir un 25% las emisiones de gases, certificar más de 10,000 hectáreas y mejorar los precios gracias a la producción orgánica, fortaleciendo la economía local.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/brazil.jpg);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub6"><i class="bi bi-geo-alt-fill"></i>Minas Gerais, Brasil</p>
+            <p data-trad="Historias-h6">La cooperativa COOPFAM ha adoptado la agroecología con integración de cultivos, ganadería y gestión de recursos, aumentando la biodiversidad en un 60% y fortaleciendo la resiliencia de la tierra, mostrando que es posible producir de forma respetuosa con el ambiente.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="img" style="background-image: url(../img/USA2.jpg);"></div>
+          <div class="texto">
+            <p style="margin-bottom: 0.5em;" data-trad="Historias-ub7"><i class="bi bi-geo-alt-fill"></i>California, EE.UU.</p>
+            <p data-trad="Historias-h7">La empresa Full Harvest ha creado un mercado digital para vender productos agrícolas imperfectos o excedentes, evitando millones de libras de desperdicio alimentario al año, aumentando los ingresos de agricultores y promoviendo la conciencia sobre el aprovechamiento de alimentos.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <!--Inicio Footer-->
     <footer>
         <div class="footer-contenido">
             <div class="footer-info">
@@ -307,10 +258,10 @@
             <p data-trad="copy">&copy;2025 Agrisomora. Todos los derechos reservados.</p>
         </div>
     </footer>
-      
-    <!--codigo de javaScript-->
+    
     <script src="../js/historias.js"></script>
     <script src="../traducciones/traducciones.js"></script>
-    <script src="../js/buscador2.js"></script>
+    <script src="../traducciones/traducciones.json"></script>
+
 </body>
 </html>
