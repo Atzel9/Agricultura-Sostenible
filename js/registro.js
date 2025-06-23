@@ -31,7 +31,7 @@ const EMAILJS_CONFIG = {
  * https://emailvalidation.io/ es un servicio que verifica si un email existe realmente
  */
 const EMAIL_VALIDATION_CONFIG = {
-  API_KEY: "Escribir API_kEY",  // Clave de API
+  API_KEY: "ema_live_fGq1rR5uyUOiJ3eA8gcLeFXoiV9kLcfxgqPRIlVU",  // Clave de API
   API_URL: "https://api.emailvalidation.io/v1/info"              // Endpoint de la API
 };
 
@@ -923,7 +923,7 @@ document.addEventListener('DOMContentLoaded', function() {
          * Redirige a página de agradecimiento después de 3 segundos
          */
         setTimeout(function() {
-          window.location.href = 'gracias.html';
+          window.location.href = '../html/gracias.html';
         }, 3000);
         
       })
