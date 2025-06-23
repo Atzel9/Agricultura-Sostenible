@@ -487,12 +487,12 @@ flex-direction: column;
 }
 
 .avatar-falso {
-  background-image: url('../img/gregory-hayes-QFmNQXLPbZc-unsplash.jpg');
+  background-image: url('../CSS/gregory-hayes-QFmNQXLPbZc-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .avatar-propio {
-    background-image: url('../img/WhatsApp\ Image\ 2025-06-23\ at\ 00.43.56_e620d192.jpg');
+    background-image: url('../CSS/WhatsApp Image 2025-06-23 at 00.43.56_e620d192.jpg');
 }

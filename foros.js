@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     
     function createFakeMessage() {
   const mensajeFalso = document.createElement("div");
